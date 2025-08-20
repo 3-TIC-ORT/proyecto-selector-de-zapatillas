@@ -1,6 +1,6 @@
 font-face {
     font-family: 'bungee';
-    src: url('Bungee\ -\ Acceso\ directo.lnk') format('truetype');
+    src: url(BungeeShade-Regular.ttf) format('truetype');
 }
 
 h1 {
@@ -9,12 +9,9 @@ h1 {
     font-size: 70px;
 }
 body {
-    background-image: url(Rectangle\ 1.png);    
+    background-image: url(Rectangle\ 1\ \(3\).png);    
 }
 .imagenes {
     display: flex;
     justify-content: space-between ;
-}
-*{
-justify-content: space-between;
 }
