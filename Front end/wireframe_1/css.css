@@ -1,9 +1,20 @@
-h1{
-font-family: Arial, Helvetica, sans-serif;
-text-align: center;
-font-size: 100px;
-}
-aura{
-size: 100px;
+font-face {
+    font-family: 'bungee';
+    src: url('Bungee\ -\ Acceso\ directo.lnk') format('truetype');
 }
 
+h1 {
+    font-family: 'bungee', sans-serif;
+    text-align: center;
+    font-size: 70px;
+}
+body {
+    background-image: url(Rectangle\ 1.png);    
+}
+.imagenes {
+    display: flex;
+    justify-content: space-between ;
+}
+*{
+justify-content: space-between;
+}
