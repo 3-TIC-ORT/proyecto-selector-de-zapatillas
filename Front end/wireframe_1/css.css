@@ -1,8 +1,13 @@
-font-face {
+@font-face {
     font-family: 'bungee';
     src: url(BungeeShade-Regular.ttf) format('truetype');
 }
-
+.bebas-neue{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 h1 {
     font-family: 'bungee', sans-serif;
     text-align: center;
@@ -14,4 +19,27 @@ body {
 .imagenes {
     display: flex;
     justify-content: space-between ;
+}
+.boton{
+    display: flex;
+    width: 358px;
+    height: 129px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 90px;
+background: #343A40;
+color: #E9ECEF;
+font-family: "Bebas Neue";
+font-size: 64px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+bottom: 20px;      
+  left: 50%;         
+transform: translateX(-50%);
+position: absolute;
+
 }
