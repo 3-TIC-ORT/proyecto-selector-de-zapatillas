@@ -16,10 +16,7 @@ h1 {
 body {
     background-image: url(Rectangle\ 1\ \(3\).png);    
 }
-.imagenes {
-    display: flex;
-    justify-content: space-between ;
-}
+
 .boton{
     display: flex;
     width: 358px;
