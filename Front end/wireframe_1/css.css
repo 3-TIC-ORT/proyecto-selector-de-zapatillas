@@ -7,22 +7,20 @@
     font-weight: 400;
     font-style: normal;
   }
-.cabezera{
-    display: flex;
-    justify-content: center;
-}
+  
+
 .titulo{
     font-family: 'bungee', sans-serif;
     text-align: center;
-    font-size: 70;
-    display: inline-block;  
-    padding: 10px 0;
+    font-size: 2rem;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-  }
+    display: flex;
+    justify-content: center;
+}
 
 body {
- background-image: url("Rectangle\ 1\ \(3\).png"); 
+    background-image: url(Rectangle\ 1\ \(3\).png);    
 }
 
 .boton{
@@ -48,29 +46,7 @@ transform: translateX(-50%);
 position: absolute;
 
 }
-.imagenes {
+.imagenes{
     display: flex;
-}
-.zapatilla_derecha{
-    right: 0%;
-    width: 570px;
-    height: 276px;
-    flex-shrink: 0;
-    position: absolute
-}
-.zapatilla_izquierda{
-width: 570px;
-height: 297px;
-position: absolute;
-justify-content: left;
-left: 0%;
-width: fixed 570px;
-height: fixed 297px;
-flex-shrink: 0;
-border-radius: 285px;
-}
-
-.boton:hover{
-    color: peru;
-    background-color: black;
+    justify-content: space-evenly;  
 }
