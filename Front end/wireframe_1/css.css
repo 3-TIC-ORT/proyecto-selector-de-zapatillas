@@ -53,6 +53,9 @@ position: absolute;
 margin-bottom: 1rem;
 
 }
+.boton:hover{
+    background-color: gray
+}
 .final{
     flex: 1; 
     display: flex;
