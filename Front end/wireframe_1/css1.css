@@ -18,10 +18,25 @@ body{
     background-size: cover;
     background-position: center;
     flex: 1;
+    display: flex;
+
 }
 .der{
     background-image: url(Rectangle\ 48.png);
     background-size: cover;
     background-position: center;
     flex: 1;
+}
+.izq{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LOGO{
+   height: 27rem;
+   border-radius: 5rem;
+background: linear-gradient(180deg, rgba(153, 153, 153, 0.60) 0%, #FFF 100%);
+}
+.boton{
+
 }
