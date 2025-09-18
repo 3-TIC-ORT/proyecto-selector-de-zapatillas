@@ -1,0 +1,27 @@
+:root{
+    --naranja:#FFA500;
+    --negro: #000000;
+
+}
+body{
+    height: 100%;   
+    margin: 0;     
+    padding: 0; 
+}
+.general{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+.izq{
+    background-image: url(Rectangle\ 47.png);
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+}
+.der{
+    background-image: url(Rectangle\ 48.png);
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+}
