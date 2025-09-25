@@ -1,0 +1,43 @@
+:root{
+    --grisclaro:#E9ECEF;
+    --negro:#000000;
+    --blanco:#FFFFFF;
+
+}
+body{
+    margin: 0;
+    gap: 0;
+}
+.encabezado{
+    display: flex;
+}
+.arriba{
+    background-color: var(--grisclaro);
+    height: 6rem;
+    margin-top: 3rem;
+    border-right: none;
+    border-left: none;
+    border-top: 0.5rem solid var(--negro);
+    border-bottom: 0.5rem solid var(--negro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+    
+    
+}
+.menu{
+    height: 2rem;
+}
+.logo{
+    
+}
+.violeta{
+    background-color: var(--negro);
+    height: 2rem;
+    width: 2rem;
+    
+}
+
+
