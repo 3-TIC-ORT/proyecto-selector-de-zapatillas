@@ -9,16 +9,26 @@
     <link rel="stylesheet" href="wireframe2.js">
 </head>
 <body>
-<div class="botones" id="inicio">
-    <div>
-    <input type="text" id="usuario" required/>
-    </div>
-    <div>
-    <input type="password" id="contraseña" required/>
-    </div>
+    <header class="cuerpo">
+        <div>
+            <img class="LOGO" src="Logo copy.svg" alt="logo">
+        </div>
+        <form>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre de usuario o email">
+          </form>
+          <form>
+            <input type="text" id="nombre" name="nombre" placeholder="Contraseña">
+          </form>
+          <button class="sesion" type="submit">Iniciar sesion</button>
+          <div class="olvidaste-tu-contraseña">
+            <h3>¿Olvidaste tu contraseña?</h3>
+            <a href="">recuperar</a>
+          </div>
+          <div class="no-tienes-cuenta">
+                <h3>¿No tienes cuenta?</h3>
+                <a href="">crear una</a>
+          </div>
 
-</div>
-    <button type="submit"> Login </button>
-    <button type="button">Olvide mi contraseña</button>
+    </header>
 </body>
 </html>
