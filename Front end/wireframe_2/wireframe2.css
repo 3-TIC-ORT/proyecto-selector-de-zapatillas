@@ -1,0 +1,52 @@
+@font-face {
+    font-family: "Inter";
+    src: url(Inter-VariableFont_opsz\,wght.ttf);
+}
+.cuerpo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.2rem;
+    margin-top: 2rem;
+}
+.sesion{
+    border-radius: 1.5rem;
+    border: 2px solid #000;
+
+    background: #FAA307;
+    width: 20rem;
+    height: 5rem;
+    font-family: Inter;
+    color: #F5F5F5;
+
+font-family: Inter;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.contraseña{
+    height: 1.5rem;
+    width: 20rem;
+}
+.nombre{
+    height: 1.5rem;
+    width: 20rem;
+}
+.olvidaste-tu-contraseña{
+    display: flex;
+    justify-content: center;
+}
+.no-tienes-cuenta{
+    display: flex;
+    justify-content: center;
+}
+.recuperar{
+    margin-top: 1.3rem;
+    color: ;
+}
+.crear{
+    margin-top: 1.3rem;
+    color: ;
+}
