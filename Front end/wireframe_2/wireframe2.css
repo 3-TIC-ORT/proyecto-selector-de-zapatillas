@@ -1,6 +1,8 @@
 :root{
     --celeste: #289EBF;
     --rojo: red;
+    --naranjac: #FFDBBB;
+    --celestm: #B0E0E6;
 }
 @font-face {
     font-family: "Inter";
@@ -46,6 +48,9 @@ font-weight: 600;
 line-height: normal;
 margin-top: 0rem;
 }
+.sesion:hover{
+    background-color: var(--naranjac);
+}
 .contraseña{
     height: 2rem;
     width: 20rem;
@@ -72,6 +77,13 @@ margin-top: 0rem;
     margin-top: 1.3rem;
     color: var(--celeste);
 }
+.recuperar:hover{
+    color: var(--celestm);
+}
+.crear:hover{
+    color: var(--celestm);
+}
+
 .crear{
     margin-top: 1.3rem;
     color: var(--celeste);

@@ -1,7 +1,7 @@
 function login() {
     let usuario = document.getElementById("nombre").value;
     let clave = document.getElementById("contraseña").value;
-    let usuarioCorrecto = "martin";
+    let usuarioCorrecto = "abcd";
     let claveCorrecta = "1234";
   
     if (usuario === usuarioCorrecto && clave === claveCorrecta) {
@@ -10,5 +10,5 @@ function login() {
     } else {
       document.getElementById("mensaje").innerText = "Usuario o contraseña incorrectos.";
     }
-  }
+}
   
