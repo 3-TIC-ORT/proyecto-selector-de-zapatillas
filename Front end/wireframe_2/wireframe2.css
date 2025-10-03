@@ -1,5 +1,6 @@
 :root{
     --celeste: #289EBF;
+    --rojo: red;
 }
 @font-face {
     font-family: "Inter";
@@ -10,7 +11,12 @@ body{
     background-size: cover;
     background-position: center;
     height: 100vh;
+    animation: degrade 2s forwards;
 }
+@keyframes degrade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
 .cuerpo{
     display: flex;
     justify-content: center;
@@ -38,13 +44,14 @@ font-size: 1.5rem;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
-margin-top: 2rem;
+margin-top: 0rem;
 }
 .contraseña{
     height: 2rem;
     width: 20rem;
     font-family: Inter;
     font-size: 1rem;
+    
 }
 .nombre{
     height: 2rem;
@@ -68,4 +75,8 @@ margin-top: 2rem;
 .crear{
     margin-top: 1.3rem;
     color: var(--celeste);
+}
+.mensaje{
+    margin-top: -1rem;
+    color: var(--rojo);
 }

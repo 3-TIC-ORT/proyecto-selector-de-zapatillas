@@ -20,9 +20,10 @@
             <input type="text" id="nombre" class="nombre" placeholder="Nombre de usuario o email">
           </form>
           <form>
-            <input  type="text" id="nombre" class="contraseña" placeholder="Contraseña">
+            <input  type="password" id="contraseña" class="contraseña" placeholder="Contraseña">
           </form>
-          <button class="sesion" type="submit">Iniciar sesion</button>
+          <p id="mensaje" class="mensaje"></p>
+          <button onclick="login()" class="sesion" type="submit">Iniciar sesion</button>
           <div class="olvidaste-tu-contraseña">
             <h3>¿Olvidaste tu contraseña?</h3>
             <a class="recuperar" href="">recuperar</a>
