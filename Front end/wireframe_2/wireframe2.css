@@ -1,6 +1,15 @@
+:root{
+    --celeste: #289EBF;
+}
 @font-face {
     font-family: "Inter";
     src: url(Inter-VariableFont_opsz\,wght.ttf);
+}
+body{
+    background-image: url(Rectangle\ 176.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
 }
 .cuerpo{
     display: flex;
@@ -9,6 +18,10 @@
     align-items: center;
     gap: 2.2rem;
     margin-top: 2rem;
+    
+}
+.LOGO{
+    height: 8rem;
 }
 .sesion{
     border-radius: 1.5rem;
@@ -25,18 +38,24 @@ font-size: 1.5rem;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
+margin-top: 2rem;
 }
 .contraseña{
-    height: 1.5rem;
+    height: 2rem;
     width: 20rem;
+    font-family: Inter;
+    font-size: 1rem;
 }
 .nombre{
-    height: 1.5rem;
+    height: 2rem;
     width: 20rem;
+    font-family: Inter;
+    font-size: 1rem;
 }
 .olvidaste-tu-contraseña{
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
 }
 .no-tienes-cuenta{
     display: flex;
@@ -44,9 +63,9 @@ line-height: normal;
 }
 .recuperar{
     margin-top: 1.3rem;
-    color: ;
+    color: var(--celeste);
 }
 .crear{
     margin-top: 1.3rem;
-    color: ;
+    color: var(--celeste);
 }
