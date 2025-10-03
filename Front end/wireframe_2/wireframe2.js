@@ -1,6 +1,6 @@
 function login() {
-    let usuario = document.getElementById("nombre").value.trim().toLowerCase();
-    let clave = document.getElementById("contraseña").value.trim();
+    let usuario = document.getElementById("nombre").value;
+    let clave = document.getElementById("contraseña").value;
     let usuarioCorrecto = "martin";
     let claveCorrecta = "1234";
   
