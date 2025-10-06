@@ -85,7 +85,7 @@ background-color: var(--blanco);
     pointer-events: none;
 }
 .barra.visible{
-    transform: translateX(0); /* MUESTRA: Mueve a la posición 0 */
+    transform: translateX(0);
     pointer-events: auto;
 }
 .busqueda{
