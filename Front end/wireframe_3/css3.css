@@ -29,6 +29,10 @@
 .menu{
     height: 2rem;
     margin-left: 3rem;
+    cursor: pointer
+}
+.menu:hover{
+background-color: var(--blanco);
 }
 .logo{
     height: 5rem;
@@ -59,5 +63,68 @@
 }
 
 
+.barra{
+    width: 660px;
+    height: 1080px;
+    flex-shrink: 0;
+    background: #FFF;
+    border-right: 3px solid black;
+    border-left: 0rem;
+    border-bottom: 0cm;
+    border-top: 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out; 
+    z-index: 1000;
+    padding-top: 8rem; 
+    pointer-events: none;
+}
+.barra.visible{
+    transform: translateX(0); /* MUESTRA: Mueve a la posición 0 */
+    pointer-events: auto;
+}
+.busqueda{
+display: flex;
+align-items: center;
+justify-content: row;
+}
+.favoritos{
+    display: flex;
+    align-items: center;
+    justify-content: row;
+    }
 
+.cuestionario{
+    display: flex;
+    align-items: center;
+    justify-content: row;
+    }
+    .mi_perfil{
+        display: flex;
+        align-items: center;
+        justify-content: row;
+        }
+
+        .guia_detalles{
+            display: flex;
+            align-items: center;
+            justify-content: row;
+            }
+
+            .acerca_nosotros{
+                display: flex;
+                align-items: center;
+                justify-content: row;
+                }
+
+                .cerrar{
+                    display: flex;
+                    align-items: center;
+                    justify-content: row;
+                    }
 
