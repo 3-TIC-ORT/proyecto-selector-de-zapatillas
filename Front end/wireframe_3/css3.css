@@ -128,3 +128,9 @@ justify-content: row;
                     justify-content: row;
                     }
 
+                    .link-barra {
+                        text-decoration: none; 
+                        color: inherit;     
+                        width: 100%;         
+                        display: block;      
+                    }
