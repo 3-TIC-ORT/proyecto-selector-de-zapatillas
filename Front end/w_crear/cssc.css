@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+}
+@font-face {
+    font-family: Inter;
+    src: url(Inter-VariableFont_opsz\,wght.ttf);
+}
+.LOGO{
+    margin-top: 3rem;
+    height: 9rem;
+}
+.boton{
+    font-family: Inter;
+    border-radius: 30px;
+    border: 2px solid #000;
+    background: #FAA307;
+    width: 24rem;
+    height: 5rem;
+    color: white;
+    font-size: 1.25rem;
+}
+.email{
+    height: 1.7rem;
+    width: 25rem;
+    font-family: inter;
+    text-align: center;
+}
