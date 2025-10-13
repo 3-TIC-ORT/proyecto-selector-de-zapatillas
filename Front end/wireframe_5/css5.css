@@ -48,6 +48,12 @@
     margin-right: 3rem;
     
 }
+.lupa{
+    height: 2.5rem;
+  }
+  .perfil{
+    height: 2.5rem;
+  }
 .buscar{
     display: flex;
     justify-content: center;
