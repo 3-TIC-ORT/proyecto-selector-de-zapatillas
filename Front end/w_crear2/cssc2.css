@@ -1,0 +1,42 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.95rem;
+    background-image: url(Rectangle\ 176.png);
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
+}
+@font-face {
+    font-family: guy;
+    src: url(LuckiestGuy-Regular.ttf);
+}
+@font-face {
+    font-family: Inter;
+    src: url(Inter-VariableFont_opsz\,wght.ttf);
+}
+.LOGO{
+    margin-bottom: 1.8rem;
+    height: 9rem;
+}
+
+.texto{
+    font-family: guy;
+    margin-bottom: 3rem;
+}
+.pie{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+.codigo{
+    height: 6rem;
+    width: 5.5rem;
+    
+    border-radius: 1rem;
+border: 2px solid #000;
+
+background: #FAA307;
+}

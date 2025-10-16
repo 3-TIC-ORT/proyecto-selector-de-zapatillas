@@ -4,13 +4,17 @@ body{
     flex-direction: column;
     justify-content: center;
     gap: 4rem;
+    background-image: url(Rectangle\ 176.png);
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
 }
 @font-face {
     font-family: Inter;
     src: url(Inter-VariableFont_opsz\,wght.ttf);
 }
 .LOGO{
-    margin-top: 3rem;
+    margin-bottom: 3rem;
     height: 9rem;
 }
 .boton{
