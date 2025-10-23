@@ -3,6 +3,10 @@
   --negro:#000000;
   --blanco:#FFFFFF;
 
+  @font-face {
+    font-family: "Bitter";
+    src: url(Bitter-Italic-VariableFont_wght.ttf);
+  }
 }* {
   margin: 0;
   padding: 0;
