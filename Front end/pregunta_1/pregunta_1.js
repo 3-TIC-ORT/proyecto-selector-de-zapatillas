@@ -12,3 +12,4 @@ window.addEventListener('click', function(e) {
         barras.classList.remove('visible');
     }
 });
+
