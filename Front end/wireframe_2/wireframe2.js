@@ -11,4 +11,3 @@ function login() {
       document.getElementById("mensaje").innerText = "Usuario o contraseña incorrectos.";
     }
 }
-  
