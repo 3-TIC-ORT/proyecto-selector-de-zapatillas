@@ -11,9 +11,7 @@
     margin: 0;
     padding: 0;
   }
-  body{
-  background-color: #ADB5BD;
-  }
+
   .encabezado {
     display: flex;
   }
@@ -157,3 +155,55 @@
   font-weight: 400;
   line-height: normal;
   }
+
+  .cuadrado_gris {
+    height: 35rem;
+    width: 70rem;
+    background-color: gray;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 1.5625rem;
+}
+
+.cuadrado_gris fieldset legend {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.25rem;
+    color: var(--negro);
+}
+
+.opcion { 
+    display: block;
+    margin-bottom: 0.9375rem;
+    cursor: pointer;
+}
+
+.opcion input {
+    display: none;
+}
+
+.opcion .texto-label::before {
+    content: ''; 
+    display: inline-block;
+    width: 1.5625rem;
+    height: 1.5625rem;
+    border: 0.1rem solid var(--negro);
+    background-color: #FFA500;
+    margin-right: 0.625rem;
+    vertical-align: middle;
+}
+
+.opcion input:checked + .texto-label::before {
+    background-color: #e69500;
+    content: '8=>';
+    color: var(--negro);
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
+}
+
+.opcion .texto-label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--negro);
+}
