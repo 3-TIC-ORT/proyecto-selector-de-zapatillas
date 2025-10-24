@@ -170,6 +170,12 @@
     font-weight: bold;
     margin-bottom: 1.25rem;
     color: var(--negro);
+  
+}
+.cuadrado_gris fieldset{
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .opcion { 
