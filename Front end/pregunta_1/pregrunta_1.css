@@ -157,20 +157,28 @@
   }
 
   .cuadrado_gris {
-    height: 35rem;
-    width: 70rem;
-    background-color: gray;
-    margin: auto;
-    margin-top: 1rem;
-    padding: 1.5625rem;
+    position: relative;
+    max-width: none;
+    height: 40rem; 
+    background: #D9D9D9;
+    margin: 1rem 2rem;
+    padding: 1.5rem 2.5rem 4rem 2.5rem; 
 }
 
 .cuadrado_gris fieldset legend {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1.25rem;
-    color: var(--negro);
-  
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+  color: var(--negro);
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.legend {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+  color: var(--negro);
+  font-family: "Bebas Neue", sans-serif;
 }
 .cuadrado_gris fieldset{
   border: none;
@@ -178,10 +186,13 @@
   margin: 0;
 }
 
-.opcion { 
-    display: block;
-    margin-bottom: 0.9375rem;
+.opcion {
+    display: flex;
+    align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem; 
     cursor: pointer;
+    font-family: "Bebas Neue", sans-serif;
 }
 
 .opcion input {
@@ -189,27 +200,95 @@
 }
 
 .opcion .texto-label::before {
-    content: ''; 
-    display: inline-block;
-    width: 1.5625rem;
-    height: 1.5625rem;
-    border: 0.1rem solid var(--negro);
-    background-color: #FFA500;
-    margin-right: 0.625rem;
-    vertical-align: middle;
+  content: '';
+  display: inline-block;
+  width: 2rem; 
+  height: 2rem;
+  border: 2.08px solid #000; 
+  background-color: #FAA307; 
+  margin-right: 0.8rem;
+  vertical-align: middle;
+  border-radius: 0;
+  box-sizing: border-box;
+  transition: background-color 0.12s ease, transform 0.12s ease;
+  text-align: center;
+  line-height: 2rem;
+  color: var(--negro);
+  font-weight: 700;
 }
 
-.opcion input:checked + .texto-label::before {
-    background-color: #e69500;
-    content: '8=>';
-    color: var(--negro);
-    text-align: center;
-    font-size: 1.125rem;
-    line-height: 1.5625rem;
+.opcion input[type="radio"] + .texto-label::before {
+  border-radius: 0;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+}
+
+.opcion input[type="checkbox"]:checked + .texto-label::before {
+  background-color: #e69500;
+  content: '✓';
+  font-size: 1rem;
+  color: var(--negro);
+}
+
+
+.opcion input[type="radio"]:checked + .texto-label::before {
+  background-color: #e69500;
+  content: '•';
+  font-size: 1.125rem;
+  color: var(--negro);
 }
 
 .opcion .texto-label {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--negro);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--negro);
+}
+
+.siguiente {
+  display: inline-block;
+  padding: 0.5rem 1.15rem;
+  border-radius: 34.667px;
+  border: 2.08px solid #000;
+  background: #FAA307;
+  color: var(--negro);
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.siguiente:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.atras {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  border-radius: 24px;
+  border: 2.08px solid #000;
+  background: #FAA307;
+  color: var(--negro);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.botonera {
+  position: absolute;
+  right: 2rem;
+  bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.siguiente:hover,
+.atras:hover {
+  filter: brightness(0.95);
+}
+
+@media (max-width: 600px) {
+  .cuadrado_gris { padding: 1rem; }
+  .botonera { right: 1rem; bottom: 1rem; }
+  .opcion .texto-label { font-size: 1rem; }
 }
