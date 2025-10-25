@@ -138,13 +138,24 @@ h1 {
 }
 
 .talles{
-  height:28rem;
-  width: 62rem;
-  background-image: url(talles.png);
-  flex: 1rem;
-  margin: auto;
-  background-size: contain;
-  background-position: center
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.25rem auto;
+  padding: 1rem;
+  background: transparent;
+}
+
+.talles-img{
+  max-width: 95%;
+  height: auto;
+  max-height: 80vh; 
+  display: block;
+  margin: 0 auto;
+  background: #fff;
+  border: 3px solid #000; 
+  box-sizing: border-box;
 }
 .texto{
   margin-top: 1rem;

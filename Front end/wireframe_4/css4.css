@@ -171,5 +171,11 @@ font-family: Bebas Neue;
 color: #FFF;
 font-size: 2.5rem;
 }
-
-
+h1{
+  color: #000;
+    font-family: "Lexend Deca";
+    font-size: 2.25rem; 
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
