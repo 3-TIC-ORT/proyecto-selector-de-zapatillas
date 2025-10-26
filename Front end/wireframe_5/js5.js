@@ -15,3 +15,24 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const filtroLink = document.getElementById("filtroLink");
+    const filtroCuadro = document.getElementById("filtroCuadro");
+
+   
+    filtroLink.addEventListener("click", (e) => {
+        e.preventDefault(); 
+        if (filtroCuadro.style.display === "none" || filtroCuadro.style.display === "") {
+            filtroCuadro.style.display = "block";
+        } else {
+            filtroCuadro.style.display = "none";
+        }
+    });
+
+   
+    document.addEventListener("click", (e) => {
+        if (!filtroCuadro.contains(e.target) && !filtroLink.contains(e.target)) {
+            filtroCuadro.style.display = "none";
+        }
+    });
+});

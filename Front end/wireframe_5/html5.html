@@ -16,7 +16,7 @@
     <div class="barra" id="lateral">
         <div class="links">
         <a href="../wireframe_5/html5.html" class="link-barra">
-            <div class="busqueda">
+            <div class="search">
                 <img src="../imagenes/busqueda.png" alt="zapatilla">
                 <h1>Buscar</h1>
             </div>
@@ -85,15 +85,70 @@
             </div>
         </head>
         
-    <main class="medio">
-        <search class="buscar">
+        <main class="medio">
+            <search class="buscar">
+                <div class="custom-input">
+                    <img src="../imagenes/busqueda.png" alt="search icon" class="left-icon">
+                    <input type="text" id="busqueda" class="busqueda" placeholder="Buscar">
+                    <a href="#" id="filtroLink">
+                        <img src="../imagenes/Vector (2).svg" alt="filtro icon" class="right-icon" id="filtro">
+                    </a>
+                </div>
+            </search>
+        
            
-            <div class="custom-input">
-                <img src="../imagenes/busqueda.png" alt="search icon" class="left-icon">
-                <input type="text" id="busqueda" class="busqueda" placeholder="Buscar">
-                <img src="../imagenes/Vector (2).svg" alt="filtro icon" class="right-icon">
-            </div>
-        </search>
+            <div class="filtro-cuadro" id="filtroCuadro">
+                <h3>Filtrar por:</h3>
+                <div class="filtro-opcion">
+                    <label for="color">Color:</label>
+                    <select id="color">
+                        <option value="Cualquiera">Cualquiera</option>
+                        <option value="red">Rojo</option>
+                        <option value="blue">Azul</option>
+                        <option value="green">Verde</option>
+                        <option value="yellow">Amarillo</option>
+                    </select>
+                </div>
+                <div class="filtro-opcion">
+                    <label for="precio">Precio:</label>
+                    <select id="precio">
+                        <option value="Cualquiera">Cualquiera</option>
+                        <option value="low">Bajo</option>
+                        <option value="medium">Medio</option>
+                        <option value="high">Alto</option>
+                    </select>
+                </div>
+                <div class="filtro-opcion">
+                    <label for="tipo">Tipo de calzado:</label>
+            <select id="tipo">
+                <option value="Cualquiera">Cualquiera</option>
+                <option value="deportivo">Deportivo</option>
+                <option value="formal">Formal</option>
+                <option value="casual">Casual</option>
+            </select>
+        </div>
+        <div class="filtro-opcion">
+            <label for="talle">Talle:</label>
+            <select id="talle">
+                <option value="Cualquiera">Cualquiera</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+            </select>
+        </div>
+        <div class="filtro-opcion">
+            <label for="marca">Marca:</label>
+            <select id="marca">
+                <option value="Cualquiera">Cualquiera</option>
+                <option value="nike">Nike</option>
+                <option value="adidas">Adidas</option>
+                <option value="puma">Puma</option>
+                <option value="reebok">Reebok</option>
+            </select>
+        </div>
+    </div>
 </main>
 <footer class="octavos">
         <div class="ejemplos"></div>

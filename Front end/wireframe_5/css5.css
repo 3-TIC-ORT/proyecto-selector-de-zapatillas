@@ -170,7 +170,7 @@
 .acerca_nosotros,
 .cerrar {
   display: flex;
-  align-items: center;
+  
   justify-content: row;
   gap: 2.5rem;
   align-self: stretch;
@@ -188,4 +188,35 @@ h1{
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+.filtro-cuadro {
+  display: none;
+  position: absolute;
+  top: 9.2rem; 
+  right: 3rem;
+  width: 30%; 
+  height: 78%; 
+  background-color: white;
+  border: 0.3rem solid black;
+  border-radius: 0.1rem;
+  padding: 1rem;
+  
+}
+
+/* Opciones dentro del cuadro */
+.filtro-opcion {
+  margin-bottom: 1rem;
+}
+
+.filtro-opcion label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.filtro-opcion select {
+  width: 100%;
+  padding: 0.4rem;
+  border: 1px solid black;
+  border-radius: 0.45rem;
 }
