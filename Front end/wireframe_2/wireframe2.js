@@ -13,6 +13,7 @@ function comprobaciondedatos(data) {
     let contraseña = data[2];
     if (logueado === true && encontrado === true && contraseña === true) {
         alert("Has iniciado sesión correctamente");
+        window.location.href = "../wireframe_3/html3.html";
     }
     else if (encontrado === true && contraseña === false && logueado === false) {
     alert("La contraseña es incorrecta");
@@ -21,17 +22,4 @@ function comprobaciondedatos(data) {
     alert("No se ha encontrado una cuenta con ese nombre");
   }
 
-}
-
-
-function login() {
-    let usuario = document.getElementById("nombre").value;
-    let clave = document.getElementById("contraseña").value;
-  
-    if (usuario === usuarioCorrecto && clave === claveCorrecta) {
-      document.getElementById("mensaje").innerText = "¡bien ahi wacho!";
-      window.location.href = "../wireframe_3/html3.html"
-    } else {
-      document.getElementById("mensaje").innerText = "Usuario o contraseña incorrectos.";
-    }
 }
