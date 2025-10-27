@@ -8,7 +8,12 @@ body{
     background-size: cover;
     background-position: center;
     height: 95vh;
+    animation: degrade 2s forwards;
 }
+@keyframes degrade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
 @font-face {
     font-family: Inter;
     src: url(Inter-VariableFont_opsz\,wght.ttf);

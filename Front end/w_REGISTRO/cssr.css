@@ -1,0 +1,44 @@
+.medio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}
+body{
+    background-image: url(../imagenes/Rectangle\ 176.png) ;
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    animation: degrade 2s forwards;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(../tipos_de_texto/Inter-VariableFont_opsz\,wght.ttf);
+}
+@keyframes degrade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+.LOGo{
+   height: 9rem;
+   margin-top: 3rem;
+}.text{
+    height: 2rem;
+    width: 22rem;
+    border: 1px solid black;
+    font-family: Inter;
+    font-size: 1.2rem;
+}
+.boton{
+    border-radius: 30px;
+border: 2px solid #000;
+background: #FAA307;
+height: 5.5rem;
+width: 22.3rem;
+font-family: "Inter";
+font-size: 1.5rem;
+color: white;
+}
