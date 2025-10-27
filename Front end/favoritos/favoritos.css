@@ -62,7 +62,7 @@ background-attachment: fixed;
 
 .barra {
   width: 40%; 
-  height: 100%; 
+  height: 110%; 
   flex-shrink: 0;
   background: #FFF;
   border-right: 0.1875rem solid black; 
@@ -317,4 +317,33 @@ opacity: 0;
 
 .fav-icon{
 cursor: pointer;
+}
+
+:root{
+  --fav-anim-duration: 300ms;
+  --fav-anim-ease: cubic-bezier(.2,.8,.2,1);
+}
+
+/* estado base (asegura que se pueda animar) */
+.cuadraditos1,
+.cuadraditos2,
+.cuadraditos3,
+.cuadraditos4,
+.cuadraditos5,
+.cuadraditos6 {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: opacity var(--fav-anim-duration) var(--fav-anim-ease),
+              transform var(--fav-anim-duration) var(--fav-anim-ease);
+  will-change: opacity, transform;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.hiding {
+  opacity: 0;
+  transform: translateY(-8px) scale(0.98);
+  pointer-events: none; 
 }
