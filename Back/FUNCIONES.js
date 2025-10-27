@@ -119,4 +119,3 @@ function filtrarZapatillas (filtros) {
 
 export {filtrarZapatillas};
 
-startServer();
