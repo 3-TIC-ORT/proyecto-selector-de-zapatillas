@@ -70,7 +70,7 @@
   
   .barra {
     width: 40%; 
-    height: 100%; 
+    height: 95vh; 
     flex-shrink: 0;
     background: #FFF;
     border-right: 0.1875rem solid black; 
@@ -126,14 +126,7 @@
     display: block;
   }
   
-  h1 {
-    color: #000;
-    font-family: "Lexend Deca";
-    font-size: 2.25rem; 
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
+
   .medio{
     
     display: flex;
