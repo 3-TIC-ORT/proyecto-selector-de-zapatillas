@@ -1,39 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="wireframe2.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="wireframe2.css">
+  
 </head>
 <body>
-    <header class="cuerpo">
-        <div>
-            <img class="LOGO" src="Logo copy.svg" alt="logo">
-        </div>
-        <form>
-            <input type="text" id="nombre" class="nombre" placeholder="Nombre de usuario">
-          </form>
-          <form>
-            <input  type="password" id="contraseña" class="contraseña" placeholder="Contraseña">
-          </form>
-          <button onclick="comprobaciondedatos()" class="sesion" type="submit">Iniciar sesion</button>
-          <div class="olvidaste-tu-contraseña">
-            <h3>¿Olvidaste tu contraseña?</h3>
-            <a class="recuperar" href="../w_crear/htmlc.html">recuperar</a>
-          </div>
-          <div class="no-tienes-cuenta">
-                <h3>¿No tienes cuenta?</h3>
-                <a  class="crear" href="">Crear una</a>
-          </div>
+  <header class="cuerpo">
+    <div><img class="LOGO" src="Logo copy.svg" alt="logo"></div>
 
-    </header>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/JZylber/SoqueTIC-Client@v1.4.2/soquetic-client.js"></script>
-    <script src="wireframe2.js"></script>
+    <form id="loginForm">
+      <input type="text" id="nombre" class="nombre" placeholder="Nombre de usuario" required>
+      <input type="password" id="contrasena" class="contrasena" placeholder="Contraseña" required>
+      <button id="iniciosesion" class="sesion" type="submit">Iniciar sesión</button>
+    </form>
+
+    <div class="olvidaste-tu-contraseña">
+      <h3>¿Olvidaste tu contraseña?</h3>
+      <a class="recuperar" href="../w_crear/htmlc.html">recuperar</a>
+    </div>
+
+    <div class="no-tienes-cuenta">
+      <h3>¿No tienes cuenta?</h3>
+      <a class="crear" href="">Crear una</a>
+    </div>
+  </header>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/JZylber/SoqueTIC-Client@v1.4.2/soquetic-client.js"></script>
+  <script src="wireframe2.js"></script>
 </body>
 </html>
