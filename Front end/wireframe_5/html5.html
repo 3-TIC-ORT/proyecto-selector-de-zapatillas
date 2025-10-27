@@ -6,7 +6,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="css5.css">
     <link rel="stylesheet" href="../shared/header.css">
-    <script src="js5.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@700&display=swap" rel="stylesheet">
@@ -102,20 +101,32 @@
                 <div class="filtro-opcion">
                     <label for="color">Color:</label>
                     <select id="color">
-                        <option value="Cualquiera">Cualquiera</option>
-                        <option value="red"> 🔴</option>
-                        <option value="blue">Azul</option>
-                        <option value="green">Verde</option>
-                        <option value="yellow">Amarillo</option>
+                        <option value="cualquiera">Cualquiera</option>
+                        <option value="rojo">Rojo</option>
+                        <option value="azul">Azul</option>
+                        <option value="verde claro">Verde claro</option>
+                        <option value="amarillo">Amarillo</option>
+                        <option value="negro">Negro</option>
+                        <option value="blanco">Blanco</option>
+                        <option value="gris">Gris</option>
+                        <option value="verde oscuro">Verde oscuro</option>
+                        <option value="rosa">Rosa</option>
+                        <option value="violeta">Violeta</option>
+                        <option value="celeste">Celeste</option>
+                        <option value="naranja">Naranja</option>|
+
                     </select>
                 </div>
                 <div class="filtro-opcion">
                     <label for="precio">Precio:</label>
                     <select id="precio">
                         <option value="Cualquiera">Cualquiera</option>
-                        <option value="low">Bajo</option>
-                        <option value="medium">Medio</option>
-                        <option value="high">Alto</option>
+                        <option value="0-50K">0-50K</option>
+                        <option value="50K-100K">50K-100K</option>
+                        <option value="100K-150K">100K-150K</option>
+                        <option value="150K-200K">150K-200K</option>
+                        <option value="200K-250K">200K-250K</option>
+                        <option value="250K+">250K+</option>
                     </select>
                 </div>
                 <div class="filtro-opcion">
@@ -131,11 +142,25 @@
             <label for="talle">Talle:</label>
             <select id="talle">
                 <option value="Cualquiera">Cualquiera</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+                <option value="32">32</option>
+                <option value="33">33</option>
+                <option value="34">34</option>
+                <option value="35">35</option>
                 <option value="36">36</option>
                 <option value="37">37</option>
                 <option value="38">38</option>
                 <option value="39">39</option>
                 <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+                <option value="44">44</option>
+                <option value="45">45</option>
+                <option value="46">46</option>
+                <option value="47">47</option>
+
             </select>
         </div>
         <div class="filtro-opcion">
@@ -146,19 +171,26 @@
                 <option value="adidas">Adidas</option>
                 <option value="puma">Puma</option>
                 <option value="reebok">Reebok</option>
+                <option value="jordan">Jordan</option>
+                <option value="asics">Asics</option>
+                <option value="under armour">Under Armour</option>
+                <option value="vans">Vans</option>
+                <option value="converse">Converse</option>
+                <option value="new balance">New Balance</option>
             </select>
         </div>
     </div>
 </main>
 <footer class="octavos">
-        <div class="ejemplos"></div>
-        <div class="ejemplos"></div>
-        <div class="ejemplos"></div>
-        <div class="ejemplos"></div>
-        <div class="ejemplos"></div>
-        <div class="ejemplos"></div>
-        <div class="ejemplos"></div>
-        <div class="ejemplos"></div>
+        <div class="resultados"></div>
+        <div class="resultados"></div>
+        <div class="resultados"></div>
+        <div class="resultados"></div>
+        <div class="resultados"></div>
+        <div class="resultados"></div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/JZylber/SoqueTIC-Client@v1.4.2/soquetic-client.js"></script>
+    <script src="js5.js"></script>
 </body>
 </html>

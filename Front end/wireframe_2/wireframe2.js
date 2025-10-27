@@ -4,10 +4,10 @@ iniciosesion.addEventListener("click", () => {
 postEvent("iniciarsesion", {
   Nombre: document.getElementById("nombre").value,
   Contraseña: document.getElementById("contraseña").value
-}, comprobaciondedatos);
+}, comprobardatos);
 
 });
-function comprobaciondedatos(data) {
+function comprobardatos(data) {
     let logueado = data[0];
     let encontrado = data[1];
     let contraseña = data[2];
