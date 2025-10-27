@@ -1,62 +1,42 @@
 import fs from "fs";
 
-let registro = JSON.parse(fs.readFileSync("UsuariosRegistrados.json", "utf-8"));
-let usuarios = JSON.parse(fs.readFileSync("UsuariosRegistrados.json", "utf-8"));
 
-let iniciado = null
-let encontrado = null
-let contrasena = null
-let usuarioregistrado = null
 let usuarioexistente = null
 
-function Registro(Data) 
-{
+
+function Registro(Data) {
     usuarioexistente = false
     for (let i = 0; i < usuarios.length; i++) {
-      if (usuarios[i].Nombre_del_usuario === Data.Nombre) {
-        usuarioexistente = true;
-        break;
-      }
+        if (usuarios[i].Nombre_del_usuario === Data.Nombre) {
+            usuarioexistente = true;
+            break;
+        }
     }
     if (usuarioexistente === true) {
-       return { success: false, message: " El usuario ya existe."}
+        return { success: false, message: " El usuario ya existe." }
     }
-    else if (usuarioexistente === false)  {
-      usuarios.push({ "Nombre_del_usuario": Data.Nombre, "Contraseña": Data.contrasena });
-    fs.writeFileSync("UsuariosRegistrados.json", JSON.stringify(usuarios, null, 2));
-    return { success: true, message: "Le damos la bienvenida a nuestro selector de zapatillas" };
+    else if (usuarioexistente === false) {
+        usuarios.push({ "Nombre_del_usuario": Data.Nombre, "Contraseña": Data.contrasena });
+        fs.writeFileSync("UsuariosRegistrados.json", JSON.stringify(usuarios, null, 2));
+        return { success: true, message: "Le damos la bienvenida a nuestro selector de zapatillas" };
     }
-  }
-export {Registro}
-
-function InicioSesion(Data)
-{
-  for (let i =0; i<registro.length;i++)
-  {
-      if (Data.Nombre === registro[i].Nombre && Data.contrasena === registro[i].contrasena)
-      {
-          console.log ("Has iniciado sesión correctamente")
-          encontrado = true
-          iniciado = true
-          contrasena=true
-          usuarioregistrado = registro[i]
-      } else if (Data.Nombre === registro[i].Nombre && Data.contrasena != registro[i].contrasena)
-      {
-          console.log ("La contraseña es incorrecta")
-          encontrado = true
-          iniciado = false
-          contrasena=false
-      } else if (Data.Nombre != registro[i].Nombre)
-      {
-          console.log ("No existe un usuario con ese nombre")
-          encontrado = false
-          iniciado = false
-          contrasena=false
-      }
-  } 
-    return [iniciado,encontrado,contrasena,usuarioregistrado]
 }
-export {InicioSesion};
+export { Registro }
+
+function InicioSesion(Data) {
+    let usuarios = []
+    usuarios = JSON.parse(fs.readFileSync("UsuariosRegistrados.json", "utf-8"));
+    let usuarioSesion = null;
+    usuarioSesion = usuarios.find((usuario) => Data.Nombre === usuario.Nombre && Data.Contraseña === usuario.Contraseña)
+
+    if(usuarioSesion !== undefined) {
+        return { ok: true, info: "Login Exitoso"}
+    }
+    else {
+        return { ok: false, info: "Login Fallido" }
+    }
+}
+export { InicioSesion };
 
 class Zapatilla {
     constructor(marca, nombre, color, talle, precio, tipo, imagen) {
@@ -87,7 +67,7 @@ function obtenerRangoPrecio(precio) {
     return "250K+";
 }
 
-function filtrarZapatillas (filtros) {
+function filtrarZapatillas(filtros) {
     let zapatillasFiltradas = zapatillas.filter(zapatilla => {
         let cumpleFiltros = true;
 
@@ -117,5 +97,5 @@ function filtrarZapatillas (filtros) {
     return zapatillasFiltradas;
 }
 
-export {filtrarZapatillas};
+export { filtrarZapatillas };
 

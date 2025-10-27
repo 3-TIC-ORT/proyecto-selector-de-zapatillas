@@ -1,4 +1,6 @@
-{
-    "Nombre": "Bruno Fernandes",
-    "Contraseña":"Bruno10"
-}
+[
+    {
+        "Nombre": "Bruno Fernandes",
+        "Contraseña": "Bruno10"
+    }
+]
