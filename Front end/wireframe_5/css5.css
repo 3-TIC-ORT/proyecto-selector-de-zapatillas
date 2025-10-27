@@ -55,7 +55,7 @@
   height: 2.5rem;
 }
 .perfil{
-  height: 2.3rem;
+  height: 2.5rem;
 }
 .buscar{
   display: flex;
@@ -219,4 +219,10 @@ h1{
   padding: 0.4rem;
   border: 1px solid black;
   border-radius: 0.45rem;
+}
+
+.limpiar{
+  margin-left: 20.5rem;
+  margin-top: 15rem;
+  width: 7rem;
 }
