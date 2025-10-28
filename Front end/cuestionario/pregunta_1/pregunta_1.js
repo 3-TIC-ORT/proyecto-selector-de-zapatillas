@@ -1,5 +1,6 @@
 let menu_lateral = document.getElementById("menu");
 let barras = document.getElementById("lateral");
+let enviar = document.getElementById("enviar");
 
 function cambiar() {
     barras.classList.toggle("visible"); 
@@ -11,5 +12,3 @@ window.addEventListener('click', function(e) {
         barras.classList.remove('visible');
     }
 });
-
-
