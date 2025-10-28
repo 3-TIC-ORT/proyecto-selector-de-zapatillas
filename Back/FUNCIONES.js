@@ -7,7 +7,7 @@ let usuarioexistente = null
 function Registro(Data) {
     usuarioexistente = false
     for (let i = 0; i < usuarios.length; i++) {
-        if (usuarios[i].Nombre_del_usuario === Data.Nombre) {
+        if (usuarios[i].Nombre === Data.Nombre) {
             usuarioexistente = true;
             break;
         }
@@ -16,7 +16,7 @@ function Registro(Data) {
         return { success: false, message: " El usuario ya existe." }
     }
     else if (usuarioexistente === false) {
-        usuarios.push({ "Nombre_del_usuario": Data.Nombre, "Contraseña": Data.contrasena });
+        usuarios.push({ "Nombre": Data.Nombre, "Contraseña": Data.Contraseña });
         fs.writeFileSync("UsuariosRegistrados.json", JSON.stringify(usuarios, null, 2));
         return { success: true, message: "Le damos la bienvenida a nuestro selector de zapatillas" };
     }
