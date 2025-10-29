@@ -1,5 +1,7 @@
 let menu_lateral = document.getElementById("menu");
 let barras = document.getElementById("lateral");
+let respuesta = localStorage.getItem("respuesta1");
+console.log(respuesta);
 
 function cambiar() {
     barras.classList.toggle("visible"); 
