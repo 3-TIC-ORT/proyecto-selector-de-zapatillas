@@ -20,16 +20,16 @@ function registro(){
      if (Contraseña === Nombre) {
         alert ("La contraseña y el nombre no pueden ser iguales")
      }
-     postEvent ("registro", { "Nombre": Nombre, "Contraseña": Contraseña }, Registro)
-     }
+     postEvent ("registro", { "nombre": Nombre, "contrasena": Contraseña }, acceso)
+}
 
-     function Registro (data) {
+function acceso (data) {
         if (data.success === true) {
             alert("Se ha registrado correctamente el usurio")
-            window.location.href = "wireframe_3/html3.html"
+            window.location.href = "../Front end/wireframe_3/html3.html"
         } else if (data.success === false) {
             alert ("No se ha podido registrar el usuari" + data.message) 
         }
     }
     
-     usuario.addEventListener ("click", Registro);
+     usuario.addEventListener ("click", registro);

@@ -1,6 +1,14 @@
 [
-    {
-        "Nombre": "Bruno Fernandes",
-        "Contraseña": "Bruno10"
-    }
+  {
+    "Nombre": "Bruno Fernandes",
+    "Contraseña": "Bruno10"
+  },
+  {
+    "nombre": "luu2",
+    "contrasena": "123456"
+  },
+  {
+    "nombre": "asdda|",
+    "contrasena": "dffaseef"
+  }
 ]

@@ -1,24 +1,28 @@
 import fs from "fs";
 
-
-let usuarioexistente = null
-
-
 function Registro(Data) {
-    usuarioexistente = false
+    let usuarios = [];
+    const { nombre, contrasena } = Data
+    usuarios = JSON.parse(fs.readFileSync("UsuariosRegistrados.json", "utf-8"))
+    
+    let usuarioexistente = false
     for (let i = 0; i < usuarios.length; i++) {
-        if (usuarios[i].Nombre === Data.Nombre) {
+        if (usuarios[i].nombre === nombre) {
             usuarioexistente = true;
             break;
+        }
+        else {
+            usuarioexistente = false;
+            
         }
     }
     if (usuarioexistente === true) {
         return { success: false, message: " El usuario ya existe." }
     }
     else if (usuarioexistente === false) {
-        usuarios.push({ "Nombre": Data.Nombre, "Contraseña": Data.Contraseña });
+        usuarios.push({ nombre, contrasena });
         fs.writeFileSync("UsuariosRegistrados.json", JSON.stringify(usuarios, null, 2));
-        return { success: true, message: "Le damos la bienvenida a nuestro selector de zapatillas" };
+        return { success: true, message: "Le damos la bienvenida a nuestro selector de zapatillas", usuarios };
     }
 }
 export { Registro }
