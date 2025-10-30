@@ -15,6 +15,9 @@
   }
   body{
     background-image: url(../imagenes/Vista\ zapatilla.svg);
+    background-position: center
+    ;
+    background-size: cover;
   }
   @font-face {
     font-family: Inter;
@@ -167,69 +170,59 @@
         
 }
 .derecha{
+  margin-top: 2rem;
   display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    align-items: center;
+    
     margin-left: 2rem;
+    gap: 2.5rem
+    ;
+
     
 }
-.talle{
-  height: 1.2rem;
-  width: 3.1rem;
-  background-color: var(--blanco);
-  text-align: center;
-  border: 1px solid var(--negro);
+.tw{
+ font-family: Inter;
+ color: #000;
 
-}
-.zapatalle{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem
-  ;
-  width: 40%;
-  margin-right: 6.1rem;
-}
-.boton{
-  border-radius: 50px;
-border: 2px solid #000;
-
-background: #FAA307;
-width: 15rem;
-height: 3.2rem;
-margin-top: 6rem;
 font-family: Inter;
+font-size: 1.5rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
-font-size: 1.2rem;
-margin-right: 7.5rem;
 
 }
-.ab{
-  font-size: 4rem;
-  margin-top: 3rem;
-  font-family: Inter;
-  font-style: normal;
+.tq{
+font-family: Inter;
+color: #000;
+
+font-family: Inter;
+font-size: 1rem;
+font-style: normal;
 font-weight: 400;
 line-height: normal;
+margin-top: 4px;
 }
-h3{
-  font-size: 1.6rem;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-  font-family: Inter;
-  font-style: normal;
+.escribir{
+  border-radius: 40px;
+border: 2px solid #000;
+
+background: #FFF;
+width: 35rem;
+height: 3rem;
+flex-shrink: 0;
+color: #717171;
+
+font-family: Inter;
+font-size: 1rem;
+font-style: normal;
 font-weight: 400;
 line-height: normal;
-margin-right: 15rem;
+text-align: ri;
 }
-.ty{
-  margin-right: 18rem;
+.escribir::placeholder {
+  padding-left: 1rem;  /* Ajusta el valor según lo que necesites */
 }
-.talle:hover{
-  background-color: var(--grisclaro);
-}
-.boton:hover{
-  background-color: var(--naranjac);
-}
+
+
+
