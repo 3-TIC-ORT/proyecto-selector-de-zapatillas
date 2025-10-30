@@ -25,8 +25,8 @@ function registro(){
 
 function acceso (data) {
         if (data.success === true) {
-            alert("Se ha registrado correctamente el usurio")
-            window.location.href = "../Front end/wireframe_3/html3.html"
+            window.location.href = "../wireframe_3/html3.html"
+
         } else if (data.success === false) {
             alert ("No se ha podido registrar el usuari" + data.message) 
         }
