@@ -13,6 +13,12 @@
     margin: 0;
     padding: 0;
   }
+  body{
+    background-image: url(../imagenes/Vista\ zapatilla.svg);
+    background-position: center
+    ;
+    background-size: cover;
+  }
   @font-face {
     font-family: Inter;
     src: url(../tipos_de_texto/Inter-VariableFont_opsz\,wght.ttf);
@@ -158,7 +164,7 @@
 }
 
 .der{
-    background-color: red;
+    
     flex: 1;
     
         
@@ -213,6 +219,9 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 text-align: ri;
+}
+.escribir::placeholder {
+  padding-left: 1rem;  /* Ajusta el valor según lo que necesites */
 }
 
 

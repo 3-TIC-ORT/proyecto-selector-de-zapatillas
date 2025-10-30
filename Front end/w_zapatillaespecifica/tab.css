@@ -13,6 +13,9 @@
     margin: 0;
     padding: 0;
   }
+  body{
+    background-image: url(../imagenes/Vista\ zapatilla.svg);
+  }
   @font-face {
     font-family: Inter;
     src: url(../tipos_de_texto/Inter-VariableFont_opsz\,wght.ttf);
