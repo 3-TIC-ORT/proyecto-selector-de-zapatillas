@@ -18,10 +18,10 @@ async function getProduct(slug) {
   
   console.log(`\n👟 ${data.title}`);
   console.log(`Marca: ${data.brand}`);
-  console.log(`Precio mínimo: $${data.min_price}`);
-  console.log(`Precio máximo: $${data.max_price}`);
-  console.log(`Color:  $${data.goat.product.colorway}`);
+  console.log(`Precio: $${data.avg_price}`);
   console.log(`Imagen: ${data.image}`);
+  console.log(`Color: ${data.goat_product.colorway}`);
+  
 }
 
 (async () => {
@@ -51,20 +51,3 @@ async function getProduct(slug) {
     }
   })();
 
-  (async () => {
-    try {
-      const slug = 'adidas-yeezy-boost-350-v2-steel-grey';
-      await getProduct(slug);
-    } catch (err) {
-      console.error('❌ Error:', err.message);
-    }
-  })();
-
-  (async () => {
-    try {
-      const slug = 'air-jordan-1-high-og-black-white';
-      await getProduct(slug);
-    } catch (err) {
-      console.error('❌ Error:', err.message);
-    }
-  })();
