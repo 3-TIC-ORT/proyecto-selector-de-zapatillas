@@ -1,8 +1,12 @@
 let menu_lateral = document.getElementById("menu");
 let barras = document.getElementById("lateral");
+const A = document.getElementById('A');
+const B = document.getElementById('B');
+const C = document.getElementById('C');
+const D = document.getElementById('D');
 
 function cambiar() {
-    barras.classList.toggle("visible"); 
+    barras.classList.toggle("visible");
 }
 
 if (menu_lateral) menu_lateral.addEventListener("click", cambiar);
