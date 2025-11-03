@@ -6,6 +6,7 @@ const B = document.getElementById('B');
 const C = document.getElementById('C');
 const D = document.getElementById('D');
 
+
 function cambiar() {
     barras.classList.toggle("visible");
 }
@@ -21,13 +22,26 @@ if (siguiente) {
 
         const seleccionada = document.querySelector('input[name="respuesta"]:checked');
 
-        if (seleccionada) {
-            localStorage.setItem("respuesta1", seleccionada.value);
-            console.log("Respuesta guardada:", seleccionada.value);
-
-            window.location.href = "../pregunta_2/pregunta_2.html";
-        } else {
-            alert("Por favor, seleccioná una opción antes de continuar.");
+        if (!seleccionada) {
+            alert("Por favor, seleccione una respuesta antes de continuar.");
+            return;
         }
+        if (seleccionada.value === "A") {
+            window.location.href = "../pregunta_2/pregunta_2.html"; 
+            
+        }
+        if (seleccionada.value === "B") {
+            window.location.href = "../pregunta_2/pregunta_2.html"; 
+        }
+        if (seleccionada.value === "C") {
+            window.location.href = "../pregunta_2/pregunta_2.html"; 
+        }
+
+        if (seleccionada.value === "D") {
+            window.location.href = "../pregunta_2/pregunta_2.html"; 
+        }
+    
+
+
     });
 }
