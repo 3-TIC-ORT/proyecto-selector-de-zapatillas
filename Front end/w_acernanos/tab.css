@@ -11,7 +11,10 @@
     background-image: url(../imagenes/Rectangle\ 176.png);
     
   }
-  
+  @font-face {
+    font-family: lucki;
+    src: url(../tipos_de_texto/Bitter-Italic-VariableFont_wght.ttf);
+  }
   .encabezado {
     display: flex;
   }
@@ -155,13 +158,18 @@ background: #D9D9D9;
   width: 26rem;
   height: 9.8rem;
   background: #D9D9D9;
+  animation: degrade 4s forwards;
 }
+
 .facha{
   text-align: center;
+  font-family: Lucki ;
+  animation: degrade 4s forwards;
+  margin-top: 2rem;
 
 }
 .faca{
-  width: 20rem;
+  width: 45rem;
   height: 26rem;
 }
   .dr{
@@ -173,4 +181,11 @@ background: #D9D9D9;
   border-radius: 5rem;
   border: 2px solid black;
   
+}
+@keyframes degrade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+  to   { opacity: 2; }
+  to   { opacity: 3; }
+  to   { opacity: 4; }
 }
