@@ -7,6 +7,10 @@
     margin: 0;
     padding: 0;
   }
+  body{
+    background-image: url(../imagenes/Rectangle\ 176.png);
+    
+  }
   
   .encabezado {
     display: flex;
@@ -129,7 +133,7 @@
 
 }
 .tercio{
-  background-color: aqua;
+  
   height:40rem;
   width: 70rem;
   display: flex;
@@ -148,12 +152,12 @@ background: #D9D9D9;
 
 }
 .imagen{
-  width: 25rem;
-  height: 10rem;
+  width: 26rem;
+  height: 9.8rem;
   background: #D9D9D9;
 }
 .facha{
-  
+  text-align: center;
 
 }
 .faca{
@@ -161,5 +165,12 @@ background: #D9D9D9;
   height: 26rem;
 }
   .dr{
-    
+    width: 26rem;
   }
+.mp{
+  height: 17rem;
+  width: 11rem;
+  border-radius: 5rem;
+  border: 2px solid black;
+  
+}
