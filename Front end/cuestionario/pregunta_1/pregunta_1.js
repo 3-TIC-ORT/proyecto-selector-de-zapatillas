@@ -17,6 +17,8 @@ window.addEventListener('click', function(e) {
         barras.classList.remove('visible');
     }
 });
+
+
 if (siguiente) {
     siguiente.addEventListener("click", () => {
 
@@ -28,17 +30,20 @@ if (siguiente) {
         }
         if (seleccionada.value === "A") {
             window.location.href = "../pregunta_2/pregunta_2.html"; 
-            
+            postEvent("respuestaPregunta1", { opcion: "A" }, callback)
         }
         if (seleccionada.value === "B") {
             window.location.href = "../pregunta_2/pregunta_2.html"; 
+            postEvent("respuestaPregunta1", { opcion: "B" }, callback)
         }
         if (seleccionada.value === "C") {
             window.location.href = "../pregunta_2/pregunta_2.html"; 
+            postEvent("respuestaPregunta1", { opcion: "C" }, callback)
         }
 
         if (seleccionada.value === "D") {
             window.location.href = "../pregunta_2/pregunta_2.html"; 
+            postEvent("respuestaPregunta1", { opcion: "D" }, callback)
         }
     
 
