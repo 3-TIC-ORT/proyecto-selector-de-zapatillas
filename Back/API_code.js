@@ -42,9 +42,63 @@ async function getProduct(slug) {
     }
   })();
 
+(async () => {
+    try {
+      const slug = 'nike-air-force-1-low-white-07';
+      await getProduct(slug);
+    } catch (err) {
+      console.error('❌ Error:', err.message);
+    }
+  })();
+
   (async () => {
     try {
-      const slug = 'adidas-yeezy-boost-350-v2-white-core-black-red';
+      const slug = 'air-jordan-4-retro-og-sp-undefeated-2025';
+      await getProduct(slug);
+    } catch (err) {
+      console.error('❌ Error:', err.message);
+    }
+  })();
+
+  (async () => {
+    try {
+      const slug = 'air-jordan-4-retro-sb-navy';
+      await getProduct(slug);
+    } catch (err) {
+      console.error('❌ Error:', err.message);
+    }
+  })();
+
+  (async () => {
+    try {
+      const slug = 'adidas-yeezy-slide-black-onyx';
+      await getProduct(slug);
+    } catch (err) {
+      console.error('❌ Error:', err.message);
+    }
+  })();
+
+  (async () => {
+    try {
+      const slug = 'nike-dunk-low-retro-white-black-2021';
+      await getProduct(slug);
+    } catch (err) {
+      console.error('❌ Error:', err.message);
+    }
+  })();
+
+  (async () => {
+    try {
+      const slug = 'air-jordan-1-retro-high-og-rare-air';
+      await getProduct(slug);
+    } catch (err) {
+      console.error('❌ Error:', err.message);
+    }
+  })();
+
+  (async () => {
+    try {
+      const slug = 'adidas-yeezy-slide-slate-marine';
       await getProduct(slug);
     } catch (err) {
       console.error('❌ Error:', err.message);
