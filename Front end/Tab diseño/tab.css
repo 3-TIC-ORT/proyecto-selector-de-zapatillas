@@ -152,6 +152,7 @@
   display: flex;
   justify-content: space-around;
   margin-top:5.5rem;
+  flex-direction: row-reverse;
   
 }
 
