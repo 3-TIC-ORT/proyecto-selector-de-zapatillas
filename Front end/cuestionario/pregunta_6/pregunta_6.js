@@ -29,20 +29,20 @@ if (siguiente) {
             return;
         }
         if (seleccionada.value === "A") {
-            window.location.href = "../pregunta_2/pregunta_2.html"; 
+            window.location.href = "../pregunta_7/pregunta_7.html";
             postEvent("respuestaPregunta6", { opcion: "A" })
         }
         if (seleccionada.value === "B") {
-            window.location.href = "../pregunta_2/pregunta_2.html"; 
+            window.location.href = "../pregunta_7/pregunta_7.html";
             postEvent("respuestaPregunta6", { opcion: "B" })
         }
         if (seleccionada.value === "C") {
-            window.location.href = "../pregunta_2/pregunta_2.html"; 
+            window.location.href = "../pregunta_7/pregunta_7.html";
             postEvent("respuestaPregunta6", { opcion: "C" })
         }
 
         if (seleccionada.value === "D") {
-            window.location.href = "../pregunta_2/pregunta_2.html"; 
+            window.location.href = "../pregunta_7/pregunta_7.html";
             postEvent("respuestaPregunta6", { opcion: "D" })
         }
     
