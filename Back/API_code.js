@@ -20,8 +20,6 @@ async function getProduct(slug) {
   console.log(`Marca: ${data.brand}`);
   console.log(`Precio: $${data.avg_price}`);
   console.log(`Imagen: ${data.image}`);
-  console.log(`Color: ${data.goat_product.colorway}`);
-  
 }
 
 (async () => {
@@ -105,3 +103,11 @@ async function getProduct(slug) {
     }
   })();
 
+  (async () => {
+    try {
+      const slug = 'air-jordan-1-retro-high-og-black-metalic-gold';
+      await getProduct(slug);
+    } catch (err) {
+      console.error('❌ Error:', err.message);
+    }
+  })();

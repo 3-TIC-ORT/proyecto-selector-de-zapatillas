@@ -16,11 +16,68 @@
     "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Zebra-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
     "Color": "Blanco"
     },
+
     {
-    "Nombre": "Adidas Yeezy Boost 350 V2 Zebra",
+    "Nombre": "Jordan 4 Retro Red Thunder",
+    "Marca": "Jordan",
+    "Precio": "$488",
+    "Imagen": "https://images.stockx.com/images/Air-Jordan-4-Retro-Red-Thunder-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+    "Color": "Rojo"
+    },
+
+    {
+    "Nombre": "adidas Yeezy Slide Onyx",
     "Marca": "Adidas",
-    "Precio": "$324",
-    "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Zebra-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+    "Precio": "$220",
+    "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Slide-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+    "Color": "Negro"
+    },
+
+    {
+    "Nombre": "Jordan 4 Retro OG SP Undefeated",
+    "Marca": "Jordan",
+    "Precio": "$360",
+    "Imagen": "https://images.stockx.com/images/Air-Jordan-4-Retro-OG-SP-Undefeated-2025-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1753819868",
+    "Color": "Gris"
+    },
+
+    {
+    "Nombre": "Jordan 4 Retro SB Navy",
+    "Marca": "Jordan",
+    "Precio": "$240",
+    "Imagen": "https://images.stockx.com/images/Air-Jordan-4-Retro-SB-Navy-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1740411181",
+    "Color": "Blanco"
+    },
+
+    {
+    "Nombre": "Jordan 1 Retro High OG Rare Air",
+    "Marca": "Jordan",
+    "Precio": "$170",
+    "Imagen": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-OG-Rare-Air-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1741385112",
+    "Color": "Azul"
+    },
+
+    {
+    "Nombre": "Nike Dunk Low Retro White Black Panda",
+    "Marca": "Nike",
+    "Precio": "$77",
+    "Imagen": "https://images.stockx.com/images/Nike-Dunk-Low-Retro-White-Black-2021-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+    "Color": "Negro"
+    },
+
+    {
+    "Nombre": "adidas Yeezy Slide Slate Marine",
+    "Marca": "Adidas",
+    "Precio": "$156",
+    "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Slide-Slate-Marine-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+    "Color": "Celeste"
+    },
+
+    {
+    "Nombre": "Nike Air Force 1 Low '07 White",
+    "Marca": "Nike",
+    "Precio": "$110",
+    "Imagen": "https://images.stockx.com/images/Nike-Air-Force-1-Low-White-07_V2-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
     "Color": "Blanco"
     }
 ]
