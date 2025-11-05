@@ -19,8 +19,9 @@ function Registro(Data) {
     if (usuarioexistente === true) {
         return { success: false, message: " El usuario ya existe." }
     }
+
     else if (usuarioexistente === false) {
-        usuarios.push({ nombre, contrasena });
+        usuarios.push({ Nombre: nombre, Contraseña: contrasena });
         fs.writeFileSync("UsuariosRegistrados.json", JSON.stringify(usuarios, null, 2));
         return { success: true, message: "Le damos la bienvenida a nuestro selector de zapatillas", usuarios };
     }
@@ -42,3 +43,7 @@ function InicioSesion(Data) {
 }
 export { InicioSesion };
 
+function Filtradozapatillas(Data) {
+    
+}
+export { Filtradozapatillas }
