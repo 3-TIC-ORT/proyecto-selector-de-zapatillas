@@ -4,6 +4,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function cambiar() {
         barras.classList.toggle("visible"); 
+
+        // 🔒 Bloquear o habilitar scroll según el estado del menú
+        if (barras.classList.contains("visible")) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
     }
 
     menu_lateral.addEventListener("click", cambiar);
@@ -11,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('click', function(e) {
         if (barras.classList.contains('visible') && !barras.contains(e.target) && !menu_lateral.contains(e.target)) {
             barras.classList.remove('visible');
+            // 🔓 Volver a permitir scroll al cerrar el menú
+            document.body.style.overflow = "";
         }
     });
 });
@@ -34,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-  
     const limpiarBoton = document.getElementById("limpiar");
     limpiarBoton.addEventListener("click", () => {
         const selects = document.querySelectorAll("select"); 

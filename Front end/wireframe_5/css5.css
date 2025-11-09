@@ -112,6 +112,7 @@
   flex-wrap: wrap;
   justify-content: center; 
   gap: 8rem;
+  margin-top: 8rem;
 }
 
 .ejemplos{
@@ -225,4 +226,7 @@ h1{
   margin-left: 19rem;
   margin-top: 7.7rem;
   width: 7rem;
+}
+.barra {
+  overflow: hidden;
 }
