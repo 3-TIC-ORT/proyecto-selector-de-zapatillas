@@ -6,6 +6,8 @@ const B = document.getElementById('B');
 const C = document.getElementById('C');
 const D = document.getElementById('D');
 
+// Conectar a SoqueTIC
+connect2Server();
 
 function cambiar() {
     barras.classList.toggle("visible");
@@ -28,25 +30,7 @@ if (siguiente) {
             alert("Por favor, seleccione una respuesta antes de continuar.");
             return;
         }
-        if (seleccionada.value === "A") {
-            window.location.href = "../pregunta_8/pregunta_8.html";
-            postEvent("respuestaPregunta7", { opcion: "A" })
-        }
-        if (seleccionada.value === "B") {
-            window.location.href = "../pregunta_8/pregunta_8.html";
-            postEvent("respuestaPregunta7", { opcion: "B" })
-        }
-        if (seleccionada.value === "C") {
-            window.location.href = "../pregunta_8/pregunta_8.html";
-            postEvent("respuestaPregunta7", { opcion: "C" })
-        }
-
-        if (seleccionada.value === "D") {
-            window.location.href = "../pregunta_8/pregunta_8.html";
-            postEvent("respuestaPregunta7", { opcion: "D" })
-        }
-    
-
-
+        postEvent("respuestaPregunta7", { opcion: seleccionada.value });
+        window.location.href = "../pregunta_8/pregunta_8.html";
     });
 }

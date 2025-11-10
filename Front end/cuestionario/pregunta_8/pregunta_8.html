@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="pregrunta_8.css">
     <link rel="stylesheet" href="../../shared/header.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/JZylber/SoqueTIC-Client@v1.4.2/soquetic-client.js"></script>
     <script defer src="pregunta_8.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +18,7 @@
 
     <div class="barra" id="lateral">
         <div class="links">
-        <a href="#" class="link-barra">
+        <a href="../../wireframe_5/html5.html" class="link-barra">
             <div class="busqueda">
                 <img src="../../imagenes/busqueda.png" alt="zapatilla">
                 <h1>Buscar</h1>
@@ -30,14 +32,14 @@
             </div>
         </a>
             
-        <a href="#" class="link-barra">
+        <a href="../../favoritos/favoritos.html" class="link-barra">
             <div class="favoritos">
                 <img src="../../imagenes/corazon.png" alt="corazon">
                 <h1>Favoritos</h1>
             </div>
         </a>
     
-        <a href="#" class="link-barra">
+        <a href="../../w_acernanos/tab.html" class="link-barra">
             <div class="mi_perfil">
                 <img src="../../imagenes/usuario.png" alt="usuario">
                 <h1>Mi perfil </h1>
@@ -53,14 +55,14 @@
             </div>
         </a>
             
-        <a href="#" class="link-barra">
+        <a href="../../w_acernanos/tab.html" class="link-barra">
             <div class="acerca_nosotros">
                 <img src="../../imagenes/inf.png" alt="informacion">
                 <h1>Acerca de nosotros</h1>
             </div>
         </a>
 
-        <a href="#" class="link-barra">
+        <a href="../../wireframe_1/html1.html" class="link-barra">
             <div class="cerrar">
                 <img src="../../imagenes/Group (1).png" alt="informacion">
                 <h1>Cerrar sesion</h1>
@@ -112,8 +114,7 @@
             </fieldset>
         </form>
         <div class="botonera">
-            <a href="../pregunta_7/pregunta_7.html"><button type="button" class="atras">Atras</button></a>
-            <a href="../pregunta_9/pregunta_9.html"><input type="button" value="Siguiente" class="siguiente"></a>
+            <input type="button" value="Siguiente" class="siguiente" id="enviar">
         </div>
     </div>
    
