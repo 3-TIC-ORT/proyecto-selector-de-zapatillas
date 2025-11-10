@@ -33,3 +33,30 @@ subscribePOSTEvent("filtrarZapatillas", (filtros) => {
 });
 
 startServer(3000);
+
+import { subscribePOSTEvent, startServer } from "soquetic";
+import fs from "fs";
+
+// Escuchar pedidos del frontend
+subscribePOSTEvent("buscarZapatilla", (data) => {
+  const { nombre } = data; // viene desde el frontend
+
+  // Leer el JSON con las zapatillas
+  const jsonData = fs.readFileSync("./backend/zapatillas.json", "utf-8");
+  const zapatillas = JSON.parse(jsonData);
+
+  // Buscar coincidencias (nombre, marca, color o precio)
+  const resultados = zapatillas.filter((z) => {
+    const query = nombre.toLowerCase();
+    return (
+      z.nombre.toLowerCase().includes(query) ||
+      z.marca.toLowerCase().includes(query) ||
+      z.color.toLowerCase().includes(query) ||
+      z.precio.toString().includes(query)
+    );
+  });
+
+  return resultados; // esto vuelve al frontend
+});
+
+startServer(3000);

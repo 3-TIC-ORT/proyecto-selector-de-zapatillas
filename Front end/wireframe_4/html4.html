@@ -13,7 +13,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -63,14 +66,33 @@
             </div>
         </a>
 
-        <a href="../wireframe_1/html1.html" class="link-barra">
-            <div class="cerrar">
-                <img src="../imagenes/Group (1).png" alt="informacion">
-                <h1>Cerrar sesion</h1>
-            </div> 
+        <a href="#">
+            <div class="cerrar" id="cerrar">
+                <div class="cerrar">
+                <img src="../imagenes/Group (1).png" alt="informacion" id="cerrar-img">
+                <h1>Cerrar sesión</h1>
+            </div>
+            </div>
         </a>
-    </div>
+            
+           
+            <div id="input_escondido" class="input_escondido hidden">
+                <div class="aparezca_input">
+                    <p>¿Estás seguro de que quieres cerrar sesión?</p>
+                    <div class="botones">
+                        <div class="si">
+                            <a href="../wireframe_1/html1.html" class="boton">Cerrar Sesión</a>
+                        </div>
+                        <div>
+                            <button id="cancel-button" class="no">Atrás</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
+            </div>
+            <div class="superpuesto"></div>
 
         <head class="encabezado">
             <div class="arriba">

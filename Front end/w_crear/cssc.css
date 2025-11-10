@@ -4,10 +4,10 @@ body{
     flex-direction: column;
     justify-content: center;
     gap: 4rem;
-    background-image: url(Rectangle\ 176.png);
+    background-image: url();
     background-size: cover;
     background-position: center;
-    height: 95vh;
+    height: 100%;
     animation: degrade 2s forwards;
 }
 @keyframes degrade {

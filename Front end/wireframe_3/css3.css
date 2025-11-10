@@ -67,7 +67,7 @@
   }
   
   .info {
-    height: 40rem;
+    height: 50rem;
     background-image: url(../imagenes/Rectangle\ 51.png);
     flex: 1;
     border-radius: 3rem;
@@ -138,5 +138,59 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+  }.input_escondido {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 26rem;
+    
+  }
+  
+  .aparezca_input {
+    background-color: var(--blanco);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--negro);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 8rem;
+  }
+  
+  .botones {
+    display: flex;
+    justify-content: space-around;
+    margin-top:5.5rem;
+    flex-direction: row-reverse;
+    
+  }
+  
+  .si, .no {
+    border-radius: 90px;
+    border: 1px solid var(--negro);
+    width: 7rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .si {
+    background: #FAA307;
+  }
+  
+  .no {
+    background: var(--blanco);
+  }
+  
+  
+  .hidden {
+    display: none;
   }
   

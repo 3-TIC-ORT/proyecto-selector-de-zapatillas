@@ -56,3 +56,16 @@ function desaparecer6() {
 }
 
 favorito6.addEventListener("click", desaparecer6);
+const cerrarImg = document.getElementById("cerrar"); 
+const inputEscondido = document.getElementById("input_escondido");
+const cancelButton = document.getElementById("cancel-button");
+
+
+cerrarImg.addEventListener("click", () => {
+    inputEscondido.classList.remove("hidden");
+});
+
+
+cancelButton.addEventListener("click", () => {
+    inputEscondido.classList.add("hidden");
+});

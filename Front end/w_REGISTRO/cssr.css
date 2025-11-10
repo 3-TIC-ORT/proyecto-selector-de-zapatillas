@@ -9,7 +9,7 @@ body{
     background-image: url(../imagenes/Rectangle\ 176.png) ;
     background-position: center;
     background-size: cover;
-    height: 80vh;
+    height: 95vh;
     animation: degrade 2s forwards;
 }
 

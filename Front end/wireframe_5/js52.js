@@ -69,8 +69,9 @@ limpiarBoton.addEventListener('click', () => {
 window.addEventListener('DOMContentLoaded', aplicarFiltros);
 
 filtroLink.addEventListener('click', (e) => {
-    e.preventDefault();
-    console.log("  Clic en filtroLink");
-    filtroCuadro.style.display = filtroCuadro.style.display === 'none' ? 'block' : 'none';
-    console.log("Estado actual del filtro:", filtroCuadro.style.display);
-  });
+  e.preventDefault();
+  console.log("Clic en el enlace de filtro");
+  filtroCuadro.style.display = filtroCuadro.style.display === 'none' ? 'block' : 'none';
+  console.log("Estado actual del filtro:", filtroCuadro.style.display);
+});
+

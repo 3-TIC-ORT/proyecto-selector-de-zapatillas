@@ -36,7 +36,7 @@
             </div>
         </a>
     
-        <a href="../w_acernanos/tab.html" class="link-barra">
+        <a href="#" class="link-barra">
             <div class="mi_perfil">
                 <img src="../imagenes/usuario.png" alt="usuario">
                 <h1>Mi perfil </h1>
@@ -52,21 +52,42 @@
             </div>
         </a>
             
-        <a href="#" class="link-barra">
+        <a href="../w_acernanos/tab.html" class="link-barra">
             <div class="acerca_nosotros">
                 <img src="../imagenes/inf.png" alt="informacion">
                 <h1>Acerca de nosotros</h1>
             </div>
         </a>
 
-        <a href="../wireframe_1/html1.html" class="link-barra">
+        <a href="#">
+        <div class="cerrar" id="cerrar">
             <div class="cerrar">
-                <img src="../imagenes/Group (1).png" alt="informacion">
-                <h1>Cerrar sesion</h1>
-            </div> 
-        </a>
+            <img src="../imagenes/Group (1).png" alt="informacion" id="cerrar-img">
+            <h1>Cerrar sesión</h1>
+        </div>
+        </div>
+    </a>
+        
+       
+        <div id="input_escondido" class="input_escondido hidden">
+            <div class="aparezca_input">
+                <p>¿Estás seguro de que quieres cerrar sesión?</p>
+                <div class="botones">
+                    <div class="si">
+                        <a href="../wireframe_1/html1.html" class="boton">Cerrar Sesión</a>
+                    </div>
+                    <div>
+                        <button id="cancel-button" class="no">Atrás</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </div>
         </div>
+        <div class="superpuesto"></div>
+
+        
 
 
         <head class="encabezado">
@@ -89,7 +110,7 @@
             <search class="buscar">
                 <div class="custom-input">
                     <img src="../imagenes/busqueda.png" alt="search icon" class="left-icon">
-                    <input type="text" id="busqueda" class="busqueda" placeholder="Buscar">
+                    <input type="search" id="busqueda" class="busqueda" placeholder="Buscar" >
                     <a href="#" id="filtroLink">
                         <img src="../imagenes/Vector (2).svg" alt="filtro icon" class="right-icon" id="filtro">
                     </a>
