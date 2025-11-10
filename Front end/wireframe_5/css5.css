@@ -85,8 +85,8 @@
   font-family: Inter;
   font-size: 1.7rem;
   font-weight: 700;
-  padding-left: 2.5rem;  /* Para espacio entre la imagen y el texto */
-  padding-right: 2.5rem; /* Para espacio entre la imagen y el texto */
+  padding-left: 2.5rem;  
+  padding-right: 2.5rem; 
   outline: none;
 }
 
@@ -113,14 +113,21 @@
   justify-content: center; 
   gap: 8rem;
   margin-top: 4rem;
+  text-align: center;
 }
 
 .ejemplos{
-  height: 15rem;
-  width: 15rem;
+  height: 16rem;
+  width: 16rem;
   background-color: var(--grisv);
   border-radius: 2.2rem;
   margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--negro);
+  
 }
 .ejemplos:hover{
   background-color: var(--grisclaro);
@@ -223,9 +230,11 @@ h1{
 }
 
 .limpiar{
-  margin-left: 19rem;
-  margin-top: 7.7rem;
+  margin-left: 20.5rem;
+  margin-top: 19rem;
   width: 7rem;
+  border-radius: 6px;
+  background-color: orange;
 }
 .barra {
   overflow: hidden;
