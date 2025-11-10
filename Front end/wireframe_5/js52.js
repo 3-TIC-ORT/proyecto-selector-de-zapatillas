@@ -1,59 +1,76 @@
-connect2Server();
+connect2Server(3000); // 🔗 conexión con backend SoqueTIC
 
-const colorelegido = document.getElementById('color');
-const precioelegido = document.getElementById('precio');
-const tipoelegido = document.getElementById('tipo');
-const talleelegido = document.getElementById('talle');
-const marcaelegida = document.getElementById('marca');
+// Referencias a los selects
+const colorSelect = document.getElementById('color');
+const precioSelect = document.getElementById('precio');
+const tipoSelect = document.getElementById('tipo');
+const marcaSelect = document.getElementById('marca');
 const filtroCuadro = document.getElementById('filtroCuadro');
 const filtroLink = document.getElementById('filtroLink');
+const limpiarBoton = document.getElementById('limpiar');
 
+// Mostrar/ocultar el cuadro de filtro
 filtroLink.addEventListener('click', (e) => {
     e.preventDefault();
-    filtroCuadro.style.display = filtroCuadro.style.display === 'none' ? 'block' : 'none';
+    filtroCuadro.style.display = filtroCuadro.style.display === 'none' || filtroCuadro.style.display === ''
+        ? 'block'
+        : 'none';
 });
 
-
+// Aplicar filtros → se comunica con el backend
 function aplicarFiltros() {
     const filtros = {
-        color: colorelegido.value,
-        rangoPrecio: precioelegido.value,
-        tipo: tipoelegido.value,
-        talle: talleelegido.value,
-        marca: marcaelegida.value
+        color: colorSelect.value,
+        precio: precioSelect.value,
+        tipo: tipoSelect.value,
+        marca: marcaSelect.value
     };
 
-    
     postEvent('filtrarZapatillas', filtros, (zapatillasFiltradas) => {
         mostrarResultados(zapatillasFiltradas);
     });
 }
 
+// Mostrar resultados en las tarjetas
 function mostrarResultados(zapatillas) {
-    const contenedor = document.querySelector('resultados');
+    const contenedor = document.querySelector('.octavos');
     contenedor.innerHTML = '';
 
-    if (zapatillas.length === 0) {
-        contenedor.innerHTML = '<p>No se encontraron zapatillas con esos filtros</p>';
+    if (!zapatillas || zapatillas.length === 0) {
+        contenedor.innerHTML = '<p>No se encontraron zapatillas con esos filtros.</p>';
         return;
     }
 
     zapatillas.forEach(zapatilla => {
         const card = document.createElement('div');
-        card.className = 'zapatilla-card';
+        card.className = 'ejemplos';
         card.innerHTML = `
-            <img src="${zapatilla.imagen}" alt="${zapatilla.marca} ${zapatilla.modelo}">
-            <h3>${zapatilla.marca} ${zapatilla.modelo}</h3>
-            <p>Color: ${zapatilla.color}</p>
-            <p>Talle: ${zapatilla.talle}</p>
-            <p>Precio: $${zapatilla.precio}</p>
-            <p>Tipo: ${zapatilla.tipo}</p>
+            <img src="${zapatilla.Imagen}" alt="${zapatilla.Nombre}" style="width:100%;border-radius:1rem;">
+            <h4>${zapatilla.Nombre}</h4>
+            <p>${zapatilla.Marca} - ${zapatilla.Color}</p>
+            <p>${zapatilla.Precio}</p>
         `;
         contenedor.appendChild(card);
     });
 }
 
-
-[colorelegido, precioelegido, tipoelegido, talleelegido, marcaelegida].forEach(select => {
+// Escucha cambios en los filtros
+[colorSelect, precioSelect, tipoSelect, marcaSelect].forEach(select => {
     select.addEventListener('change', aplicarFiltros);
 });
+
+// Botón limpiar filtros
+limpiarBoton.addEventListener('click', () => {
+    [colorSelect, precioSelect, tipoSelect, marcaSelect].forEach(select => (select.selectedIndex = 0));
+    aplicarFiltros();
+});
+
+// Mostrar todas al inicio
+window.addEventListener('DOMContentLoaded', aplicarFiltros);
+
+filtroLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log("  Clic en filtroLink");
+    filtroCuadro.style.display = filtroCuadro.style.display === 'none' ? 'block' : 'none';
+    console.log("Estado actual del filtro:", filtroCuadro.style.display);
+  });

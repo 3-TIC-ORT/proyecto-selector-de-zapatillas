@@ -112,12 +112,12 @@
   flex-wrap: wrap;
   justify-content: center; 
   gap: 8rem;
-  margin-top: 8rem;
+  margin-top: 4rem;
 }
 
 .ejemplos{
-  height: 12rem;
-  width: 12rem;
+  height: 15rem;
+  width: 15rem;
   background-color: var(--grisv);
   border-radius: 2.2rem;
   margin-top: 1rem;
