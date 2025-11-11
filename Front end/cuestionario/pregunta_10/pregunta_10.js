@@ -30,7 +30,7 @@ if (siguiente) {
             alert("Por favor, seleccione una respuesta antes de continuar.");
             return;
         }
-        postEvent("respuestaPregunta10", { opcion: seleccionada.value });
+        postEvent("RP10", { opcion: seleccionada.value });
         window.location.href = "../resultado/resultado.html";
     });
 }
