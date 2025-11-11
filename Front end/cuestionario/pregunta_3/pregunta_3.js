@@ -33,4 +33,16 @@ if (siguiente) {
         postEvent("respuestaPregunta3", { opcion: seleccionada.value });
         window.location.href = "../pregunta_4/pregunta_4.html";
     });
-}
+}const cerrarImg = document.getElementById("cerrar"); 
+const inputEscondido = document.getElementById("input_escondido");
+const cancelButton = document.getElementById("cancel-button");
+
+
+cerrarImg.addEventListener("click", () => {
+    inputEscondido.classList.remove("hidden");
+});
+
+
+cancelButton.addEventListener("click", () => {
+    inputEscondido.classList.add("hidden");
+});
