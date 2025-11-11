@@ -56,7 +56,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener("DOMContentLoaded", () => {
     const zapatilla = JSON.parse(localStorage.getItem("zapatillaSeleccionada"));
-    if (zapatilla) return;
+    if (!zapatilla) return;
   
     document.querySelector(".zapatilla").innerHTML = `<img src="${zapatilla.Imagen}" alt="${zapatilla.Nombre}" style="width:100%;border-radius:1rem;">`;
     document.querySelector(".nombre-zapatilla").textContent = zapatilla.Nombre;
