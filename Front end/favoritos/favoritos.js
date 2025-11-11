@@ -1,18 +1,5 @@
 let menu_lateral = document.getElementById("menu");
 let barras = document.getElementById("lateral");
-let cuadrado1 = document.getElementById("cuadraditos1");
-let cuadrado2 = document.getElementById("cuadraditos2");
-let cuadrado3 = document.getElementById("cuadraditos3");
-let cuadrado4 = document.getElementById("cuadraditos4");
-let cuadrado5 = document.getElementById("cuadraditos5");
-let cuadrado6 = document.getElementById("cuadraditos6");
-
-let favorito1 = document.getElementById("favorito1");
-let favorito2 = document.getElementById("favorito2");
-let favorito3 = document.getElementById("favorito3");
-let favorito4 = document.getElementById("favorito4");
-let favorito5 = document.getElementById("favorito5");
-let favorito6 = document.getElementById("favorito6");
 
 function cambiar() {
     barras.classList.toggle("visible"); 
@@ -20,52 +7,68 @@ function cambiar() {
 
 menu_lateral.addEventListener("click", cambiar);
 window.addEventListener('click', function(e) {
-
     if (barras.classList.contains('visible') && !barras.contains(e.target) && !menu_lateral.contains(e.target)) {
         barras.classList.remove('visible');
     }
 });
 
-function desaparecer() {
-    cuadrado1.classList.toggle("invisible"); 
+//lo de favoritos
+
+connect2Server();
+
+const contenedor = document.querySelector(".cuadrados");
+
+document.addEventListener("DOMContentLoaded", cargarFavoritos);
+
+function cargarFavoritos() {
+    
+    getEvent("obtenerZapatillasFavoritas", (zapatillas) => {
+        
+        if (!zapatillas || !Array.isArray(zapatillas) || zapatillas.length === 0) {
+            contenedor.innerHTML = "<h1>No tienes ninguna zapatilla favorita salva aún.</h1>";
+            return;
+        }
+
+        contenedor.innerHTML = ""; 
+
+        zapatillas.forEach(zapatilla => {
+            const nuevaCaja = crearCajaHTML(zapatilla);
+            contenedor.appendChild(nuevaCaja);
+        });
+    });
 }
 
-favorito1.addEventListener("click", desaparecer);
-function desaparecer2() {
-    cuadrado2.classList.toggle("invisible"); 
-}
-favorito2.addEventListener("click", desaparecer2);
+function crearCajaHTML(zapatilla) {
+    const caja = document.createElement("div");
+    caja.classList.add("cuadradito");
+    caja.dataset.id = zapatilla.id; 
+    
+    const imagenSrc = zapatilla.imagenUrl || zapatilla.foto || '../imagenes/placeholder.png';
 
-function desaparecer3() {
-    cuadrado3.classList.toggle("invisible"); 
-}
-favorito3.addEventListener("click", desaparecer3);
+    caja.innerHTML = `
+        <img class="cuadradito-img" src="${imagenSrc}" alt="${zapatilla.nombre || 'Zapatilla'}">
+        <p>${zapatilla.nombre || 'Zapatilla Favorita'}</p>
+        <img class="fav-icon" src="../imagenes/favorito.png" alt="Quitar favorito">
+    `;
 
-function desaparecer4() {
-    cuadrado4.classList.toggle("invisible"); 
-}
-favorito4.addEventListener("click", desaparecer4);
+    const iconoCorazon = caja.querySelector(".fav-icon");
+    iconoCorazon.addEventListener("click", quitarFavorito);
 
-function desaparecer5() {
-    cuadrado5.classList.toggle("invisible"); 
-}
-favorito5.addEventListener("click", desaparecer5);
-
-function desaparecer6() {
-    cuadrado6.classList.toggle("invisible"); 
+    return caja;
 }
 
-favorito6.addEventListener("click", desaparecer6);
-const cerrarImg = document.getElementById("cerrar"); 
-const inputEscondido = document.getElementById("input_escondido");
-const cancelButton = document.getElementById("cancel-button");
+function quitarFavorito(event) {
+    const icono = event.target;
+    const cajaParaEliminar = icono.closest(".cuadradito");
+    const idParaEliminar = cajaParaEliminar.dataset.id;
 
+    cajaParaEliminar.classList.add("hiding");
 
-cerrarImg.addEventListener("click", () => {
-    inputEscondido.classList.remove("hidden");
-});
+    setTimeout(() => {
+        cajaParaEliminar.remove();
+    }, 300); 
 
-
-cancelButton.addEventListener("click", () => {
-    inputEscondido.classList.add("hidden");
-});
+    getEvent(`quitarFavorito?id=${idParaEliminar}`, (respuesta) => {
+        console.log(`Zapatilla ${idParaEliminar} eliminada. Respuesta del servidor:`, respuesta);
+    });
+}
