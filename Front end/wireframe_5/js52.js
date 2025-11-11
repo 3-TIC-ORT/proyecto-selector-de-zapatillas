@@ -1,6 +1,6 @@
-connect2Server(3000); // 🔗 conexión con backend SoqueTIC
+connect2Server(3000); 
 
-// Referencias a los selects
+
 const colorSelect = document.getElementById('color');
 const precioSelect = document.getElementById('precio');
 const tipoSelect = document.getElementById('tipo');
@@ -9,7 +9,7 @@ const filtroCuadro = document.getElementById('filtroCuadro');
 const filtroLink = document.getElementById('filtroLink');
 const limpiarBoton = document.getElementById('limpiar');
 
-// Mostrar/ocultar el cuadro de filtro
+
 filtroLink.addEventListener('click', (e) => {
     e.preventDefault();
     filtroCuadro.style.display = filtroCuadro.style.display === 'none' || filtroCuadro.style.display === ''
@@ -17,7 +17,7 @@ filtroLink.addEventListener('click', (e) => {
         : 'none';
 });
 
-// Aplicar filtros → se comunica con el backend
+
 function aplicarFiltros() {
     const filtros = {
         color: colorSelect.value,
@@ -54,18 +54,18 @@ function mostrarResultados(zapatillas) {
     });
 }
 
-// Escucha cambios en los filtros
+
 [colorSelect, precioSelect, tipoSelect, marcaSelect].forEach(select => {
     select.addEventListener('change', aplicarFiltros);
 });
 
-// Botón limpiar filtros
+
 limpiarBoton.addEventListener('click', () => {
     [colorSelect, precioSelect, tipoSelect, marcaSelect].forEach(select => (select.selectedIndex = 0));
     aplicarFiltros();
 });
 
-// Mostrar todas al inicio
+
 window.addEventListener('DOMContentLoaded', aplicarFiltros);
 
 filtroLink.addEventListener('click', (e) => {
@@ -75,3 +75,38 @@ filtroLink.addEventListener('click', (e) => {
   console.log("Estado actual del filtro:", filtroCuadro.style.display);
 });
 
+function mostrarResultados(zapatillas) {
+    const contenedor = document.querySelector('.octavos');
+    if (!contenedor) {
+        console.error("No se encontró el contenedor '.octavos' en el DOM.");
+        return;
+    }
+
+    contenedor.innerHTML = '';
+
+    if (!zapatillas || zapatillas.length === 0) {
+        contenedor.innerHTML = '<p>No se encontraron zapatillas con esos filtros.</p>';
+        return;
+    }
+
+    zapatillas.forEach(zapatilla => {
+        const card = document.createElement('div');
+        card.className = 'ejemplos';
+        card.innerHTML = `
+            <img src="${zapatilla.Imagen}" alt="${zapatilla.Nombre}" style="width:100%;border-radius:1rem;">
+            <h4>${zapatilla.Nombre}</h4>
+            <p>${zapatilla.Marca} - ${zapatilla.Color}</p>
+            <p>${zapatilla.Precio}</p>`;
+        
+            card.addEventListener('click', () => {
+            try {
+                localStorage.setItem('zapatillaSeleccionada', JSON.stringify(zapatilla));
+                window.location.href = "../w_zapatillaespecifica copy/tab.html";
+            } catch (err) {
+                console.error("Error al guardar y redirigir:", err);
+            }
+        });
+
+        contenedor.appendChild(card);
+    });
+}

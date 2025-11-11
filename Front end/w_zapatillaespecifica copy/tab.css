@@ -155,13 +155,15 @@
 
 }
 .zapatilla{
-  height: 29rem;
-  width: 29rem;
-  background-color: var(--blanco)
+height: 36rem;
+  width: 36rem;
+  background-color: var(--blanco);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
-.zapatilla:hover{
- background-color: var(--grisclaro);
-}
+
 
 .der{
     
@@ -206,23 +208,53 @@ margin-top: 4px;
 .escribir{
   border-radius: 40px;
 border: 2px solid #000;
-
 background: #FFF;
 width: 35rem;
 height: 3rem;
 flex-shrink: 0;
 color: #717171;
-
 font-family: Inter;
 font-size: 1rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
 text-align: ri;
+margin-top: 15rem;
 }
 .escribir::placeholder {
-  padding-left: 1rem;  /* Ajusta el valor según lo que necesites */
+  padding-left: 1rem; 
 }
 
+.nombre-zapatilla{
+  font-family: Inter;
+  font-size: 4rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-top: 4rem;
+}
+.precios{
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem;
+}
 
+.precio-zapatilla{
+  margin-left: 1rem;
+  color: var(--naranja);
+  font-family: Inter;
+  font-size: 4rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  
+}
+.PP{
+  
+  font-family: Inter;
+  font-size: 4rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
 

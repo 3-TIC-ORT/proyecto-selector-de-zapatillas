@@ -32,4 +32,18 @@ subscribePOSTEvent("filtrarZapatillas", (filtros) => {
   return resultado;
 });
 
+// === BUSQUEDA POR NOMBRE ===
+subscribePOSTEvent("buscarZapatilla", (data) => {
+  const { nombre } = data;
+  const query = nombre.toLowerCase();
+
+  const resultados = zapatillas.filter((z) =>
+    z.Nombre.toLowerCase().includes(query) ||
+    z.Marca.toLowerCase().includes(query) ||
+    z.Color.toLowerCase().includes(query)
+  );
+
+  return resultados;
+});
+
 startServer(3000);
