@@ -1,10 +1,10 @@
+// server.js
 import { subscribePOSTEvent, startServer } from "soquetic";
 import fs from "fs";
 
-// Leer zapatillas desde el JSON
 const zapatillas = JSON.parse(fs.readFileSync("./zapatillas.json", "utf-8"));
 
-// Escuchar evento desde el frontend
+// 🟢 Escucha pedidos de filtrado
 subscribePOSTEvent("filtrarZapatillas", (filtros) => {
   let resultado = zapatillas.filter((z) => {
     const coincideColor =
@@ -14,7 +14,7 @@ subscribePOSTEvent("filtrarZapatillas", (filtros) => {
     const coincideTipo =
       filtros.tipo === "Cualquiera" || z.Tipo?.toLowerCase() === filtros.tipo.toLowerCase();
 
-    // Convertir "$128" → 128
+    // Convertimos precios tipo "$128" → número 128
     const precioNum = parseFloat(z.Precio.replace("$", ""));
     let coincidePrecio = true;
     switch (filtros.precio) {
@@ -30,33 +30,6 @@ subscribePOSTEvent("filtrarZapatillas", (filtros) => {
   });
 
   return resultado;
-});
-
-startServer(3000);
-
-import { subscribePOSTEvent, startServer } from "soquetic";
-import fs from "fs";
-
-// Escuchar pedidos del frontend
-subscribePOSTEvent("buscarZapatilla", (data) => {
-  const { nombre } = data; // viene desde el frontend
-
-  // Leer el JSON con las zapatillas
-  const jsonData = fs.readFileSync("./backend/zapatillas.json", "utf-8");
-  const zapatillas = JSON.parse(jsonData);
-
-  // Buscar coincidencias (nombre, marca, color o precio)
-  const resultados = zapatillas.filter((z) => {
-    const query = nombre.toLowerCase();
-    return (
-      z.nombre.toLowerCase().includes(query) ||
-      z.marca.toLowerCase().includes(query) ||
-      z.color.toLowerCase().includes(query) ||
-      z.precio.toString().includes(query)
-    );
-  });
-
-  return resultados; // esto vuelve al frontend
 });
 
 startServer(3000);
