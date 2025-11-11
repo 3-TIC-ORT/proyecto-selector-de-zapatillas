@@ -108,5 +108,5 @@ function mostrarResultados(zapatillas) {
         });
 
         contenedor.appendChild(card);
-    });
+});
 }

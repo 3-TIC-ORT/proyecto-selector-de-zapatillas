@@ -31,8 +31,8 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 window.addEventListener("beforeunload", () => {
     localStorage.removeItem("zapatillaSeleccionada");
-  });
-  // === Mostrar la zapatilla seleccionada en la página de detalle ===
+});
+ 
 window.addEventListener('DOMContentLoaded', () => {
     const zapatillaSeleccionada = JSON.parse(localStorage.getItem('zapatillaSeleccionada'));
 
@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    // Mostrar imagen en el div izquierdo
+   
     const divZapatilla = document.querySelector('.zapatilla');
     if (divZapatilla) {
         divZapatilla.innerHTML = `
@@ -56,9 +56,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener("DOMContentLoaded", () => {
     const zapatilla = JSON.parse(localStorage.getItem("zapatillaSeleccionada"));
-    if (!zapatilla) return;
+    if (zapatilla) return;
   
-    document.querySelector(".zapatilla").innerHTML = <img src="${zapatilla.Imagen}" alt="${zapatilla.Nombre}" style="width:100%;border-radius:1rem;"img/>;
+    document.querySelector(".zapatilla").innerHTML = `<img src="${zapatilla.Imagen}" alt="${zapatilla.Nombre}" style="width:100%;border-radius:1rem;">`;
     document.querySelector(".nombre-zapatilla").textContent = zapatilla.Nombre;
     document.querySelector(".precio-zapatilla").textContent = zapatilla.Precio;
-  });
+});
