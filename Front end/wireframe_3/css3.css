@@ -71,6 +71,19 @@
     background-image: url(../imagenes/Rectangle\ 51.png);
     flex: 1;
     border-radius: 3rem;
+    display: flex;
+    justify-content:center ;
+    flex-direction: column;
+    gap: 10rem;
+  }
+  .img{
+    height: 15rem;
+  }
+  .imf{
+    height: 10rem;
+  }
+  .imr{
+    height: 32rem;
   }
   
   .barra {
