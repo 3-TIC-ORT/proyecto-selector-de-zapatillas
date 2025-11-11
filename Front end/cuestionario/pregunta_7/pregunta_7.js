@@ -6,7 +6,6 @@ const B = document.getElementById('B');
 const C = document.getElementById('C');
 const D = document.getElementById('D');
 
-// Conectar a SoqueTIC
 connect2Server();
 
 function cambiar() {
