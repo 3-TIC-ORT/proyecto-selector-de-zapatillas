@@ -1,5 +1,8 @@
 import fs from "fs";
 
+let crearcomentario = null
+let mensajes = JSON.parse(fs.readFileSync("Comentarios.json", "utf-8"))
+
 function Registro(Data) {
     let usuarios = [];
     const { nombre, contrasena } = Data
@@ -43,7 +46,16 @@ function InicioSesion(Data) {
 }
 export { InicioSesion };
 
-function Filtradozapatillas(Data) {
-    
+function Comentario (Data) {
+    Comentario: Data.crearcomentario,
+    mensajes.push(
+        {
+            "Mensaje": Data.crearcomentario,
+            "Autor": Data.NOMBRE 
+        }
+    )
+    fs.writeFileSync ("Comentarios.json", JSON.stringify(mensajes, null, 2))
+ return "Comentario guardado"
 }
-export { Filtradozapatillas }
+
+export { Comentario }
