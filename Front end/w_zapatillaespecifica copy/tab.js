@@ -72,3 +72,11 @@ window.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".precio-zapatilla").textContent = zapatilla.Precio;
 });
 
+postEvent ("Comentario",{
+    Autor:localStorage.getItem("Nombre"),
+    Mensaje: document.getElementById("comentario").value
+} , postearcomentario (Data))
+
+function postearcomentario(Data){
+    console.log (Data)
+}

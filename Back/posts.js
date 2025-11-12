@@ -8,6 +8,6 @@ import {Comentario} from "./FUNCIONES.js";
 
 subscribePOSTEvent ("iniciarsesion", InicioSesion);
 subscribePOSTEvent ("registro", Registro);
-subscribePOSTEvent ("comentario", Comentario)
+subscribePOSTEvent ("Comentario", Comentario)
 
 startServer();
