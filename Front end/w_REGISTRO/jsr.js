@@ -2,8 +2,9 @@ let usuario = document.getElementById ("usuario")
 
 connect2Server();
 
-function registro(){
-    let Nombre = document.getElementById ('nombre').value
+function registro(e){
+   
+   let Nombre = document.getElementById ('nombre').value
     let Contraseña = document.getElementById ('contrasena').value
      if (!Nombre || ! Contraseña) {
         alert ("Por favor complete con todos sus datos");
@@ -28,8 +29,8 @@ function acceso (data) {
             window.location.href = "../wireframe_3/html3.html"
 
         } else if (data.success === false) {
-            alert ("No se ha podido registrar el usuari" + data.message) 
+            alert ("No se ha podido registrar el usuario" + data.message) 
         }
     }
     
-     usuario.addEventListener ("click", registro);
+usuario.addEventListener ("click", registro);
