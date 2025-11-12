@@ -18,6 +18,7 @@ let corazon = document.getElementById("fav");
 if (corazon) {
   corazon.addEventListener("click", function () {
     corazon.classList.toggle("tocado");
+    
   });
 }
 
