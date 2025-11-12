@@ -70,7 +70,7 @@
   
   .barra {
     width: 40%; 
-    height: 119vh; 
+    height: 95vh; 
     flex-shrink: 0;
     background: #FFF;
     border-right: 0.1875rem solid black; 
@@ -336,6 +336,7 @@
 
 .si {
   background: #FAA307;
+  color: var(--blanco);
 }
 
 .no {

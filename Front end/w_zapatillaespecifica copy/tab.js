@@ -13,6 +13,15 @@ window.addEventListener('click', function(e) {
     }
 });
 
+
+let corazon = document.getElementById("fav");
+if (corazon) {
+  corazon.addEventListener("click", function () {
+    corazon.classList.toggle("tocado");
+  });
+}
+
+
 window.addEventListener("DOMContentLoaded", () => {
     const zapatilla = JSON.parse(localStorage.getItem("zapatillaSeleccionada"));
 
@@ -62,3 +71,4 @@ window.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".nombre-zapatilla").textContent = zapatilla.Nombre;
     document.querySelector(".precio-zapatilla").textContent = zapatilla.Precio;
 });
+
