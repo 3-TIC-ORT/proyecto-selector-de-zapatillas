@@ -73,11 +73,16 @@ window.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".precio-zapatilla").textContent = zapatilla.Precio;
 });
 
-postEvent ("Comentario",{
-    Autor:localStorage.getItem("Nombre"),
-    Mensaje: document.getElementById("comentario").value
-} , postearcomentario (Data))
+document.getElementById("comentar").addEventListener("click", function () {
 
-function postearcomentario(Data){
-    console.log (Data)
+    postEvent("Comentario", {
+        NOMBRE: localStorage.getItem("Nombre"),
+        crearcomentario: document.getElementById("comentario").value
+    }, postearcomentario);
+});
+
+
+function postearcomentario(Data) {
+    console.log("Respuesta del backend:");
+    console.log(Data);
 }

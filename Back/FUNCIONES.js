@@ -1,7 +1,6 @@
 import fs from "fs";
+import path from "path";
 
-let crearcomentario = null
-let comentario = JSON.parse(fs.readFileSync("Comentarios.json", "utf-8"))
 
 function Registro(Data) {
     let usuarios = [];
@@ -46,16 +45,42 @@ function InicioSesion(Data) {
 }
 export { InicioSesion };
 
-function Comentario (Data) {
-    comentario: Data.crearcomentario,
-    comentario.push(
-        {
-            "Mensaje": Data.crearcomentario,
-            "Autor": Data.NOMBRE 
-        }
-    )
-    fs.writeFileSync ("Comentarios.json", JSON.stringify(comentario, null, 2))
- return "Comentario guardado"
+
+function Comentario(Data) {
+    let usuario = Data.NOMBRE
+    let comentario = Data.crearcomentario
+
+    const DATA_FILE = path.resolve(process.cwd(), 'Comentarios.json');
+  if (!Data || !Data.crearcomentario || !Data.NOMBRE) {
+    return { success: false, error: 'Faltan campos: "crearcomentario" y "NOMBRE" son requeridos.' };
+  }
+
+
+  let comentarios = [];
+  try {
+    const raw = fs.readFileSync(DATA_FILE, 'utf8');
+    comentarios = JSON.parse(raw);
+    if (!Array.isArray(comentarios)) comentarios = [];
+  } catch (err) {
+    if (err.code !== 'ENOENT') {
+      return { success: false, error: 'Error al leer el archivo: ' + err.message };
+    }
+  }
+
+  const comentarioNuevo = {
+    Mensaje: comentario,
+    Autor: usuario
+  };
+
+  comentarios.push(comentarioNuevo);
+
+  try {
+    fs.writeFileSync(DATA_FILE, JSON.stringify(comentarios, null, 2), 'utf8');
+  } catch (err) {
+    return { success: false, error: 'Error al escribir el archivo: ' + err.message };
+  }
+
+  return { success: true, mensaje: 'Comentario guardado', comentario: comentarioNuevo };
 }
 
-export { Comentario }
+export { Comentario };

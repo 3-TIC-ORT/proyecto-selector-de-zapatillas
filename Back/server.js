@@ -1,10 +1,9 @@
-// server.js
 import { subscribePOSTEvent, startServer } from "soquetic";
 import fs from "fs";
 
 const zapatillas = JSON.parse(fs.readFileSync("./zapatillas.json", "utf-8"));
 
-// 🟢 Escucha pedidos de filtrado
+
 subscribePOSTEvent("filtrarZapatillas", (filtros) => {
   let resultado = zapatillas.filter((z) => {
     const coincideColor =
@@ -14,7 +13,7 @@ subscribePOSTEvent("filtrarZapatillas", (filtros) => {
     const coincideTipo =
       filtros.tipo === "Cualquiera" || z.Tipo?.toLowerCase() === filtros.tipo.toLowerCase();
 
-    // Convertimos precios tipo "$128" → número 128
+
     const precioNum = parseFloat(z.Precio.replace("$", ""));
     let coincidePrecio = true;
     switch (filtros.precio) {
@@ -32,7 +31,6 @@ subscribePOSTEvent("filtrarZapatillas", (filtros) => {
   return resultado;
 });
 
-// === BUSQUEDA POR NOMBRE ===
 subscribePOSTEvent("buscarZapatilla", (data) => {
   const { nombre } = data;
   const query = nombre.toLowerCase();
