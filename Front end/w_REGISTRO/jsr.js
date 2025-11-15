@@ -3,9 +3,9 @@ let usuario = document.getElementById ("usuario")
 connect2Server();
 
 function registro(e){
-   
+
    let Nombre = document.getElementById ('nombre').value
-    let Contraseña = document.getElementById ('contrasena').value
+   let Contraseña = document.getElementById ('contrasena').value
      if (!Nombre || ! Contraseña) {
         alert ("Por favor complete con todos sus datos");
         return;

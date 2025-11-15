@@ -6,7 +6,7 @@ const B = document.getElementById('B');
 const C = document.getElementById('C');
 const D = document.getElementById('D');
 
-// Conectar a SoqueTIC
+
 connect2Server();
 
 function cambiar() {
@@ -33,7 +33,8 @@ if (siguiente) {
         postEvent("RP1", { opcion: seleccionada.value });
         window.location.href = "../pregunta_2/pregunta_2.html";
     });
-}const cerrarImg = document.getElementById("cerrar"); 
+}
+const cerrarImg = document.getElementById("cerrar"); 
 const inputEscondido = document.getElementById("input_escondido");
 const cancelButton = document.getElementById("cancel-button");
 

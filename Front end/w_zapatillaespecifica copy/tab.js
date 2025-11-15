@@ -1,3 +1,5 @@
+connect2Server();
+
 let menu_lateral = document.getElementById("menu");
 let barras = document.getElementById("lateral");
 
@@ -73,14 +75,15 @@ window.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".precio-zapatilla").textContent = zapatilla.Precio;
 });
 
+
 document.getElementById("comentar").addEventListener("click", function () {
 
+    console.log("Comentario enviado");
     postEvent("Comentario", {
-        NOMBRE: localStorage.getItem("Nombre"),
+        Nombre: localStorage.getItem("Nombre"),
         crearcomentario: document.getElementById("comentario").value
     }, postearcomentario);
 });
-
 
 function postearcomentario(Data) {
     console.log("Respuesta del backend:");
