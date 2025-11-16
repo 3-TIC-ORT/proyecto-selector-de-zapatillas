@@ -1,12 +1,7 @@
 let menu_lateral = document.getElementById("menu");
 let barras = document.getElementById("lateral");
 let siguiente = document.getElementById("enviar");
-const A = document.getElementById('A');
-const B = document.getElementById('B');
-const C = document.getElementById('C');
-const D = document.getElementById('D');
 
-// Conectar a SoqueTIC
 connect2Server();
 
 function cambiar() {
@@ -30,7 +25,24 @@ if (siguiente) {
             alert("Por favor, seleccione una respuesta antes de continuar.");
             return;
         }
-        postEvent("RP10", { opcion: seleccionada.value });
+
+        sessionStorage.setItem("RP10", seleccionada.value);
+
+        const respuestasCompletas = {
+            rp1: sessionStorage.getItem("RP1"),
+            rp2: sessionStorage.getItem("RP2"),
+            rp3: sessionStorage.getItem("RP3"),
+            rp4: sessionStorage.getItem("RP4"),
+            rp5: sessionStorage.getItem("RP5"),
+            rp6: sessionStorage.getItem("RP6"),
+            rp7: sessionStorage.getItem("RP7"),
+            rp8: sessionStorage.getItem("RP8"),
+            rp9: sessionStorage.getItem("RP9"),
+            rp10: sessionStorage.getItem("RP10")
+        };
+        
+        ("calcularRecomendaciones", respuestasCompletas);
+
         window.location.href = "../resultado/resultado.html";
     });
 }
@@ -38,12 +50,14 @@ const cerrarImg = document.getElementById("cerrar");
 const inputEscondido = document.getElementById("input_escondido");
 const cancelButton = document.getElementById("cancel-button");
 
+if (cerrarImg) {
+    cerrarImg.addEventListener("click", () => {
+        if (inputEscondido) inputEscondido.classList.remove("hidden");
+    });
+}
 
-cerrarImg.addEventListener("click", () => {
-    inputEscondido.classList.remove("hidden");
-});
-
-
-cancelButton.addEventListener("click", () => {
-    inputEscondido.classList.add("hidden");
-});
+if (cancelButton) {
+    cancelButton.addEventListener("click", () => {
+        if (inputEscondido) inputEscondido.classList.add("hidden");
+    });
+}

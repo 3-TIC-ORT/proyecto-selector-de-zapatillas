@@ -1,10 +1,6 @@
 let menu_lateral = document.getElementById("menu");
 let barras = document.getElementById("lateral");
 let siguiente = document.getElementById("enviar");
-const A = document.getElementById('A');
-const B = document.getElementById('B');
-const C = document.getElementById('C');
-const D = document.getElementById('D');
 
 connect2Server();
 
@@ -29,7 +25,8 @@ if (siguiente) {
             alert("Por favor, seleccione una respuesta antes de continuar.");
             return;
         }
-        postEvent("RP7", { opcion: seleccionada.value });
+
+        sessionStorage.setItem("RP7", seleccionada.value);
         window.location.href = "../pregunta_8/pregunta_8.html";
     });
 }
@@ -37,12 +34,14 @@ const cerrarImg = document.getElementById("cerrar");
 const inputEscondido = document.getElementById("input_escondido");
 const cancelButton = document.getElementById("cancel-button");
 
+if (cerrarImg) {
+    cerrarImg.addEventListener("click", () => {
+        if (inputEscondido) inputEscondido.classList.remove("hidden");
+    });
+}
 
-cerrarImg.addEventListener("click", () => {
-    inputEscondido.classList.remove("hidden");
-});
-
-
-cancelButton.addEventListener("click", () => {
-    inputEscondido.classList.add("hidden");
-});
+if (cancelButton) {
+    cancelButton.addEventListener("click", () => {
+        if (inputEscondido) inputEscondido.classList.add("hidden");
+    });
+}
