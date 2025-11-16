@@ -84,3 +84,46 @@ function Comentario(Data) {
 }
 
 export { Comentario };
+
+const zapatillas = JSON.parse(fs.readFileSync("./zapatillas.n", "utf-8"));jso
+
+function FiltrarZapatillas(Data) {
+
+    // Cargar zapatillas desde el JSON
+    let zapatillas = JSON.parse(fs.readFileSync("zapatillas.json", "utf-8"));
+
+    // Filtrar
+    let resultado = zapatillas.filter((z) => {
+
+        let coincideColor =
+            Data.color === "Cualquiera" ||
+            z.Color.toLowerCase() === Data.color.toLowerCase();
+
+        let coincideMarca =
+            Data.marca === "Cualquiera" ||
+            z.Marca.toLowerCase() === Data.marca.toLowerCase();
+
+        let coincideTipo =
+            Data.tipo === "Cualquiera" ||
+            (z.Tipo && z.Tipo.toLowerCase() === Data.tipo.toLowerCase());
+
+        // Convertir "$150" → 150
+        let precioNum = parseFloat(z.Precio.replace("$", ""));
+        let coincidePrecio = true;
+
+        switch (Data.precio) {
+            case "k": coincidePrecio = precioNum < 50; break;
+            case "kk": coincidePrecio = precioNum >= 50 && precioNum < 100; break;
+            case "kkk": coincidePrecio = precioNum >= 100 && precioNum < 150; break;
+            case "kkkk": coincidePrecio = precioNum >= 150 && precioNum < 200; break;
+            case "kkkkk": coincidePrecio = precioNum >= 200 && precioNum < 250; break;
+            case "kkkkkk": coincidePrecio = precioNum >= 250; break;
+        }
+
+        return coincideColor && coincideMarca && coincideTipo && coincidePrecio;
+    });
+
+    return resultado;
+}
+
+export { FiltrarZapatillas };
