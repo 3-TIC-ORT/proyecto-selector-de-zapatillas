@@ -85,14 +85,11 @@ function Comentario(Data) {
 
 export { Comentario };
 
-const zapatillas = JSON.parse(fs.readFileSync("./zapatillas.n", "utf-8"));jso
 
 function FiltrarZapatillas(Data) {
 
-    // Cargar zapatillas desde el JSON
     let zapatillas = JSON.parse(fs.readFileSync("zapatillas.json", "utf-8"));
 
-    // Filtrar
     let resultado = zapatillas.filter((z) => {
 
         let coincideColor =
@@ -107,7 +104,6 @@ function FiltrarZapatillas(Data) {
             Data.tipo === "Cualquiera" ||
             (z.Tipo && z.Tipo.toLowerCase() === Data.tipo.toLowerCase());
 
-        // Convertir "$150" → 150
         let precioNum = parseFloat(z.Precio.replace("$", ""));
         let coincidePrecio = true;
 
