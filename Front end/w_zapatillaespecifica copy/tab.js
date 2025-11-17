@@ -88,15 +88,32 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
-document.getElementById("comentar").addEventListener("click", function () {
-    console.log("Comentario enviado");
+document.getElementById("comentar").addEventListener("click", function (e) {
+    e.preventDefault(); // ← evita recargar SI O SI
+
+    const texto = document.getElementById("comentario").value.trim();
+    if (texto === "") return;
+
+    const usuario = localStorage.getItem("nombreusuario");
+
+    // Mostrarlo inmediatamente en pantalla
+    agregarComentarioEnPantalla(usuario, texto);
+
+    // Enviar al backend
     postEvent("Comentario", {
-        Nombre: nombreUsuario,
-        crearcomentario: document.getElementById("comentario").value
-    }, postearcomentario);
+        Nombre: usuario,
+        crearcomentario: texto
+    }, (respuesta) => {
+        console.log("Respuesta del backend:", respuesta);
+    });
+
+    document.getElementById("comentario").value = "";
 });
 
-function postearcomentario(Data) {
-    console.log("Respuesta del backend:");
-    console.log(Data);
+function agregarComentarioEnPantalla(autor, mensaje) {
+    const div = document.createElement("div");
+    div.className = "comentario";
+    div.innerHTML = `<p><strong>${autor}:</strong> ${mensaje}</p>`;
+
+    document.querySelector(".lista-comentarios").prepend(div);
 }
