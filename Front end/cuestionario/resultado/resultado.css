@@ -189,3 +189,13 @@ h1{
     font-weight: 700;
     line-height: normal;
 }
+
+p{
+  color: #000;
+  font-family: "Lexend Deca";
+  font-size: 1.25rem; 
+  font-style: normal;
+  font-weight: 350;
+  line-height: normal;
+  margin: auto;
+}

@@ -27,7 +27,7 @@ if (siguiente) {
         }
 
         sessionStorage.setItem("RP5", seleccionada.value);
-        window.location.href = "../pregunta_6/pregunta_6.html";
+        window.location.href = "../pregunta_10/pregunta_10.html";
     });
 }
 const cerrarImg = document.getElementById("cerrar"); 
@@ -43,5 +43,5 @@ if (cerrarImg) {
 if (cancelButton) {
     cancelButton.addEventListener("click", () => {
         if (inputEscondido) inputEscondido.classList.add("hidden");
-    });
+    })
 }

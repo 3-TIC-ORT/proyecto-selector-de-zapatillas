@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     connect2Server();
 
-    subscribeRealTimeEvent("recomendaciones", (data) => {
+    getEvent("recomendaciones", (data) => {
         displayShoes(data.shoes);
     });
 
