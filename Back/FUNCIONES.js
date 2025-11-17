@@ -33,8 +33,7 @@ export { Registro }
 function InicioSesion(Data) {
     let usuarios = []
     usuarios = JSON.parse(fs.readFileSync("UsuariosRegistrados.json", "utf-8"));
-    let usuarioSesion = null;
-    usuarioSesion = usuarios.find((usuario) => Data.Nombre === usuario.Nombre && Data.Contraseña === usuario.Contraseña)
+    let usuarioSesion = usuarios.find((usuario) => Data.Nombre === usuario.Nombre && Data.Contraseña === usuario.Contraseña)
 
     if(usuarioSesion !== undefined) {
         return { ok: true, info: "Login Exitoso"}
@@ -47,11 +46,11 @@ export { InicioSesion };
 
 
 function Comentario(Data) {
-    let usuario = Data.NOMBRE
+    let usuario = Data.Nombre
     let comentario = Data.crearcomentario
 
     const DATA_FILE = path.resolve(process.cwd(), 'Comentarios.json');
-  if (!Data || !Data.crearcomentario || !Data.NOMBRE) {
+  if (!Data || !comentario || !usuario) {
     return { success: false, error: 'Faltan campos: "crearcomentario" y "NOMBRE" son requeridos.' };
   }
 
