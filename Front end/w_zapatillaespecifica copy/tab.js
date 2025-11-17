@@ -2,6 +2,8 @@ connect2Server();
 
 let menu_lateral = document.getElementById("menu");
 let barras = document.getElementById("lateral");
+const sesion = localStorage.getItem("usuarioSesion");
+const nombreUsuario = localStorage.getItem("nombreusuario");
 
 function cambiar() {
     barras.classList.toggle("visible"); 
@@ -20,9 +22,7 @@ let corazon = document.getElementById("fav");
         corazon.addEventListener("click", function () {
             corazon.classList.toggle("tocado");
 
-            const zapatillaSeleccionada = JSON.parse(localStorage.getItem("zapatillaSeleccionada"));
-            const nombreUsuario = localStorage.getItem("Nombre"); // Asumo que el nombre está guardado
-
+            const zapatillaSeleccionada = JSON.parse(localStorage.getItem("zapatillaSeleccionada")); 
             if (!zapatillaSeleccionada || !nombreUsuario) {
                 console.error("Error: No se encontró la zapatilla o el nombre de usuario en localStorage");
                 return;
@@ -89,10 +89,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 document.getElementById("comentar").addEventListener("click", function () {
-
     console.log("Comentario enviado");
     postEvent("Comentario", {
-        Nombre: localStorage.getItem("Nombre"),
+        Nombre: nombreUsuario,
         crearcomentario: document.getElementById("comentario").value
     }, postearcomentario);
 });

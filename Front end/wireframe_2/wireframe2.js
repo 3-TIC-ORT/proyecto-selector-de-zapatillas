@@ -10,7 +10,8 @@ const usuarioLoguearse = {
 postEvent("iniciarsesion", usuarioLoguearse , (res) => {
   if (res && res.ok) {
     alert("Login Exitoso")
-    localStorage.setItem('usuarioSesion', JSON.stringify(usuarioLoguearse));
+    localStorage.setItem('nombreusuario', document.getElementById("nombre").value,);
+    localStorage.setItem('contrausuario', document.getElementById("contrasena").value)
     window.location.href = "/Front end/wireframe_3/html3.html"
   }
   else {
