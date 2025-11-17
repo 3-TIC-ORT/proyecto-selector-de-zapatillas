@@ -12,8 +12,6 @@ window.addEventListener('click', function(e) {
     }
 });
 
-//lo de favoritos
-
 connect2Server();
 
 const contenedor = document.querySelector(".cuadrados");

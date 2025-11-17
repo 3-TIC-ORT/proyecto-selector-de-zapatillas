@@ -31,7 +31,7 @@ function aplicarFiltros() {
     });
 }
 
-// Mostrar resultados en las tarjetas
+
 function mostrarResultados(zapatillas) {
     const contenedor = document.querySelector('.octavos');
     contenedor.innerHTML = '';
@@ -110,3 +110,40 @@ function mostrarResultados(zapatillas) {
         contenedor.appendChild(card);
 });
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+    const inputBusqueda = document.getElementById("busqueda");
+  
+    if (!inputBusqueda) {
+      console.error("No se encontró el input #busqueda");
+      return;
+    }
+  
+    inputBusqueda.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+  
+        e.preventDefault();
+        const texto = inputBusqueda.value.trim();
+  
+        if (texto === "") {
+          aplicarFiltros(); 
+          return;
+        }
+  
+        console.log("Buscando:", texto);
+  
+        postEvent("buscarZapatilla", { nombre: texto }, (resultados) => {
+          console.log("Resultados:", resultados);
+  
+          if (!resultados || resultados.length === 0) {
+            document.querySelector(".octavos").innerHTML =
+              `<p>No existe ninguna zapatilla llamada "${texto}".</p>`;
+            return;
+          }
+  
+          mostrarResultados(resultados);
+        });
+      }
+    });
+  });
+  

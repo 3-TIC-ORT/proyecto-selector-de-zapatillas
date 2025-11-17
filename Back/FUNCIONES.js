@@ -84,3 +84,67 @@ function Comentario(Data) {
 }
 
 export { Comentario };
+
+
+function FiltrarZapatillas(Data) {
+
+    let zapatillas = JSON.parse(fs.readFileSync("zapatillas.json", "utf-8"));
+
+    let resultado = zapatillas.filter((z) => {
+
+        let coincideColor =
+            Data.color === "Cualquiera" ||
+            z.Color.toLowerCase() === Data.color.toLowerCase();
+
+        let coincideMarca =
+            Data.marca === "Cualquiera" ||
+            z.Marca.toLowerCase() === Data.marca.toLowerCase();
+
+        let coincideTipo =
+            Data.tipo === "Cualquiera" ||
+            (z.Tipo && z.Tipo.toLowerCase() === Data.tipo.toLowerCase());
+
+        let precioNum = parseFloat(z.Precio.replace("$", ""));
+        let coincidePrecio = true;
+
+        switch (Data.precio) {
+            case "k": coincidePrecio = precioNum < 50; break;
+            case "kk": coincidePrecio = precioNum >= 50 && precioNum < 100; break;
+            case "kkk": coincidePrecio = precioNum >= 100 && precioNum < 150; break;
+            case "kkkk": coincidePrecio = precioNum >= 150 && precioNum < 200; break;
+            case "kkkkk": coincidePrecio = precioNum >= 200 && precioNum < 250; break;
+            case "kkkkkk": coincidePrecio = precioNum >= 250; break;
+        }
+
+        return coincideColor && coincideMarca && coincideTipo && coincidePrecio;
+    });
+
+    return resultado;
+}
+
+export { FiltrarZapatillas };
+
+
+function BuscarZapatilla(Data) {
+  
+  let zapatillas = JSON.parse(fs.readFileSync("zapatillas.json", "utf-8"));
+
+  const query = (Data.nombre || "").toString().trim().toLowerCase();
+  if (!query) return [];
+
+  const resultados = zapatillas.filter((z) => {
+      const nombre = (z.Nombre || "").toString().toLowerCase();
+      const marca = (z.Marca || "").toString().toLowerCase();
+      const color = (z.Color || "").toString().toLowerCase();
+
+      return (
+          (nombre && nombre.includes(query)) ||
+          (marca && marca.includes(query)) ||
+          (color && color.includes(query))
+      );
+  });
+
+  return resultados;
+}
+
+export { BuscarZapatilla };

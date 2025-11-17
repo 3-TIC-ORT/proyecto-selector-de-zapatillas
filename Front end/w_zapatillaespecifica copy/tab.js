@@ -55,12 +55,10 @@ window.addEventListener("DOMContentLoaded", () => {
         document.querySelector(".zapatilla").innerHTML = "<p>No se seleccionó ninguna zapatilla.</p>";
     }
 });
-window.addEventListener("beforeunload", () => {
-    localStorage.removeItem("zapatillaSeleccionada");
-});
+
  
 window.addEventListener('DOMContentLoaded', () => {
-    const zapatillaSeleccionada = JSON.parse(localStorage.getItem('zapatillaSeleccionada'));
+    const zapatillaSeleccionada = JSON.parse(localStorage.getItem('zapatillaSeleccionada'))
 
     if (!zapatillaSeleccionada) {
         console.warn("No hay zapatilla seleccionada.");
