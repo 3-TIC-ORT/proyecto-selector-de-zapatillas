@@ -34,10 +34,6 @@ if (siguiente) {
             rp3: sessionStorage.getItem("RP3"),
             rp4: sessionStorage.getItem("RP4"),
             rp5: sessionStorage.getItem("RP5"),
-            rp6: sessionStorage.getItem("RP6"),
-            rp7: sessionStorage.getItem("RP7"),
-            rp8: sessionStorage.getItem("RP8"),
-            rp9: sessionStorage.getItem("RP9"),
             rp10: sessionStorage.getItem("RP10")
         };
         

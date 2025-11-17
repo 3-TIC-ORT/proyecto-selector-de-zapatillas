@@ -4,7 +4,6 @@ let menu_lateral = document.getElementById("menu");
 let barras = document.getElementById("lateral");
 const sesion = localStorage.getItem("usuarioSesion");
 const nombreUsuario = localStorage.getItem("nombreusuario");
-// ASUMIR: Declaración de los contenedores de comentarios (Ajusta los IDs si son diferentes)
 const ulcomentarios = document.getElementById("ulcomentarios"); 
 const ulcomentariosusuario = document.getElementById("ulcomentariosusuario"); 
 
