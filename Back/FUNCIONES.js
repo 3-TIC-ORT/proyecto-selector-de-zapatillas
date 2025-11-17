@@ -123,3 +123,28 @@ function FiltrarZapatillas(Data) {
 }
 
 export { FiltrarZapatillas };
+
+
+function BuscarZapatilla(Data) {
+  
+  let zapatillas = JSON.parse(fs.readFileSync("zapatillas.json", "utf-8"));
+
+  const query = (Data.nombre || "").toString().trim().toLowerCase();
+  if (!query) return [];
+
+  const resultados = zapatillas.filter((z) => {
+      const nombre = (z.Nombre || "").toString().toLowerCase();
+      const marca = (z.Marca || "").toString().toLowerCase();
+      const color = (z.Color || "").toString().toLowerCase();
+
+      return (
+          (nombre && nombre.includes(query)) ||
+          (marca && marca.includes(query)) ||
+          (color && color.includes(query))
+      );
+  });
+
+  return resultados;
+}
+
+export { BuscarZapatilla };
