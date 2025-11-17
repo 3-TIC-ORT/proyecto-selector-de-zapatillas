@@ -147,3 +147,259 @@ function BuscarZapatilla(Data) {
 }
 
 export { BuscarZapatilla };
+
+function CalcularRecomendaciones(Data) {
+    let zapatillas = JSON.parse(fs.readFileSync("zapatillas.json", "utf-8"));
+    
+    let puntuaciones = {};
+    
+    zapatillas.forEach((zapatilla, index) => {
+        puntuaciones[index] = 0;
+    });
+    
+    if (Data.rp1 === "A") {
+        zapatillas.forEach((z, i) => {
+            if (z.Marca === "New Balance") puntuaciones[i] += 3;
+            if (z.Marca === "ASICS") puntuaciones[i] += 3;
+            if (z.Marca === "Reebok") puntuaciones[i] += 3;
+            if (z.Marca === "Vans") puntuaciones[i] += 2;
+            
+            if (z.Nombre.includes("Air Force")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("990")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("992")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("Classic Leather")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("Old Skool")) puntuaciones[i] += 2;
+            if (z.Nombre.includes("Gel-1130")) puntuaciones[i] += 3;
+            
+            if (z.Color === "Blanco" || z.Color === "Negro" || z.Color === "Gris") {
+                puntuaciones[i] += 1;
+            }
+        });
+        
+    } else if (Data.rp1 === "B") {
+        zapatillas.forEach((z, i) => {
+            if (z.Marca === "Nike") puntuaciones[i] += 3;
+            if (z.Marca === "Adidas") puntuaciones[i] += 3;
+            if (z.Marca === "ASICS") puntuaciones[i] += 3;
+            if (z.Marca === "New Balance") puntuaciones[i] += 2;
+            
+            if (z.Nombre.includes("Boost")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("NMD")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("Kobe")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("Nite Jogger")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("380")) puntuaciones[i] += 2;
+            if (z.Nombre.includes("450")) puntuaciones[i] += 2;
+            if (z.Nombre.includes("990")) puntuaciones[i] += 2;
+        });
+        
+    } else if (Data.rp1 === "C") {
+        zapatillas.forEach((z, i) => {
+            if (z.Marca === "Jordan") puntuaciones[i] += 4;
+            
+            if (z.Nombre.includes("Yeezy")) puntuaciones[i] += 4;
+            if (z.Nombre.includes("Dunk")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("Jordan")) puntuaciones[i] += 4;
+            if (z.Nombre.includes("Retro")) puntuaciones[i] += 3;
+            
+            if (z.Color === "Rojo" || z.Color === "Azul" || z.Color === "Verde") {
+                puntuaciones[i] += 2;
+            }
+        });
+    }
+    
+    if (Data.rp2 === "B") {
+        zapatillas.forEach((z, i) => {
+            if (z.Nombre.includes("NMD")) puntuaciones[i] += 2;
+            if (z.Nombre.includes("Boost")) puntuaciones[i] += 2;
+            if (z.Nombre.includes("Nite Jogger")) puntuaciones[i] += 2;
+            if (z.Nombre.includes("Kobe")) puntuaciones[i] += 2;
+            if (z.Marca === "ASICS") puntuaciones[i] += 2;
+            if (z.Marca === "Adidas") puntuaciones[i] += 1;
+            if (z.Marca === "Nike") puntuaciones[i] += 1;
+        });
+        
+    } else if (Data.rp2 === "C") {
+        zapatillas.forEach((z, i) => {
+            if (z.Marca === "Jordan") puntuaciones[i] += 3;
+            if (z.Nombre.includes("Yeezy")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("Dunk")) puntuaciones[i] += 2;
+            if (z.Nombre.includes("Retro")) puntuaciones[i] += 2;
+            if (z.Nombre.includes("OG")) puntuaciones[i] += 2;
+            
+            if (z.Color !== "Negro" && z.Color !== "Gris") {
+                puntuaciones[i] += 1;
+            }
+        });
+        
+    } else if (Data.rp2 === "D") {
+        zapatillas.forEach((z, i) => {
+            if (z.Marca === "New Balance") puntuaciones[i] += 3;
+            if (z.Marca === "Vans") puntuaciones[i] += 2;
+            if (z.Marca === "Reebok") puntuaciones[i] += 2;
+            if (z.Nombre.includes("Air Force")) puntuaciones[i] += 2;
+            if (z.Nombre.includes("Classic Leather")) puntuaciones[i] += 2;
+            if (z.Nombre.includes("Old Skool")) puntuaciones[i] += 2;
+            if (z.Nombre.includes("Gel-1130")) puntuaciones[i] += 2;
+            if (z.Nombre.includes("990")) puntuaciones[i] += 2;
+        });
+    }
+    
+    if (Data.rp3 === "A" || Data.rp3 === "C") {
+        zapatillas.forEach((z, i) => {
+            if (z.Color === "Blanco") puntuaciones[i] += 3;
+            if (z.Color === "Negro") puntuaciones[i] += 3;
+            if (z.Color === "Gris") puntuaciones[i] += 2;
+            
+            if (z.Nombre.includes("Air Force")) puntuaciones[i] += 2;
+            if (z.Nombre.includes("Classic")) puntuaciones[i] += 2;
+            if (z.Nombre.includes("Old Skool")) puntuaciones[i] += 2;
+        });
+        
+    } else if (Data.rp3 === "B") {
+        zapatillas.forEach((z, i) => {
+            if (z.Color === "Azul") puntuaciones[i] += 2;
+            if (z.Color === "Rojo") puntuaciones[i] += 2;
+            if (z.Color === "Verde") puntuaciones[i] += 2;
+            if (z.Color === "Celeste") puntuaciones[i] += 2;
+            
+            if (z.Color === "Blanco" || z.Color === "Negro") puntuaciones[i] += 1;
+        });
+    }
+    
+    if (Data.rp4 === "A") {
+        zapatillas.forEach((z, i) => {
+            if (z.Marca === "Vans") puntuaciones[i] += 3;
+            if (z.Marca === "Adidas") puntuaciones[i] += 2;
+            if (z.Nombre.includes("Dunk")) puntuaciones[i] += 2;
+            if (z.Nombre.includes("Old Skool")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("Air Force")) puntuaciones[i] += 2;
+            if (z.Nombre.includes("Yeezy Slide")) puntuaciones[i] += 2;
+            if (z.Nombre.includes("NMD")) puntuaciones[i] += 2;
+        });
+        
+    } else if (Data.rp4 === "B") {
+        zapatillas.forEach((z, i) => {
+            if (z.Marca === "New Balance") puntuaciones[i] += 3;
+            if (z.Marca === "ASICS") puntuaciones[i] += 3;
+            if (z.Marca === "Reebok") puntuaciones[i] += 2;
+            if (z.Nombre.includes("990")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("992")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("Air Force")) puntuaciones[i] += 2;
+            if (z.Nombre.includes("Gel-1130")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("Boost")) puntuaciones[i] += 2;
+        });
+        
+    } else if (Data.rp4 === "C") {
+        zapatillas.forEach((z, i) => {
+            if (z.Marca === "Jordan") puntuaciones[i] += 4;
+            if (z.Nombre.includes("Yeezy") && !z.Nombre.includes("Slide")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("Kobe")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("Retro")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("OG")) puntuaciones[i] += 2;
+            
+            let precio = parseFloat(z.Precio.replace("$", ""));
+            if (precio > 200) puntuaciones[i] += 2;
+        });
+    }
+    
+    if (Data.rp5 === "A") {
+        zapatillas.forEach((z, i) => {
+            if (z.Color === "Blanco") puntuaciones[i] += 4;
+            if (z.Color === "Negro") puntuaciones[i] += 4;
+            if (z.Color === "Gris") puntuaciones[i] += 2;
+            
+            if (z.Color === "Rojo" || z.Color === "Verde" || z.Color === "Azul") {
+                puntuaciones[i] -= 1;
+            }
+        });
+        
+    } else if (Data.rp5 === "B") {
+        zapatillas.forEach((z, i) => {
+            if (z.Color === "Blanco") puntuaciones[i] += 2;
+            if (z.Color === "Negro") puntuaciones[i] += 2;
+            if (z.Color === "Gris") puntuaciones[i] += 2;
+            
+            if (z.Color === "Celeste" || z.Color === "Verde Oscuro") {
+                puntuaciones[i] += 1;
+            }
+        });
+        
+    } else if (Data.rp5 === "D") {
+        zapatillas.forEach((z, i) => {
+            if (z.Color === "Rojo") puntuaciones[i] += 3;
+            if (z.Color === "Verde") puntuaciones[i] += 3;
+            if (z.Color === "Azul") puntuaciones[i] += 3;
+            if (z.Color === "Celeste") puntuaciones[i] += 2;
+            
+            if (z.Nombre.includes("Grinch")) puntuaciones[i] += 2;
+            if (z.Nombre.includes("Red Thunder")) puntuaciones[i] += 2;
+            if (z.Nombre.includes("Zebra")) puntuaciones[i] += 2;
+        });
+    }
+    
+    if (Data.rp10 === "A") {
+        zapatillas.forEach((z, i) => {
+            if (z.Marca === "New Balance") puntuaciones[i] += 4;
+            if (z.Marca === "ASICS") puntuaciones[i] += 4;
+            if (z.Marca === "Reebok") puntuaciones[i] += 3;
+            
+            if (z.Nombre.includes("Air Force")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("Classic Leather")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("990")) puntuaciones[i] += 4;
+            if (z.Nombre.includes("992")) puntuaciones[i] += 4;
+            if (z.Nombre.includes("Gel")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("Boost")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("Slide")) puntuaciones[i] += 3;
+        });
+        
+    } else if (Data.rp10 === "B") {
+        zapatillas.forEach((z, i) => {
+            if (z.Marca === "Jordan") puntuaciones[i] += 4;
+            
+            if (z.Nombre.includes("Yeezy")) puntuaciones[i] += 4;
+            if (z.Nombre.includes("Dunk")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("Jordan")) puntuaciones[i] += 4;
+            if (z.Nombre.includes("Retro")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("OG")) puntuaciones[i] += 2;
+            
+            if (z.Nombre.includes("Undefeated")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("Grinch")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("Zebra")) puntuaciones[i] += 3;
+        });
+        
+    } else if (Data.rp10 === "C") {
+        zapatillas.forEach((z, i) => {
+            if (z.Marca === "New Balance") puntuaciones[i] += 4;
+            if (z.Marca === "Reebok") puntuaciones[i] += 3;
+            if (z.Marca === "ASICS") puntuaciones[i] += 3;
+            if (z.Marca === "Nike") puntuaciones[i] += 2;
+            
+            if (z.Nombre.includes("990")) puntuaciones[i] += 4;
+            if (z.Nombre.includes("992")) puntuaciones[i] += 4;
+            if (z.Nombre.includes("Classic")) puntuaciones[i] += 3;
+            if (z.Nombre.includes("Air Force")) puntuaciones[i] += 3;
+            
+            let precio = parseFloat(z.Precio.replace("$", ""));
+            if (precio >= 150 && precio <= 300) puntuaciones[i] += 2;
+        });
+    }
+    
+    let resultado = zapatillas.map((z, i) => ({
+        ...z,
+        puntuacion: puntuaciones[i]
+    }))
+    .filter(z => z.puntuacion > 0)
+    .sort((a, b) => b.puntuacion - a.puntuacion)
+    .slice(0, 8);
+    
+    console.log("=== SISTEMA DE RECOMENDACIONES ===");
+    console.log("Respuestas recibidas:", Data);
+    console.log("Top zapatillas recomendadas:");
+    resultado.forEach((z, i) => {
+        console.log(`${i + 1}. ${z.Nombre} - Puntuación: ${z.puntuacion}`);
+    });
+    
+    return { shoes: resultado };
+}
+
+export { CalcularRecomendaciones };

@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     connect2Server();
 
-    // 1. Recolectamos TODAS las respuestas
     const respuestasCompletas = {
         rp1: sessionStorage.getItem("RP1"),
         rp2: sessionStorage.getItem("RP2"),
@@ -55,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <p>Color: ${shoe.Color}</p>
             `;
             container.appendChild(shoeDiv);
-        });
-    }
+     });
+    }
 });
+
