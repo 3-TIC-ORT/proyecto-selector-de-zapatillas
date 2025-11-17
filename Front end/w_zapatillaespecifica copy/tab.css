@@ -282,3 +282,8 @@ line-height: normal;
   border-color: #FFD400;
   outline: none;
 }
+.comenta{
+  height: 3.5rem;
+  background-color: var(--naranja);
+  border-radius: 3rem;
+}
