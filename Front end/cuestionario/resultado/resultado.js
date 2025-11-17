@@ -22,7 +22,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function displayShoes(shoes) {
         const container = document.querySelector('.resultados');
-        container.innerHTML = '<h2>Recomendaciones</h2>';
+        
+        // --- TÍTULO CAMBIADO AQUÍ ---
+        container.innerHTML = '<h2>Tus zapatillas recomendadas</h2>';
+        // --- FIN DEL CAMBIO ---
+
         shoes.forEach(shoe => {
             const shoeDiv = document.createElement('div');
             shoeDiv.className = 'shoe';

@@ -15,15 +15,29 @@ window.addEventListener('click', function(e) {
     }
 });
 
-
 let corazon = document.getElementById("fav");
-if (corazon) {
-  corazon.addEventListener("click", function () {
-    corazon.classList.toggle("tocado");
-    
-  });
-}
+    if (corazon) {
+        corazon.addEventListener("click", function () {
+            corazon.classList.toggle("tocado");
 
+            const zapatillaSeleccionada = JSON.parse(localStorage.getItem("zapatillaSeleccionada"));
+            const nombreUsuario = localStorage.getItem("Nombre"); // Asumo que el nombre está guardado
+
+            if (!zapatillaSeleccionada || !nombreUsuario) {
+                console.error("Error: No se encontró la zapatilla o el nombre de usuario en localStorage");
+                return;
+            }
+
+            const datosFavorito = {
+                NOMBRE: nombreUsuario,
+                zapatilla: zapatillaSeleccionada
+            };
+
+            postEvent("ToggleFavorito", datosFavorito, (respuesta) => {
+                console.log("Respuesta del servidor:", respuesta); 
+            });
+        });
+    }
 
 window.addEventListener("DOMContentLoaded", () => {
     const zapatilla = JSON.parse(localStorage.getItem("zapatillaSeleccionada"));

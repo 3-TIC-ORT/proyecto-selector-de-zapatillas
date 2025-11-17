@@ -41,7 +41,7 @@ if (siguiente) {
             rp10: sessionStorage.getItem("RP10")
         };
         
-        ("calcularRecomendaciones", respuestasCompletas);
+       postEvent("calcularRecomendaciones", respuestasCompletas);
 
         window.location.href = "../resultado/resultado.html";
     });
