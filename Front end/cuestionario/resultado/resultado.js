@@ -16,16 +16,33 @@ document.addEventListener("DOMContentLoaded", function() {
 
     connect2Server();
 
-    getEvent("recomendaciones", (data) => {
-        displayShoes(data.shoes);
-    });
+    // 1. Recolectamos TODAS las respuestas
+    const respuestasCompletas = {
+        rp1: sessionStorage.getItem("RP1"),
+        rp2: sessionStorage.getItem("RP2"),
+        rp3: sessionStorage.getItem("RP3"),
+        rp4: sessionStorage.getItem("RP4"),
+        rp5: sessionStorage.getItem("RP5"),
+        rp10: sessionStorage.getItem("RP10")
+    };
+
+    console.log("Enviando al backend:", respuestasCompletas);
+
+
+    postEvent("calcularRecomendaciones", respuestasCompletas, (data) => {
+        
+        console.log("Respuesta recibida del backend:", data);
+      
+        if (data && data.shoes) {
+            displayShoes(data.shoes);
+        } else {
+            console.error("El backend no devolvió un objeto { shoes: [...] }");
+        }
+    },);
 
     function displayShoes(shoes) {
         const container = document.querySelector('.resultados');
-        
-        // --- TÍTULO CAMBIADO AQUÍ ---
         container.innerHTML = '<h2>Tus zapatillas recomendadas</h2>';
-        // --- FIN DEL CAMBIO ---
 
         shoes.forEach(shoe => {
             const shoeDiv = document.createElement('div');
@@ -38,6 +55,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 <p>Color: ${shoe.Color}</p>
             `;
             container.appendChild(shoeDiv);
-        });
-    }
+        });
+    }
 });

@@ -28,16 +28,7 @@ if (siguiente) {
 
         sessionStorage.setItem("RP10", seleccionada.value);
 
-        const respuestasCompletas = {
-            rp1: sessionStorage.getItem("RP1"),
-            rp2: sessionStorage.getItem("RP2"),
-            rp3: sessionStorage.getItem("RP3"),
-            rp4: sessionStorage.getItem("RP4"),
-            rp5: sessionStorage.getItem("RP5"),
-            rp10: sessionStorage.getItem("RP10")
-        };
-        
-       postEvent("calcularRecomendaciones", respuestasCompletas);
+     
 
         window.location.href = "../resultado/resultado.html";
     });
