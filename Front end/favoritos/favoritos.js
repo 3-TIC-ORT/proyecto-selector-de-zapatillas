@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", cargarFavoritos);
 
 function cargarFavoritos() {
     
-    getEvent("obtenerZapatillasFavoritas", (zapatillas) => {
+    getEvent("zapatillasfavoritas", (zapatillas) => {
         
         if (!zapatillas || !Array.isArray(zapatillas) || zapatillas.length === 0) {
             contenedor.innerHTML = "<h1>No tienes ninguna zapatilla favorita salva aún.</h1>";
