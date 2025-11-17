@@ -96,7 +96,43 @@ document.getElementById("comentar").addEventListener("click", function () {
     }, postearcomentario);
 });
 
-function postearcomentario(Data) {
-    console.log("Respuesta del backend:");
-    console.log(Data);
+function postearcomentario(data) {
+    mensajes = data.Mensaje;
+    nombre = data.Autor;
+    
+    // Compara el autor del mensaje con el nombre completo guardado localmente
+    if(nombre == localStorage.getItem("nombreusuario")){
+        // Si el autor es el usuario actual, lo muestra en el contenedor 'ulcomentariosusuario'
+        const li = document.createElement("p");
+        li.textContent = mensajes;
+        li.className="tipocomentario"
+        ulcomentariosusuario.appendChild(li);
+        
+        // Y añade un espacio en blanco/simulador en el otro contenedor
+        const li2 = document.createElement("p");
+        li2.textContent = mensajes;
+        li2.className="tipocomentarioblanco"
+        ulcomentarios.appendChild(li2);
+    }
+    else{
+        // Si el autor es otro usuario, lo muestra en el contenedor 'ulcomentarios'
+        const li = document.createElement("p");
+        li.textContent = mensajes;
+        li.className="tipocomentariootro"
+        ulcomentarios.appendChild(li);
+        
+        // Y añade un espacio en blanco/simulador en el contenedor del usuario
+        const li2 = document.createElement("p");
+        li2.textContent = mensajes;
+        li2.className="tipocomentarioblanco"
+        ulcomentariosusuario.appendChild(li2);
+    }
+} // <--- ¡Esta llave cierra la función!
+
+function cargarComentario() {
+    getEvent('fetchComentarios', (res) => {
+        res.forEach(comentario => {
+            
+        });
+    })
 }
