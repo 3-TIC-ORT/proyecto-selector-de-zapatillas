@@ -67,7 +67,7 @@ function Comentario(Data) {
   }
 
   const comentarioNuevo = {
-    Mensaje: comentario, 
+    Mensaje: comentario,
     Autor: usuario
   };
 

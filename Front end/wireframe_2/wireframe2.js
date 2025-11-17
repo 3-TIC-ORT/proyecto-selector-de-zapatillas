@@ -20,4 +20,3 @@ postEvent("iniciarsesion", usuarioLoguearse , (res) => {
 });
 
 });
-
