@@ -27,7 +27,6 @@ function verificarSiEsFavorito() {
     const idUnico = zapatillaSeleccionada.id || 
                    `${zapatillaSeleccionada.Nombre}_${zapatillaSeleccionada.Marca || ''}_${zapatillaSeleccionada.Precio}`.replace(/\s/g, '_');
 
-    // Llamar al backend para verificar si está en favoritos
     postEvent("VerificarFavorito", {
         usuario: nombreUsuario,
         id: idUnico
@@ -88,28 +87,6 @@ if (corazon) {
     });
 }
 
-// Cargar información de la zapatilla
-window.addEventListener("DOMContentLoaded", () => {
-    const zapatillaSeleccionada = JSON.parse(localStorage.getItem("zapatillaSeleccionada"));
-
-    if (zapatillaSeleccionada) {
-        const contenedor = document.querySelector(".zapatilla");
-        contenedor.innerHTML = `
-            <img src="${zapatillaSeleccionada.Imagen}" alt="${zapatillaSeleccionada.Nombre}" 
-                 style="width:100%; height:auto; border-radius:1rem;">
-        `;
-
-        document.querySelector(".nombre-zapatilla").textContent = zapatillaSeleccionada.Nombre;
-        document.querySelector(".precio-zapatilla").textContent = zapatillaSeleccionada.Precio;
-
-        // Verificar si está en favoritos después de cargar la info
-        verificarSiEsFavorito();
-
-    } else {
-        document.querySelector(".zapatilla").innerHTML = "<p>No se seleccionó ninguna zapatilla.</p>";
-    }
-});
-
 // Función para agregar comentario en pantalla
 function agregarComentarioEnPantalla(autor, mensaje) {
     const div = document.createElement("div");
@@ -125,6 +102,80 @@ function agregarComentarioEnPantalla(autor, mensaje) {
 
     document.querySelector(".lista-comentarios").prepend(div);
 }
+
+// Función para cargar comentarios guardados en localStorage de esta zapatilla
+function cargarComentariosGuardados() {
+    const zapatillaSeleccionada = JSON.parse(localStorage.getItem("zapatillaSeleccionada"));
+    
+    if (!zapatillaSeleccionada) {
+        return;
+    }
+
+    // Crear ID único para esta zapatilla
+    const idZapatilla = `${zapatillaSeleccionada.Nombre}_${zapatillaSeleccionada.Marca || ''}`.replace(/\s/g, '_');
+    
+    // Obtener comentarios de esta zapatilla específica desde localStorage
+    const comentariosGuardados = JSON.parse(localStorage.getItem(`comentarios_${idZapatilla}`)) || [];
+    
+    console.log(`📝 Cargando ${comentariosGuardados.length} comentarios para ${zapatillaSeleccionada.Nombre}`);
+    
+    // Mostrar cada comentario guardado
+    comentariosGuardados.forEach(comentario => {
+        agregarComentarioEnPantalla(comentario.autor, comentario.mensaje);
+    });
+}
+
+// Función para guardar comentario en localStorage específico de esta zapatilla
+function guardarComentarioLocal(autor, mensaje) {
+    const zapatillaSeleccionada = JSON.parse(localStorage.getItem("zapatillaSeleccionada"));
+    
+    if (!zapatillaSeleccionada) {
+        return;
+    }
+
+    // Crear ID único para esta zapatilla
+    const idZapatilla = `${zapatillaSeleccionada.Nombre}_${zapatillaSeleccionada.Marca || ''}`.replace(/\s/g, '_');
+    
+    // Obtener comentarios existentes de esta zapatilla
+    const comentariosGuardados = JSON.parse(localStorage.getItem(`comentarios_${idZapatilla}`)) || [];
+    
+    // Agregar el nuevo comentario al principio
+    comentariosGuardados.unshift({
+        autor: autor,
+        mensaje: mensaje,
+        fecha: new Date().toISOString()
+    });
+    
+    // Guardar de vuelta en localStorage
+    localStorage.setItem(`comentarios_${idZapatilla}`, JSON.stringify(comentariosGuardados));
+    
+    console.log(`💾 Comentario guardado localmente para ${zapatillaSeleccionada.Nombre}:`, { autor, mensaje });
+}
+
+// Cargar información de la zapatilla y sus comentarios
+window.addEventListener("DOMContentLoaded", () => {
+    const zapatillaSeleccionada = JSON.parse(localStorage.getItem("zapatillaSeleccionada"));
+
+    if (zapatillaSeleccionada) {
+        const contenedor = document.querySelector(".zapatilla");
+        contenedor.innerHTML = `
+            <img src="${zapatillaSeleccionada.Imagen}" alt="${zapatillaSeleccionada.Nombre}" 
+                 style="width:100%; height:auto; border-radius:1rem;">
+        `;
+
+        document.querySelector(".nombre-zapatilla").textContent = zapatillaSeleccionada.Nombre;
+        document.querySelector(".precio-zapatilla").textContent = zapatillaSeleccionada.Precio;
+
+        // Verificar si está en favoritos
+        verificarSiEsFavorito();
+        
+        // ✨ CARGAR COMENTARIOS GUARDADOS DE ESTA ZAPATILLA
+        cargarComentariosGuardados();
+
+    } else {
+        document.querySelector(".zapatilla").innerHTML = "<p>No se seleccionó ninguna zapatilla.</p>";
+    }
+});
 
 // Prevenir que el formulario recargue la página
 const formulario = document.querySelector("form");
@@ -153,20 +204,23 @@ document.getElementById("comentar").addEventListener("click", function (e) {
 
     // Mostrar el comentario inmediatamente en pantalla
     agregarComentarioEnPantalla(usuario, texto);
-    console.log("Comentario agregado en pantalla:", { autor: usuario, mensaje: texto });
+    
+    // ✨ GUARDAR COMENTARIO EN LOCALSTORAGE ESPECÍFICO DE ESTA ZAPATILLA
+    guardarComentarioLocal(usuario, texto);
+    
+    console.log("✅ Comentario agregado en pantalla y guardado localmente:", { autor: usuario, mensaje: texto });
 
-    // Enviar al backend
+    // Enviar al backend (opcional, sigue guardándose en Comentarios.json)
     postEvent("Comentario", {
         Nombre: usuario,
         crearcomentario: texto
     }, (respuesta) => {
-        console.log("✅ Respuesta del backend:", respuesta);
+        console.log("📡 Respuesta del backend:", respuesta);
         
         if (respuesta.success) {
             console.log("✅ Comentario guardado exitosamente en el servidor");
         } else {
-            console.error("❌ Error al guardar comentario:", respuesta.error);
-            alert("Hubo un error al guardar tu comentario");
+            console.error("❌ Error al guardar comentario en servidor:", respuesta.error);
         }
     });
 

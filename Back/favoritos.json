@@ -1,15 +1,5 @@
 [
   {
-    "usuario": "Bruno Fernandes",
-    "id": "New_Balance_990v5_Grey_New_Balance_$190",
-    "nombre": "New Balance 990v5 Grey",
-    "precio": "$190",
-    "imagenUrl": "https://images.stockx.com/images/New-Balance-990v5-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
-    "marca": "New Balance",
-    "color": "Gris",
-    "fechaAgregado": "2025-11-18T11:59:00.936Z"
-  },
-  {
     "usuario": "simon",
     "id": "Jordan_4_Retro_SB_Navy_Jordan_$240",
     "nombre": "Jordan 4 Retro SB Navy",
@@ -18,5 +8,15 @@
     "marca": "Jordan",
     "color": "Blanco",
     "fechaAgregado": "2025-11-18T15:04:03.209Z"
+  },
+  {
+    "usuario": "Bruno Fernandes",
+    "id": "Adidas_Yeezy_Boost_350_V2_Zebra_Adidas_$324",
+    "nombre": "Adidas Yeezy Boost 350 V2 Zebra",
+    "precio": "$324",
+    "imagenUrl": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Zebra-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+    "marca": "Adidas",
+    "color": "Blanco",
+    "fechaAgregado": "2025-11-18T17:15:05.254Z"
   }
 ]
