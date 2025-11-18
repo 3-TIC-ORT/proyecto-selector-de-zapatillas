@@ -20,7 +20,6 @@ window.addEventListener('click', function(e) {
     }
 });
 
-// Verificar si la zapatilla está en favoritos al cargar la página
 function verificarSiEsFavorito() {
     const zapatillaSeleccionada = JSON.parse(localStorage.getItem("zapatillaSeleccionada"));
     
@@ -91,7 +90,6 @@ if (corazon) {
     });
 }
 
-// Función para agregar comentario en pantalla
 function agregarComentarioEnPantalla(autor, mensaje) {
     const div = document.createElement("div");
     div.className = "comentario";
@@ -107,7 +105,6 @@ function agregarComentarioEnPantalla(autor, mensaje) {
     document.querySelector(".lista-comentarios").prepend(div);
 }
 
-// Función para cargar comentarios guardados en localStorage de esta zapatilla
 function cargarComentariosGuardados() {
     const zapatillaSeleccionada = JSON.parse(localStorage.getItem("zapatillaSeleccionada"));
     
@@ -115,21 +112,17 @@ function cargarComentariosGuardados() {
         return;
     }
 
-    // Crear ID único para esta zapatilla
     const idZapatilla = `${zapatillaSeleccionada.Nombre}_${zapatillaSeleccionada.Marca || ''}`.replace(/\s/g, '_');
     
-    // Obtener comentarios de esta zapatilla específica desde localStorage
     const comentariosGuardados = JSON.parse(localStorage.getItem(`comentarios_${idZapatilla}`)) || [];
     
     console.log(`📝 Cargando ${comentariosGuardados.length} comentarios para ${zapatillaSeleccionada.Nombre}`);
     
-    // Mostrar cada comentario guardado
     comentariosGuardados.forEach(comentario => {
         agregarComentarioEnPantalla(comentario.autor, comentario.mensaje);
     });
 }
 
-// Función para guardar comentario en localStorage específico de esta zapatilla
 function guardarComentarioLocal(autor, mensaje) {
     const zapatillaSeleccionada = JSON.parse(localStorage.getItem("zapatillaSeleccionada"));
     
@@ -137,26 +130,21 @@ function guardarComentarioLocal(autor, mensaje) {
         return;
     }
 
-    // Crear ID único para esta zapatilla
     const idZapatilla = `${zapatillaSeleccionada.Nombre}_${zapatillaSeleccionada.Marca || ''}`.replace(/\s/g, '_');
     
-    // Obtener comentarios existentes de esta zapatilla
     const comentariosGuardados = JSON.parse(localStorage.getItem(`comentarios_${idZapatilla}`)) || [];
     
-    // Agregar el nuevo comentario al principio
     comentariosGuardados.unshift({
         autor: autor,
         mensaje: mensaje,
         fecha: new Date().toISOString()
     });
     
-    // Guardar de vuelta en localStorage
     localStorage.setItem(`comentarios_${idZapatilla}`, JSON.stringify(comentariosGuardados));
     
-    console.log(`💾 Comentario guardado localmente para ${zapatillaSeleccionada.Nombre}:`, { autor, mensaje });
+    console.log(`Comentario guardado localmente para ${zapatillaSeleccionada.Nombre}:`, { autor, mensaje });
 }
 
-// Cargar información de la zapatilla y sus comentarios
 window.addEventListener("DOMContentLoaded", () => {
     const zapatillaSeleccionada = JSON.parse(localStorage.getItem("zapatillaSeleccionada"));
 
@@ -170,10 +158,8 @@ window.addEventListener("DOMContentLoaded", () => {
         document.querySelector(".nombre-zapatilla").textContent = zapatillaSeleccionada.Nombre;
         document.querySelector(".precio-zapatilla").textContent = zapatillaSeleccionada.Precio;
 
-        // Verificar si está en favoritos
         verificarSiEsFavorito();
         
-        // ✨ CARGAR COMENTARIOS GUARDADOS DE ESTA ZAPATILLA
         cargarComentariosGuardados();
 
     } else {
@@ -181,7 +167,6 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Prevenir que el formulario recargue la página
 const formulario = document.querySelector("form");
 if (formulario) {
     formulario.addEventListener("submit", function(e) {
@@ -189,7 +174,6 @@ if (formulario) {
     });
 }
 
-// Evento para enviar comentario
 document.getElementById("comentar").addEventListener("click", function (e) {
     e.preventDefault();
 
@@ -206,46 +190,42 @@ document.getElementById("comentar").addEventListener("click", function (e) {
         return;
     }
 
-    // Mostrar el comentario inmediatamente en pantalla
     agregarComentarioEnPantalla(usuario, texto);
     
-    // ✨ GUARDAR COMENTARIO EN LOCALSTORAGE ESPECÍFICO DE ESTA ZAPATILLA
     guardarComentarioLocal(usuario, texto);
     
-    console.log("✅ Comentario agregado en pantalla y guardado localmente:", { autor: usuario, mensaje: texto });
+    console.log("Comentario agregado en pantalla y guardado localmente:", { autor: usuario, mensaje: texto });
 
-    // Enviar al backend (opcional, sigue guardándose en Comentarios.json)
     postEvent("Comentario", {
         Nombre: usuario,
         crearcomentario: texto
     }, (respuesta) => {
-        console.log("📡 Respuesta del backend:", respuesta);
+        console.log("Respuesta del backend:", respuesta);
         
         if (respuesta.success) {
-            console.log("✅ Comentario guardado exitosamente en el servidor");
+            console.log("Comentario guardado exitosamente en el servidor");
         } else {
-            console.error("❌ Error al guardar comentario en servidor:", respuesta.error);
+            console.error("Error al guardar comentario en servidor:", respuesta.error);
         }
     });
 
-    // Limpiar el input
     document.getElementById("comentario").value = "";
 });
 function cambiar() {
     barras.classList.toggle("visible");
 
     if (barras.classList.contains("visible")) {
-        document.body.classList.add("noscroll");   // bloquear scroll
+        document.body.classList.add("noscroll");  
     } else{
-        document.body.classList.remove("noscroll"); // permitir scroll
+        document.body.classList.remove("noscroll"); 
     }
 }input.addEventListener("input", () => {
-    let palabras = input.value.trim().split(/\s+/); // divide por espacios
+    let palabras = input.value.trim().split(/\s+/);
 
     if (palabras.length > maxPalabras) {
         error.style.display = "block";
-        palabras = palabras.slice(0, maxPalabras); // recorta al máximo permitido
-        input.value = palabras.join(" "); // vuelve a colocar el texto permitido
+        palabras = palabras.slice(0, maxPalabras);
+        input.value = palabras.join(" "); 
     } else {
         error.style.display = "none";
     }
