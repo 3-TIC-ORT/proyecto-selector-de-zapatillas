@@ -61,6 +61,7 @@ if (corazon) {
     });
 }
 
+// Cargar información de la zapatilla
 window.addEventListener("DOMContentLoaded", () => {
     const zapatillaSeleccionada = JSON.parse(localStorage.getItem("zapatillaSeleccionada"));
 
@@ -79,11 +80,39 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// Función para agregar comentario en pantalla
+function agregarComentarioEnPantalla(autor, mensaje) {
+    const div = document.createElement("div");
+    div.className = "comentario";
+    div.style.cssText = `
+        background-color: #f0f0f0;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 8px;
+        border-left: 4px solid #FFA500;
+    `;
+    div.innerHTML = `<p style="margin: 0;"><strong style="color: #FFA500;">${autor}:</strong> ${mensaje}</p>`;
+
+    document.querySelector(".lista-comentarios").prepend(div);
+}
+
+// Prevenir que el formulario recargue la página
+const formulario = document.querySelector("form");
+if (formulario) {
+    formulario.addEventListener("submit", function(e) {
+        e.preventDefault();
+    });
+}
+
+// Evento para enviar comentario
 document.getElementById("comentar").addEventListener("click", function (e) {
     e.preventDefault();
 
     const texto = document.getElementById("comentario").value.trim();
-    if (texto === "") return;
+    if (texto === "") {
+        alert("Por favor escribe un comentario antes de enviar");
+        return;
+    }
 
     const usuario = localStorage.getItem("nombreusuario");
 
@@ -92,23 +121,25 @@ document.getElementById("comentar").addEventListener("click", function (e) {
         return;
     }
 
+    // Mostrar el comentario inmediatamente en pantalla
     agregarComentarioEnPantalla(usuario, texto);
+    console.log("Comentario agregado en pantalla:", { autor: usuario, mensaje: texto });
 
-
+    // Enviar al backend
     postEvent("Comentario", {
         Nombre: usuario,
         crearcomentario: texto
     }, (respuesta) => {
-        console.log("Respuesta del backend:", respuesta);
+        console.log("✅ Respuesta del backend:", respuesta);
+        
+        if (respuesta.success) {
+            console.log("✅ Comentario guardado exitosamente en el servidor");
+        } else {
+            console.error("❌ Error al guardar comentario:", respuesta.error);
+            alert("Hubo un error al guardar tu comentario");
+        }
     });
 
+    // Limpiar el input
     document.getElementById("comentario").value = "";
 });
-
-function agregarComentarioEnPantalla(autor, mensaje) {
-    const div = document.createElement("div");
-    div.className = "comentario";
-    div.innerHTML = `<p><strong>${autor}:</strong> ${mensaje}</p>`;
-
-    document.querySelector(".lista-comentarios").prepend(div);
-}
