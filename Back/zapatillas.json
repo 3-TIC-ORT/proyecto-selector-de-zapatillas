@@ -1,135 +1,1375 @@
 [
     {
-    "Nombre": "ASICS Gel-1130 Black Pure Silver",
-    "Marca": "ASICS",
-    "Precio": "$128",
-    "Imagen": "https://images.stockx.com/images/ASICS-Gel-1130-Black-Pure-Silver-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
-    "Color": "Negro"
+        "Nombre": "ASICS Gel-1130 Black Pure Silver",
+        "Marca": "ASICS",
+        "Precio": "$128",
+        "Imagen": "https://images.stockx.com/images/ASICS-Gel-1130-Black-Pure-Silver-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro",
+        "Tipo": "Deportivo"
     },
     {
-    "Nombre": "Adidas Yeezy Boost 350 V2 Zebra",
-    "Marca": "Adidas",
-    "Precio": "$324",
-    "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Zebra-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
-    "Color": "Blanco"
+        "Nombre": "Adidas Yeezy Boost 350 V2 Zebra",
+        "Marca": "Adidas",
+        "Precio": "$324",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Zebra-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco",
+        "Tipo": "Deportivo"
     },
     {
-    "Nombre": "Jordan 4 Retro Red Thunder",
-    "Marca": "Jordan",
-    "Precio": "$488",
-    "Imagen": "https://images.stockx.com/images/Air-Jordan-4-Retro-Red-Thunder-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
-    "Color": "Rojo"
+        "Nombre": "Jordan 4 Retro Red Thunder",
+        "Marca": "Jordan",
+        "Precio": "$488",
+        "Imagen": "https://images.stockx.com/images/Air-Jordan-4-Retro-Red-Thunder-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Rojo",
+        "Tipo": "Casual"
     },
     {
-    "Nombre": "adidas Yeezy Slide Onyx",
-    "Marca": "Adidas",
-    "Precio": "$220",
-    "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Slide-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
-    "Color": "Negro"
+        "Nombre": "adidas Yeezy Slide Onyx",
+        "Marca": "Adidas",
+        "Precio": "$220",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Slide-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro",
+        "Tipo": "Casual"
     },
     {
-    "Nombre": "Jordan 4 Retro OG SP Undefeated",
-    "Marca": "Jordan",
-    "Precio": "$360",
-    "Imagen": "https://images.stockx.com/images/Air-Jordan-4-Retro-OG-SP-Undefeated-2025-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1753819868",
-    "Color": "Gris"
+        "Nombre": "Jordan 4 Retro OG SP Undefeated",
+        "Marca": "Jordan",
+        "Precio": "$360",
+        "Imagen": "https://images.stockx.com/images/Air-Jordan-4-Retro-OG-SP-Undefeated-2025-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1753819868",
+        "Color": "Gris",
+        "Tipo": "Deportivo"
     },
     {
-    "Nombre": "Jordan 4 Retro SB Navy",
-    "Marca": "Jordan",
-    "Precio": "$240",
-    "Imagen": "https://images.stockx.com/images/Air-Jordan-4-Retro-SB-Navy-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1740411181",
-    "Color": "Blanco"
+        "Nombre": "Jordan 4 Retro SB Navy",
+        "Marca": "Jordan",
+        "Precio": "$240",
+        "Imagen": "https://images.stockx.com/images/Air-Jordan-4-Retro-SB-Navy-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1740411181",
+        "Color": "Blanco",
+        "Tipo": "Casual"
     },
     {
-    "Nombre": "Jordan 1 Retro High OG Rare Air",
-    "Marca": "Jordan",
-    "Precio": "$170",
-    "Imagen": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-OG-Rare-Air-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1741385112",
-    "Color": "Azul"
+        "Nombre": "Jordan 1 Retro High OG Rare Air",
+        "Marca": "Jordan",
+        "Precio": "$170",
+        "Imagen": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-OG-Rare-Air-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1741385112",
+        "Color": "Azul",
+        "Tipo": "Casual"
     },
     {
-    "Nombre": "Nike Dunk Low Retro White Black Panda",
-    "Marca": "Nike",
-    "Precio": "$77",
-    "Imagen": "https://images.stockx.com/images/Nike-Dunk-Low-Retro-White-Black-2021-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
-    "Color": "Negro"
+        "Nombre": "Nike Dunk Low Retro White Black Panda",
+        "Marca": "Nike",
+        "Precio": "$77",
+        "Imagen": "https://images.stockx.com/images/Nike-Dunk-Low-Retro-White-Black-2021-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro",
+        "Tipo": "Formal"
     },
     {
-    "Nombre": "adidas Yeezy Slide Slate Marine",
-    "Marca": "Adidas",
-    "Precio": "$156",
-    "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Slide-Slate-Marine-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
-    "Color": "Celeste"
+        "Nombre": "adidas Yeezy Slide Slate Marine",
+        "Marca": "Adidas",
+        "Precio": "$156",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Slide-Slate-Marine-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Celeste",
+        "Tipo": "Casual"
     },
     {
-    "Nombre": "Nike Air Force 1 Low '07 White",
-    "Marca": "Nike",
-    "Precio": "$110",
-    "Imagen": "https://images.stockx.com/images/Nike-Air-Force-1-Low-White-07_V2-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
-    "Color": "Blanco"
+        "Nombre": "Nike Air Force 1 Low '07 White",
+        "Marca": "Nike",
+        "Precio": "$110",
+        "Imagen": "https://images.stockx.com/images/Nike-Air-Force-1-Low-White-07_V2-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco",
+        "Tipo": "Formal"
     },
     {
-    "Nombre": "Reebok Classic Leather White",
-    "Marca": "Reebok",
-    "Precio": "$100",
-    "Imagen": "https://images.stockx.com/images/Reebok-Classic-Leather-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
-    "Color": "Blanco"
+        "Nombre": "Reebok Classic Leather White",
+        "Marca": "Reebok",
+        "Precio": "$100",
+        "Imagen": "https://images.stockx.com/images/Reebok-Classic-Leather-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco",
+        "Tipo": "Formal"
     },
     {
-    "Nombre": "ASICS Gel-1130 White Black",
-    "Marca": "ASICS",
-    "Precio": "$120",
-    "Imagen": "https://images.stockx.com/images/ASICS-Gel-1130-White-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
-    "Color": "Blanco"
+        "Nombre": "ASICS Gel-1130 White Black",
+        "Marca": "ASICS",
+        "Precio": "$120",
+        "Imagen": "https://images.stockx.com/images/ASICS-Gel-1130-White-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco",
+        "Tipo": "Deportivo"
     },
     {
-    "Nombre": "Vans Old Skool Black White",
-    "Marca": "Vans",
-    "Precio": "$68",
-    "Imagen": "https://images.stockx.com/images/Vans-Old-Skool-Black-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
-    "Color": "Blanco"
+        "Nombre": "Vans Old Skool Black White",
+        "Marca": "Vans",
+        "Precio": "$68",
+        "Imagen": "https://images.stockx.com/images/Vans-Old-Skool-Black-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro",
+        "Tipo": "Formal"
     },
     {
-    "Nombre": "adidas Nite Jogger Core Black",
-    "Marca": "Adidas",
-    "Precio": "$215",
-    "Imagen": "https://images.stockx.com/images/adidas-Nite-Jogger-Core-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
-    "Color": "Negro"
+        "Nombre": "adidas Nite Jogger Core Black",
+        "Marca": "Adidas",
+        "Precio": "$215",
+        "Imagen": "https://images.stockx.com/images/adidas-Nite-Jogger-Core-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro",
+        "Tipo": "Casual"
     },
     {
-    "Nombre": "New Balance 990v5 Grey",
-    "Marca": "New Balance",
-    "Precio": "$190",
-    "Imagen": "https://images.stockx.com/images/New-Balance-990v5-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
-    "Color": "Gris"
+        "Nombre": "New Balance 990v5 Grey",
+        "Marca": "New Balance",
+        "Precio": "$190",
+        "Imagen": "https://images.stockx.com/images/New-Balance-990v5-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris",
+        "Tipo": "Deportivo"
     },
     {
-    "Nombre": "adidas Yeezy Boost 380 Mist",
-    "Marca": "Adidas",
-    "Precio": "$175",
-    "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-380-Mist-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
-    "Color": "Verde Oscuro"
+        "Nombre": "New Balance 992 Grey",
+        "Marca": "New Balance",
+        "Precio": "$485",
+        "Imagen": "https://images.stockx.com/images/New-Balance-992-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
     },
     {
-    "Nombre": "New Balance 992 Grey",
-    "Marca": "New Balance",
-    "Precio": "$485",
-    "Imagen": "https://images.stockx.com/images/New-Balance-992-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
-    "Color": "Gris"
+        "Nombre": "adidas Yeezy 450 Cloud White",
+        "Marca": "Adidas",
+        "Precio": "$160",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-450-Cloud-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
     },
     {
-    "Nombre": "adidas Yeezy 450 Cloud White",
-    "Marca": "Adidas",
-    "Precio": "$160",
-    "Imagen": "https://images.stockx.com/images/adidas-Yeezy-450-Cloud-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
-    "Color": "Blanco"
+        "Nombre": "Nike Dunk Low Grey Fog",
+        "Marca": "Nike",
+        "Precio": "$190",
+        "Imagen": "https://images.stockx.com/images/Nike-Dunk-Low-Grey-Fog-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
     },
     {
-    "Nombre": "Nike Dunk Low Grey Fog",
-    "Marca": "Nike",
-    "Precio": "$190",
-    "Imagen": "https://images.stockx.com/images/Nike-Dunk-Low-Grey-Fog-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
-    "Color": "Gris"
+        "Nombre": "Jordan 1 Retro High OG Black Toe Reimagined",
+        "Marca": "Jordan",
+        "Precio": "$122.86567164179104",
+        "Imagen": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-OG-Black-Toe-Reimagined-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Rojo"
+    },
+    {
+        "Nombre": "Jordan 4 Retro Bred Reimagined",
+        "Marca": "Jordan",
+        "Precio": "$284.59090909090907",
+        "Imagen": "https://images.stockx.com/images/Air-Jordan-4-Retro-Bred-Reimagined-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "Jordan 4 Retro Military Black",
+        "Marca": "Jordan",
+        "Precio": "$507.8",
+        "Imagen": "https://images.stockx.com/images/Air-Jordan-4-Retro-Military-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "Jordan 1 Retro High OG Patent Bred",
+        "Marca": "Jordan",
+        "Precio": "$287.1475409836066",
+        "Imagen": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-OG-Bred-Patent-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "Jordan 13 Retro Black Flint",
+        "Marca": "Jordan",
+        "Precio": "$279.9375",
+        "Imagen": "https://images.stockx.com/images/Air-Jordan-13-Retro-Black-Flint-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "Nike SB Dunk Low Futura Laboratories Bleached Aqua",
+        "Marca": "Nike",
+        "Precio": "$310",
+        "Imagen": "https://images.stockx.com/images/Nike-SB-Dunk-Low-Futura-Laboratories-Bleached-Aqua-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Celeste"
+    },
+    {
+        "Nombre": "Nike Dunk Low Michigan (2021)",
+        "Marca": "Nike",
+        "Precio": "$282",
+        "Imagen": "https://images.stockx.com/images/Nike-Dunk-Low-Michigan-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Amarillo"
+    },
+    {
+        "Nombre": "Nike SB Dunk Low Born X Raised One Block At A Time",
+        "Marca": "Nike",
+        "Precio": "$479.2758620689655",
+        "Imagen": "https://images.stockx.com/images/Nike-SB-Dunk-Low-Born-x-Raised-One-Block-At-A-Time-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Azul"
+    },
+    {
+        "Nombre": "Nike Air Force 1 Low Cactus Plant Flea Market Fuchsia Dream",
+        "Marca": "Nike",
+        "Precio": "$1400",
+        "Imagen": "https://images.stockx.com/images/Nike-Air-Force-1-Low-Cactus-Plant-Flea-Market-Fuchsia-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Violeta"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Onyx",
+        "Marca": "adidas",
+        "Precio": "$266.1917808219178",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Onyx-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Bone",
+        "Marca": "adidas",
+        "Precio": "$216.65714285714284",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Pure-Oat-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "adidas Yeezy Slide Pure (First Release)",
+        "Marca": "adidas",
+        "Precio": "$221.1851851851852",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Slide-Pure-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Marron"
+    },
+    {
+        "Nombre": "adidas Yeezy Slide Granite",
+        "Marca": "adidas",
+        "Precio": "$191.24324324324326",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Slide-Granite-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1763413818",
+        "Color": "Verde oscuro"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 380 Alien",
+        "Marca": "adidas",
+        "Precio": "$260",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-380-Alien-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "adidas Yeezy 450 Cloud White",
+        "Marca": "adidas",
+        "Precio": "$161.1315789473684",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-450-Cloud-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "adidas Yeezy 450 Dark Slate",
+        "Marca": "adidas",
+        "Precio": "$212.29545454545453",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-450-Dark-Slate-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "adidas Campus 00s Core Black",
+        "Marca": "adidas",
+        "Precio": "$60.53225806451613",
+        "Imagen": "https://images.stockx.com/images/adidas-Campus-00s-Core-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "adidas Campus 00s Grey",
+        "Marca": "adidas",
+        "Precio": "$257.7",
+        "Imagen": "https://images.stockx.com/images/adidas-Campus-00s-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "adidas Nite Jogger Core Black",
+        "Marca": "adidas",
+        "Precio": "$216.75",
+        "Imagen": "https://images.stockx.com/images/adidas-Nite-Jogger-Core-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "adidas AE 1 New Wave",
+        "Marca": "adidas",
+        "Precio": "$160.71428571428572",
+        "Imagen": "https://images.stockx.com/images/adidas-AE-1-New-Wave-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Celeste"
+    },
+    {
+        "Nombre": "New Balance 550 White Grey",
+        "Marca": "New Balance",
+        "Precio": "$133.83333333333334",
+        "Imagen": "https://images.stockx.com/images/New-Balance-550-White-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "New Balance 1906R Action Bronson Rosewater",
+        "Marca": "New Balance",
+        "Precio": "$332.3333333333333",
+        "Imagen": "https://images.stockx.com/images/New-Balance-1906R-Action-Bronson-Rosewater-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Rosa"
+    },
+    {
+        "Nombre": "New Balance 327 Grey White",
+        "Marca": "New Balance",
+        "Precio": "$190",
+        "Imagen": "https://images.stockx.com/images/New-Balance-327-Grey-White.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1626893228",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "New Balance 574 Grey",
+        "Marca": "New Balance",
+        "Precio": "$260",
+        "Imagen": "https://images.stockx.com/images/New-Balance-574-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "ASICS Gel-1130 White Pure Silver",
+        "Marca": "ASICS",
+        "Precio": "$130",
+        "Imagen": "https://images.stockx.com/images/ASICS-Gel-1130-White-Pure-Silver-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "ASICS Gel-Kayano 14 Imperfection Pack Cream",
+        "Marca": "ASICS",
+        "Precio": "$295.375",
+        "Imagen": "https://images.stockx.com/images/ASICS-Gel-Kayano-14-Cream-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "Nike Kobe 6 Protro Grinch (2020)",
+        "Marca": "Nike",
+        "Precio": "$1046.6037735849056",
+        "Imagen": "https://images.stockx.com/images/Nike-Kobe-6-Protro-Grinch-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Verde"
+    },
+    {
+        "Nombre": "Nike Kobe 6 Protro Reverse Grinch",
+        "Marca": "Nike",
+        "Precio": "$482.3",
+        "Imagen": "https://images.stockx.com/images/Nike-Kobe-6-Protro-Reverse-Grinch-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Rojo"
+    },
+    {
+        "Nombre": "Nike Kobe 4 Protro Gift of Mamba",
+        "Marca": "Nike",
+        "Precio": "$400",
+        "Imagen": "https://images.stockx.com/images/Nike-Kobe-4-Protro-Gift-of-Mamba-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "Nike Ja 3 Max Volume",
+        "Marca": "Nike",
+        "Precio": "$324.7692307692308",
+        "Imagen": "https://images.stockx.com/images/Nike-Ja-3-Max-Volume-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1756147141",
+        "Color": "Rosa"
+    },
+    {
+        "Nombre": "Nike Ja 3 Hustle & Flow",
+        "Marca": "Nike",
+        "Precio": "$247.21052631578948",
+        "Imagen": "https://images.stockx.com/images/Nike-Ja-3-Hustle-and-Flow-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1756741596",
+        "Color": "Naranja"
+    },
+    {
+        "Nombre": "Puma Speedcat OG Black White",
+        "Marca": "Puma",
+        "Precio": "$96.54347826086956",
+        "Imagen": "https://images.stockx.com/images/Puma-Speedcat-OG-Black-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "Jordan 1 Retro High OG UNC Reimagined",
+        "Marca": "Jordan",
+        "Precio": "$136.80327868852459",
+        "Imagen": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-OG-UNC-Reimagined-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1744933337",
+        "Color": "Celeste"
+    },
+    {
+        "Nombre": "Jordan 1 Retro High OG Yellow Ochre",
+        "Marca": "Jordan",
+        "Precio": "$134.9607843137255",
+        "Imagen": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-OG-Yellow-Ochre-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Naranja"
+    },
+    {
+        "Nombre": "Jordan 1 Retro High OG Bleached Coral",
+        "Marca": "Jordan",
+        "Precio": "$199.55769230769232",
+        "Imagen": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-OG-Stage-Haze-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "Jordan 1 Low OG Neutral Grey (2021/2024)",
+        "Marca": "Jordan",
+        "Precio": "$269",
+        "Imagen": "https://images.stockx.com/images/Air-Jordan-1-Low-OG-Neutral-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "Jordan 3 Retro Muslin",
+        "Marca": "Jordan",
+        "Precio": "$242.92105263157896",
+        "Imagen": "https://images.stockx.com/images/Air-Jordan-3-Retro-Muslin-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Marron"
+    },
+    {
+        "Nombre": "Nike Dunk Low Michigan State",
+        "Marca": "Nike",
+        "Precio": "$130.77966101694915",
+        "Imagen": "https://images.stockx.com/images/Nike-Dunk-Low-Team-Green-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "Nike Dunk Low Coast (Women's)",
+        "Marca": "Nike",
+        "Precio": "$147.03225806451613",
+        "Imagen": "https://images.stockx.com/images/Nike-Dunk-Low-Coast-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Celeste"
+    },
+    {
+        "Nombre": "Nike Dunk Low University Gold",
+        "Marca": "Nike",
+        "Precio": "$111.72222222222223",
+        "Imagen": "https://images.stockx.com/images/Nike-Dunk-Low-University-Gold-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Naranja"
+    },
+    {
+        "Nombre": "Nike Dunk Low Black White",
+        "Marca": "Nike",
+        "Precio": "$0",
+        "Imagen": "https://images.stockx.com/images/Nike-Dunk-Low-Black-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "Nike Dunk Low Polar Blue",
+        "Marca": "Nike",
+        "Precio": "$113.36538461538461",
+        "Imagen": "https://images.stockx.com/images/Nike-Dunk-Low-Polar-Blue-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Celeste"
+    },
+    {
+        "Nombre": "Nike Dunk Low Orange Pearl (Women's)",
+        "Marca": "Nike",
+        "Precio": "$110.4074074074074",
+        "Imagen": "https://images.stockx.com/images/Nike-Dunk-Low-Orange-Pearl-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Rosa"
+    },
+    {
+        "Nombre": "Nike Dunk Low Team Gold",
+        "Marca": "Nike",
+        "Precio": "$102.89795918367346",
+        "Imagen": "https://images.stockx.com/images/Nike-Dunk-Low-Team-Gold-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Marron"
+    },
+    {
+        "Nombre": "Nike SB Dunk Low Pro Why So Sad?",
+        "Marca": "Nike",
+        "Precio": "$273.8292682926829",
+        "Imagen": "https://images.stockx.com/images/Nike-SB-Dunk-Low-Pro-Why-So-Sad-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Azul"
+    },
+    {
+        "Nombre": "Nike SB Dunk Low Travis Scott",
+        "Marca": "Nike",
+        "Precio": "$2093.0333333333333",
+        "Imagen": "https://images.stockx.com/images/Nike-SB-Dunk-Low-Travis-Scott-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Marron"
+    },
+    {
+        "Nombre": "Nike SB Dunk Low Jarritos",
+        "Marca": "Nike",
+        "Precio": "$527.4",
+        "Imagen": "https://images.stockx.com/images/Nike-SB-Dunk-Low-Jarritos-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Marron"
+    },
+    {
+        "Nombre": "Nike SB Dunk Low Ben & Jerry's Chunky Dunky",
+        "Marca": "Nike",
+        "Precio": "$2119.3529411764707",
+        "Imagen": "https://images.stockx.com/images/Nike-SB-Dunk-Low-Ben-Jerrys-Chunky-Dunky-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Celeste"
+    },
+    {
+        "Nombre": "Nike SB Dunk Low Street Hawker (2021)",
+        "Marca": "Nike",
+        "Precio": "$407.5625",
+        "Imagen": "https://images.stockx.com/images/Nike-SB-Dunk-Low-CNY-Chinese-New-Year-2021-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Rojo"
+    },
+    {
+        "Nombre": "Nike SB Dunk Low Grateful Dead Bears Orange",
+        "Marca": "Nike",
+        "Precio": "$4644.5",
+        "Imagen": "https://images.stockx.com/images/Nike-SB-Dunk-Low-Grateful-Dead-Bears-Orange-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Naranja"
+    },
+    {
+        "Nombre": "Nike Air Force 1 Low Travis Scott Cactus Jack",
+        "Marca": "Nike",
+        "Precio": "$392.6756756756757",
+        "Imagen": "https://images.stockx.com/images/Nike-Air-Force-1-Low-Travis-Scott-Cactus-Jack-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Naranja"
+    },
+    {
+        "Nombre": "Nike Air Force 1 Low CLOT Blue Silk",
+        "Marca": "Nike",
+        "Precio": "$288.09375",
+        "Imagen": "https://images.stockx.com/images/Nike-Air-Force-1-Low-Clot-Blue-Silk-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Azul"
+    },
+    {
+        "Nombre": "Nike Air Max Plus TN Hyper Blue",
+        "Marca": "Nike",
+        "Precio": "$911.25",
+        "Imagen": "https://images.stockx.com/images/Nike-Air-Max-Plus-TN-Hyper-Blue.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1617295099",
+        "Color": "Celeste"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Beluga Reflective",
+        "Marca": "adidas",
+        "Precio": "$207.16417910447763",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Beluga-Reflective-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Marron"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Butter",
+        "Marca": "adidas",
+        "Precio": "$257.6857142857143",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Butter-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Sesame",
+        "Marca": "adidas",
+        "Precio": "$268.75",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Sesame-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Clay",
+        "Marca": "adidas",
+        "Precio": "$304.45",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Clay-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Rosa"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Cloud White (Non-Reflective)",
+        "Marca": "adidas",
+        "Precio": "$299.27906976744185",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Cloud-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Carbon",
+        "Marca": "adidas",
+        "Precio": "$209.53703703703704",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Carbon-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Sand Taupe",
+        "Marca": "adidas",
+        "Precio": "$249.9318181818182",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Eliada-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Marron"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 700 V2 Static",
+        "Marca": "adidas",
+        "Precio": "$267.2758620689655",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-700-V2-Static-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 700 V2 Vanta",
+        "Marca": "adidas",
+        "Precio": "$444.3478260869565",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-700-V2-Vanta-Product.png?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 700 MNVN Orange",
+        "Marca": "adidas",
+        "Precio": "$375.9117647058824",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-700-MNVN-Orange-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Naranja"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 700 Sun",
+        "Marca": "adidas",
+        "Precio": "$366.43333333333334",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-700-Sun-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Amarillo"
+    },
+    {
+        "Nombre": "adidas Yeezy 500 Utility Black",
+        "Marca": "adidas",
+        "Precio": "$284.8305084745763",
+        "Imagen": "https://images.stockx.com/images/Adidas-Yeezy-500-Utility-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "adidas Yeezy 500 Blush",
+        "Marca": "adidas",
+        "Precio": "$238.88636363636363",
+        "Imagen": "https://images.stockx.com/images/Adidas-Yeezy-500-Blush-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "adidas Yeezy Slide Slate Marine",
+        "Marca": "adidas",
+        "Precio": "$155.43243243243242",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Slide-Slate-Marine-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Celeste"
+    },
+    {
+        "Nombre": "adidas Yeezy Slide Glow Green",
+        "Marca": "adidas",
+        "Precio": "$173.41666666666666",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Slide-Glow-Green-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Verde"
+    },
+    {
+        "Nombre": "adidas Samba OG Cloud White Core Black",
+        "Marca": "adidas",
+        "Precio": "$63.06349206349206",
+        "Imagen": "https://images.stockx.com/images/adidas-Samba-OG-Cloud-White-Core-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "New Balance 990v4 Grey",
+        "Marca": "New Balance",
+        "Precio": "$390.3333333333333",
+        "Imagen": "https://images.stockx.com/images/New-Balance-990v4-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "New Balance 990v6 MiUSA Grey",
+        "Marca": "New Balance",
+        "Precio": "$180.2",
+        "Imagen": "https://images.stockx.com/images/New-Balance-990v6-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "New Balance 992 Tan",
+        "Marca": "New Balance",
+        "Precio": "$1051.2",
+        "Imagen": "https://images.stockx.com/images/New-Balance-992-Tan-Product.png?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Marron"
+    },
+    {
+        "Nombre": "New Balance 550 White Green",
+        "Marca": "New Balance",
+        "Precio": "$144.46",
+        "Imagen": "https://images.stockx.com/images/New-Balance-550-White-Green-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "New Balance 550 Shadow",
+        "Marca": "New Balance",
+        "Precio": "$218.85714285714286",
+        "Imagen": "https://images.stockx.com/images/New-Balance-550-Shadow-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "New Balance 2002R Sea Salt",
+        "Marca": "New Balance",
+        "Precio": "$239.84615384615384",
+        "Imagen": "https://images.stockx.com/images/New-Balance-2002R-Sea-Salt-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1750713025",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "New Balance 9060 Grey",
+        "Marca": "New Balance",
+        "Precio": "$140.65384615384616",
+        "Imagen": "https://images.stockx.com/images/New-Balance-9060-Grey-Womens-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "ASICS Gel-1130 Cream Pure Silver",
+        "Marca": "ASICS",
+        "Precio": "$223.33333333333334",
+        "Imagen": "https://images.stockx.com/images/ASICS-Gel-1130-Cream-Pure-Silver-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "ASICS Gel-Kayano 14 White Pure Silver",
+        "Marca": "ASICS",
+        "Precio": "$442",
+        "Imagen": "https://images.stockx.com/images/ASICS-Gel-Kayano-14-White-Pure-Silver-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "ASICS Gel-Lyte V Black",
+        "Marca": "ASICS",
+        "Precio": "$243",
+        "Imagen": "https://images.stockx.com/images/ASICS-Gel-Lyte-V-Black.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1623895172",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "ASICS GT-2160 White Pure Silver",
+        "Marca": "ASICS",
+        "Precio": "$106.09756097560975",
+        "Imagen": "https://images.stockx.com/images/ASICS-GT-2160-White-Pure-Silver-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Celeste"
+    },
+    {
+        "Nombre": "ASICS Gel-NYC Cream",
+        "Marca": "ASICS",
+        "Precio": "$327.96153846153845",
+        "Imagen": "https://images.stockx.com/images/ASICS-Gel-NYC-Cream-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Marron"
+    },
+    {
+        "Nombre": "Vans Old Skool True White",
+        "Marca": "Vans",
+        "Precio": "$0",
+        "Imagen": "https://images.stockx.com/images/Vans-Old-Skool-True-White.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1626898580",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "Vans Sk8-Hi Black White",
+        "Marca": "Vans",
+        "Precio": "$75.33333333333333",
+        "Imagen": "https://images.stockx.com/images/Vans-Sk8-Hi-Black-White-Product.png?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "Vans Authentic Black White",
+        "Marca": "Vans",
+        "Precio": "$57.92",
+        "Imagen": "https://images.stockx.com/images/Vans-Authentic-Black-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "Reebok Classic Leather Black",
+        "Marca": "Reebok",
+        "Precio": "$56",
+        "Imagen": "https://images.stockx.com/images/Reebok-Classic-Leather-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "Reebok Club C 85 White Green",
+        "Marca": "Reebok",
+        "Precio": "$98.54166666666667",
+        "Imagen": "https://images.stockx.com/images/Reebok-Club-C-85-White-Green-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "Jordan 1 Retro Low OG Shadow (2024)",
+        "Marca": "Jordan",
+        "Precio": "$169.1509433962264",
+        "Imagen": "https://images.stockx.com/images/Air-Jordan-1-Low-OG-Shadow-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "Jordan 1 Low Starfish",
+        "Marca": "Jordan",
+        "Precio": "$206.05",
+        "Imagen": "https://images.stockx.com/images/Air-Air-Jordan-1-Low-OG-Shattered-Backboard-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Rojo"
+    },
+    {
+        "Nombre": "Jordan 3 Retro Pine Green",
+        "Marca": "Jordan",
+        "Precio": "$307.84615384615387",
+        "Imagen": "https://images.stockx.com/images/Air-Jordan-3-Retro-Pine-Green-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Verde oscuro"
+    },
+    {
+        "Nombre": "Jordan 4 Retro Oxidized Green",
+        "Marca": "Jordan",
+        "Precio": "$265.3448275862069",
+        "Imagen": "https://images.stockx.com/images/Air-Jordan-4-Retro-Oxidized-Green-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "Jordan 4 Retro University Blue",
+        "Marca": "Jordan",
+        "Precio": "$465.85",
+        "Imagen": "https://images.stockx.com/images/Air-Jordan-4-Retro-University-Blue-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Celeste"
+    },
+    {
+        "Nombre": "Jordan 5 Retro Aqua",
+        "Marca": "Jordan",
+        "Precio": "$292.7096774193548",
+        "Imagen": "https://images.stockx.com/images/Air-Jordan-5-Retro-Aqua-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "Jordan 11 Retro Win Like 96",
+        "Marca": "Jordan",
+        "Precio": "$395.05405405405406",
+        "Imagen": "https://images.stockx.com/images/Air-Jordan-11-Retro-Win-Like-96-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Rojo"
+    },
+    {
+        "Nombre": "Jordan 11 Retro Low Concord Bred",
+        "Marca": "Jordan",
+        "Precio": "$305.5483870967742",
+        "Imagen": "https://images.stockx.com/images/Air-Jordan-11-Retro-Low-Concord-Bred-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "Nike Dunk Low Georgetown",
+        "Marca": "Nike",
+        "Precio": "$180.89655172413794",
+        "Imagen": "https://images.stockx.com/images/Nike-Dunk-Low-Georgetown-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "Nike Dunk Low Medium Grey",
+        "Marca": "Nike",
+        "Precio": "$0",
+        "Imagen": "https://images.stockx.com/images/Nike-Dunk-Low-Medium-Grey.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1616564502",
+        "Color": "Rosa"
+    },
+    {
+        "Nombre": "Nike Dunk Low Championship Goldenrod (2021)",
+        "Marca": "Nike",
+        "Precio": "$113.2258064516129",
+        "Imagen": "https://images.stockx.com/images/Nike-Dunk-Low-Goldenrod-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Naranja"
+    },
+    {
+        "Nombre": "Nike Dunk Low Valerian Blue",
+        "Marca": "Nike",
+        "Precio": "$106.2127659574468",
+        "Imagen": "https://images.stockx.com/images/Nike-Dunk-Low-Valerian-Blue-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Azul"
+    },
+    {
+        "Nombre": "Nike Dunk Low Free 99 Black",
+        "Marca": "Nike",
+        "Precio": "$193.3846153846154",
+        "Imagen": "https://images.stockx.com/images/Nike-Dunk-Low-Free-99-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Celeste"
+    },
+    {
+        "Nombre": "Nike SB Dunk Low Grateful Dead Bears Opti Yellow",
+        "Marca": "Nike",
+        "Precio": "$943.9666666666667",
+        "Imagen": "https://images.stockx.com/images/Nike-SB-Dunk-Low-Grateful-Dead-Bears-Yellow-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Amarillo"
+    },
+    {
+        "Nombre": "Nike SB Dunk Low Skate Like a Girl",
+        "Marca": "Nike",
+        "Precio": "$199.88095238095238",
+        "Imagen": "https://images.stockx.com/images/Nike-SB-Dunk-Low-Skate-Like-a-Girl-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Rojo"
+    },
+    {
+        "Nombre": "Nike SB Dunk Low Laser Orange",
+        "Marca": "Nike",
+        "Precio": "$319.8666666666667",
+        "Imagen": "https://images.stockx.com/images/Nike-SB-Dunk-Low-Laser-Orange-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Naranja"
+    },
+    {
+        "Nombre": "Nike SB Dunk Low StrangeLove Skateboards",
+        "Marca": "Nike",
+        "Precio": "$1234.6176470588234",
+        "Imagen": "https://images.stockx.com/images/Nike-SB-Dunk-Low-StrangeLove-Skateboards-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Rosa"
+    },
+    {
+        "Nombre": "Nike SB Dunk Low Instant Skateboards",
+        "Marca": "Nike",
+        "Precio": "$386.25",
+        "Imagen": "https://images.stockx.com/images/Nike-SB-Dunk-Low-Instant-Skateboards-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Celeste"
+    },
+    {
+        "Nombre": "Nike SB Dunk High Dog Walker",
+        "Marca": "Nike",
+        "Precio": "$520.4",
+        "Imagen": "https://images.stockx.com/images/Nike-SB-Dunk-High-Dog-Walker-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Verde"
+    },
+    {
+        "Nombre": "Nike SB Dunk Low Supreme Rammellzee",
+        "Marca": "Nike",
+        "Precio": "$504.5625",
+        "Imagen": "https://images.stockx.com/images/Nike-SB-Dunk-Low-Supreme-Rammellzee-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "Nike SB Dunk Low Supreme Jewel Swoosh Red",
+        "Marca": "Nike",
+        "Precio": "$341.40909090909093",
+        "Imagen": "https://images.stockx.com/images/Nike-SB-Dunk-Low-Supreme-Jewel-Swoosh-Red-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "Nike Air Force 1 Low '07 White Pure Platinum",
+        "Marca": "Nike",
+        "Precio": "$170",
+        "Imagen": "https://images.stockx.com/images/Nike-Air-Force-1-07-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "Nike Air Force 1 High White",
+        "Marca": "Nike",
+        "Precio": "$182.1304347826087",
+        "Imagen": "https://images.stockx.com/images/Nike-Air-Force-1-High-White-2016-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "Nike Air Max 90 White",
+        "Marca": "Nike",
+        "Precio": "$0",
+        "Imagen": "https://images.stockx.com/images/Nike-Air-Max-90-White-Product.png?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Beluga 2.0",
+        "Marca": "adidas",
+        "Precio": "$429.2258064516129",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Beluga-2pt0-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Cream",
+        "Marca": "adidas",
+        "Precio": "$398.16279069767444",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Cream-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Tail Light",
+        "Marca": "adidas",
+        "Precio": "$419.2857142857143",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Tail-Light-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Cinder",
+        "Marca": "adidas",
+        "Precio": "$296.9795918367347",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Cinder-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Sulfur",
+        "Marca": "adidas",
+        "Precio": "$376.03125",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Sulfur-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Verde"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Linen",
+        "Marca": "adidas",
+        "Precio": "$268.94736842105266",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Linen-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Natural",
+        "Marca": "adidas",
+        "Precio": "$241.125",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Natural-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Ash Stone",
+        "Marca": "adidas",
+        "Precio": "$312.39285714285717",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Ash-Stone-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Light",
+        "Marca": "adidas",
+        "Precio": "$219.17543859649123",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Light-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Mono Ice",
+        "Marca": "adidas",
+        "Precio": "$220.76923076923077",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Mono-Ice-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Celeste"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Mono Mist",
+        "Marca": "adidas",
+        "Precio": "$158.35593220338984",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Mono-Mist-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Marron"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Mono Clay",
+        "Marca": "adidas",
+        "Precio": "$156.19148936170214",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Mono-Clay-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Naranja"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Semi Frozen Yellow",
+        "Marca": "adidas",
+        "Precio": "$369.94444444444446",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Semi-Frozen-Yellow-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Verde"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Yeezreel (Non-Reflective)",
+        "Marca": "adidas",
+        "Precio": "$229.4",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Yeezreel-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Verde"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Yecheil (Non-Reflective)",
+        "Marca": "adidas",
+        "Precio": "$328.4583333333333",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Yecheil-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Flax",
+        "Marca": "adidas",
+        "Precio": "$188.26190476190476",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Flax-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Marron"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Desert Sage",
+        "Marca": "adidas",
+        "Precio": "$214.14583333333334",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Desert-Sage-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Earth",
+        "Marca": "adidas",
+        "Precio": "$408.55882352941177",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Earth-Product_V2.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Marron"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Israfil",
+        "Marca": "adidas",
+        "Precio": "$256.5813953488372",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Israfil-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 Zyon",
+        "Marca": "adidas",
+        "Precio": "$181.07407407407408",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Zyon-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 350 V2 MX Rock",
+        "Marca": "adidas",
+        "Precio": "$198.32075471698113",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-MX-Rock-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 700 V2 Geode",
+        "Marca": "adidas",
+        "Precio": "$473.51851851851853",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-700-V2-Geode-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 700 V2 Tephra",
+        "Marca": "adidas",
+        "Precio": "$248.44444444444446",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-700-V2-Tephra-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 700 V2 Hospital Blue",
+        "Marca": "adidas",
+        "Precio": "$455.1666666666667",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-700-V2-Hospital-Blue-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Celeste"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 700 V2 Cream",
+        "Marca": "adidas",
+        "Precio": "$253.08510638297872",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-700-V2-Cream-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 700 MNVN Triple Black",
+        "Marca": "adidas",
+        "Precio": "$295.8235294117647",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-700-MNVN-Triple-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 700 MNVN Blue Tint",
+        "Marca": "adidas",
+        "Precio": "$155.92307692307693",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-700-MNVN-Blue-Tint-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Celeste"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 700 Mauve",
+        "Marca": "adidas",
+        "Precio": "$425.8611111111111",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-700-Mauve-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 700 Salt",
+        "Marca": "adidas",
+        "Precio": "$260.8",
+        "Imagen": "https://images.stockx.com/images/Adidas-Yeezy-Boost-700-Salt-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 700 Inertia",
+        "Marca": "adidas",
+        "Precio": "$431.71875",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-700-Inertia-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Celeste"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 700 Utility Black",
+        "Marca": "adidas",
+        "Precio": "$275.0377358490566",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-700-Utility-Black-Product.png?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 700 Magnet",
+        "Marca": "adidas",
+        "Precio": "$627.2",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-700-Magnet-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 700 Teal Blue",
+        "Marca": "adidas",
+        "Precio": "$431.94444444444446",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-700-Teal-Blue-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 700 Bright Blue",
+        "Marca": "adidas",
+        "Precio": "$214.54347826086956",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-700-Bright-Blue-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Naranja"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 700 Wash Orange",
+        "Marca": "adidas",
+        "Precio": "$211.60416666666666",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-700-Wash-Orange-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Naranja"
+    },
+    {
+        "Nombre": "adidas Yeezy 700 V3 Azael",
+        "Marca": "adidas",
+        "Precio": "$235.59615384615384",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-700-V3-Azael-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 380 Calcite Glow",
+        "Marca": "adidas",
+        "Precio": "$251.11111111111111",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-380-Calcite-Glow-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "adidas Yeezy Boost 380 Pepper",
+        "Marca": "adidas",
+        "Precio": "$167.3448275862069",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-380-Pepper-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Naranja"
+    },
+    {
+        "Nombre": "adidas Yeezy 500 Salt",
+        "Marca": "adidas",
+        "Precio": "$324.5806451612903",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-500-Salt-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "adidas Yeezy 500 Soft Vision",
+        "Marca": "adidas",
+        "Precio": "$467.7391304347826",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-500-Soft-Vision-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Violeta"
+    },
+    {
+        "Nombre": "adidas Yeezy 500 Taupe Light",
+        "Marca": "adidas",
+        "Precio": "$204.14285714285714",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-500-Taupe-Light-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Marron"
+    },
+    {
+        "Nombre": "adidas Yeezy 500 Enflame",
+        "Marca": "adidas",
+        "Precio": "$197.6595744680851",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-500-Enflame-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Rojo"
+    },
+    {
+        "Nombre": "adidas Yeezy Slide Slate Grey",
+        "Marca": "adidas",
+        "Precio": "$187.92105263157896",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Slide-Slate-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "adidas Yeezy Slide Azure",
+        "Marca": "adidas",
+        "Precio": "$122",
+        "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Slide-Azure-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Azul"
+    },
+    {
+        "Nombre": "adidas Stan Smith Triple White",
+        "Marca": "adidas",
+        "Precio": "$183.16666666666666",
+        "Imagen": "https://images.stockx.com/images/adidas-Stan-Smith-Triple-White-Product.png?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "New Balance 997 Grey",
+        "Marca": "New Balance",
+        "Precio": "$137.75",
+        "Imagen": "https://images.stockx.com/images/New-Balance-997-Grey.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1617290844",
+        "Color": "Azul"
+    },
+    {
+        "Nombre": "New Balance 997H Grey",
+        "Marca": "New Balance",
+        "Precio": "$0",
+        "Imagen": "https://images.stockx.com/images/New-Balance-997H-Grey.png?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1617289139",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "New Balance 999 Grey",
+        "Marca": "New Balance",
+        "Precio": "$730",
+        "Imagen": "https://images.stockx.com/images/New-Balance-999-Grey.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1642460207",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "New Balance 2002R Grey",
+        "Marca": "New Balance",
+        "Precio": "$147.02777777777777",
+        "Imagen": "https://images.stockx.com/images/New-Balance-2002R-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "New Balance 2002R Black",
+        "Marca": "New Balance",
+        "Precio": "$154",
+        "Imagen": "https://images.stockx.com/images/New-Balance-2002R-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "New Balance 327 Green White",
+        "Marca": "New Balance",
+        "Precio": "$157",
+        "Imagen": "https://images.stockx.com/images/New-Balance-327-Green-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1749849096",
+        "Color": "Verde"
+    },
+    {
+        "Nombre": "New Balance 574 Navy",
+        "Marca": "New Balance",
+        "Precio": "$190",
+        "Imagen": "https://images.stockx.com/images/New-Balance-574-Navy-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "New Balance 574 Black",
+        "Marca": "New Balance",
+        "Precio": "$252.66666666666666",
+        "Imagen": "https://images.stockx.com/images/New-Balance-574-Black.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1737493404",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "New Balance 9060 Black",
+        "Marca": "New Balance",
+        "Precio": "$737.3333333333334",
+        "Imagen": "https://images.stockx.com/images/New-Balance-9060-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "New Balance 530 White",
+        "Marca": "New Balance",
+        "Precio": "$0",
+        "Imagen": "https://images.stockx.com/images/New-Balance-530-White.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1685174321",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "ASICS Gel-Lyte V White",
+        "Marca": "ASICS",
+        "Precio": "$0",
+        "Imagen": "https://images.stockx.com/images/ASICS-Gel-Lyte-V-White.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1623895172",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "ASICS Japan S White",
+        "Marca": "ASICS",
+        "Precio": "$123",
+        "Imagen": "https://images.stockx.com/images/ASICS-Japan-S-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1757624986",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "Vans Old Skool Navy White",
+        "Marca": "Vans",
+        "Precio": "$67.56",
+        "Imagen": "https://images.stockx.com/images/Vans-Old-Skool-Navy-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Celeste"
+    },
+    {
+        "Nombre": "Vans Old Skool Platform Black White",
+        "Marca": "Vans",
+        "Precio": "$124.61111111111111",
+        "Imagen": "https://images.stockx.com/images/Vans-Old-Skool-Platform-Black-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "Vans Sk8-Hi True White",
+        "Marca": "Vans",
+        "Precio": "$89.61904761904762",
+        "Imagen": "https://images.stockx.com/images/Vans-Sk8-Hi-True-White-Leather-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "Vans Authentic True White",
+        "Marca": "Vans",
+        "Precio": "$42.794117647058826",
+        "Imagen": "https://images.stockx.com/images/Vans-Authentic-True-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "Vans Slip-On True White",
+        "Marca": "Vans",
+        "Precio": "$40.55555555555556",
+        "Imagen": "https://images.stockx.com/images/Vans-Slip-On-True-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
+    },
+    {
+        "Nombre": "Vans Style 36 Black White",
+        "Marca": "Vans",
+        "Precio": "$274.6666666666667",
+        "Imagen": "https://images.stockx.com/images/Vans-Style-36-Black-White.png?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1626899759",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "Vans Half Cab Black White",
+        "Marca": "Vans",
+        "Precio": "$200",
+        "Imagen": "https://images.stockx.com/images/Vans-Half-Cab-Black-White.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1637831756",
+        "Color": "Negro"
+    },
+    {
+        "Nombre": "Reebok Classic Leather Grey",
+        "Marca": "Reebok",
+        "Precio": "$0",
+        "Imagen": "https://images.stockx.com/images/Reebok-Classic-Leather-Grey.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1657956070",
+        "Color": "Gris"
+    },
+    {
+        "Nombre": "Reebok Club C 85 White Navy",
+        "Marca": "Reebok",
+        "Precio": "$157.86363636363637",
+        "Imagen": "https://images.stockx.com/images/Reebok-Club-C-85-White-Navy-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "Color": "Blanco"
     }
 ]
