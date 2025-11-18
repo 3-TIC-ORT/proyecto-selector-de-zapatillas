@@ -199,3 +199,56 @@ p{
   line-height: normal;
   margin: auto;
 }
+
+.resultados {
+  padding: 2rem;
+  text-align: center;
+}
+
+.resultados h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: "Lexend Deca";
+  color: var(--negro);
+}
+
+.shoe {
+  display: inline-block;
+  width: 18rem;
+  margin: 1rem;
+  padding: 1.5rem;
+  background-color: var(--grisv);
+  border-radius: 1rem;
+  border: 2px solid var(--negro);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  vertical-align: top;
+}
+
+.shoe:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: var(--grisclaro);
+}
+
+.shoe img {
+  width: 100%;
+  height: 12rem;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.shoe h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: var(--negro);
+  font-family: "Lexend Deca";
+  font-weight: 700;
+}
+
+.shoe p {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+  color: var(--negro);
+  font-family: "Lexend Deca";
+}
