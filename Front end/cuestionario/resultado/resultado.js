@@ -27,9 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     console.log("Enviando al backend:", respuestasCompletas);
 
-
     postEvent("calcularRecomendaciones", respuestasCompletas, (data) => {
-        
         console.log("Respuesta recibida del backend:", data);
       
         if (data && data.shoes) {
@@ -37,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             console.error("El backend no devolvió un objeto { shoes: [...] }");
         }
-    },);
+    });
 
     function displayShoes(shoes) {
         const container = document.querySelector('.resultados');
@@ -54,7 +52,17 @@ document.addEventListener("DOMContentLoaded", function() {
                 <p>Color: ${shoe.Color}</p>
             `;
             container.appendChild(shoeDiv);
-     });
+
+            shoeDiv.addEventListener('click', () => {
+                try {
+                    localStorage.removeItem('zapatillaSeleccionada');
+                    localStorage.setItem('zapatillaSeleccionada', JSON.stringify(shoe));
+                    console.log("Guardando zapatilla:", shoe.Nombre);
+                    window.location.href = "../../w_zapatillaespecifica%20copy/tab.html";
+                } catch (err) {
+                    console.error("Error al guardar y redirigir:", err);
+                }
+            });
+        });
     }
 });
-

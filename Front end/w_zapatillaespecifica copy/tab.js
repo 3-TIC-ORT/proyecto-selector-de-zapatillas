@@ -16,6 +16,33 @@ window.addEventListener('click', function(e) {
     }
 });
 
+// Verificar si la zapatilla está en favoritos al cargar la página
+function verificarSiEsFavorito() {
+    const zapatillaSeleccionada = JSON.parse(localStorage.getItem("zapatillaSeleccionada"));
+    
+    if (!zapatillaSeleccionada || !nombreUsuario) {
+        return;
+    }
+
+    const idUnico = zapatillaSeleccionada.id || 
+                   `${zapatillaSeleccionada.Nombre}_${zapatillaSeleccionada.Marca || ''}_${zapatillaSeleccionada.Precio}`.replace(/\s/g, '_');
+
+    // Llamar al backend para verificar si está en favoritos
+    postEvent("VerificarFavorito", {
+        usuario: nombreUsuario,
+        id: idUnico
+    }, (respuesta) => {
+        console.log("Verificación de favorito:", respuesta);
+        
+        if (respuesta.esFavorito) {
+            const corazon = document.getElementById("fav");
+            if (corazon) {
+                corazon.classList.add("tocado");
+            }
+        }
+    });
+}
+
 let corazon = document.getElementById("fav");
 if (corazon) {
     corazon.addEventListener("click", function () {
@@ -74,6 +101,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
         document.querySelector(".nombre-zapatilla").textContent = zapatillaSeleccionada.Nombre;
         document.querySelector(".precio-zapatilla").textContent = zapatillaSeleccionada.Precio;
+
+        // Verificar si está en favoritos después de cargar la info
+        verificarSiEsFavorito();
 
     } else {
         document.querySelector(".zapatilla").innerHTML = "<p>No se seleccionó ninguna zapatilla.</p>";
