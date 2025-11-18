@@ -4,6 +4,10 @@ let menu_lateral = document.getElementById("menu");
 let barras = document.getElementById("lateral");
 const sesion = localStorage.getItem("usuarioSesion");
 const nombreUsuario = localStorage.getItem("nombreusuario");
+const input = document.getElementById("comentar");
+const error = document.getElementById("error");
+const maxPalabras = 5;
+
 
 function cambiar() {
     barras.classList.toggle("visible"); 
@@ -226,4 +230,23 @@ document.getElementById("comentar").addEventListener("click", function (e) {
 
     // Limpiar el input
     document.getElementById("comentario").value = "";
+});
+function cambiar() {
+    barras.classList.toggle("visible");
+
+    if (barras.classList.contains("visible")) {
+        document.body.classList.add("noscroll");   // bloquear scroll
+    } else{
+        document.body.classList.remove("noscroll"); // permitir scroll
+    }
+}input.addEventListener("input", () => {
+    let palabras = input.value.trim().split(/\s+/); // divide por espacios
+
+    if (palabras.length > maxPalabras) {
+        error.style.display = "block";
+        palabras = palabras.slice(0, maxPalabras); // recorta al máximo permitido
+        input.value = palabras.join(" "); // vuelve a colocar el texto permitido
+    } else {
+        error.style.display = "none";
+    }
 });

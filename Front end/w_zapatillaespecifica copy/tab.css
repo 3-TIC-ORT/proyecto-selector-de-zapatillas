@@ -219,7 +219,7 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 text-align: ri;
-margin-top: 15rem;
+margin-top: 10rem;
 }
 .escribir::placeholder {
   padding-left: 1rem; 
@@ -286,4 +286,9 @@ line-height: normal;
   height: 3.5rem;
   background-color: var(--naranja);
   border-radius: 3rem;
+}
+.noscroll {
+  overflow: hidden;
+  height: 100vh;
+  
 }
