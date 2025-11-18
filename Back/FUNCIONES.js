@@ -403,3 +403,159 @@ function CalcularRecomendaciones(Data) {
 }
 
 export { CalcularRecomendaciones };
+
+function ToggleFavorito(Data) {
+    const { NOMBRE, zapatilla } = Data;
+    
+    if (!NOMBRE || !zapatilla) {
+        return { success: false, error: 'Faltan datos: usuario y zapatilla son requeridos.' };
+    }
+
+    const idUnico = zapatilla.id || `${zapatilla.Nombre}_${zapatilla.Marca}_${zapatilla.Precio}`.replace(/\s/g, '_');
+
+    let favoritos = [];
+    try {
+        const raw = fs.readFileSync("favoritos.json", "utf-8");
+        favoritos = JSON.parse(raw);
+        if (!Array.isArray(favoritos)) favoritos = [];
+    } catch (err) {
+        if (err.code !== 'ENOENT') {
+            return { success: false, error: 'Error al leer favoritos: ' + err.message };
+        }
+    }
+
+    console.log("=== TOGGLE FAVORITO ===");
+    console.log("Usuario:", NOMBRE);
+    console.log("ID único generado:", idUnico);
+    console.log("Favoritos actuales:", favoritos.length);
+
+    const index = favoritos.findIndex(
+        fav => fav.usuario === NOMBRE && 
+               fav.nombre === zapatilla.Nombre && 
+               fav.marca === (zapatilla.Marca || '')
+    );
+
+    console.log("Index encontrado:", index);
+
+    if (index !== -1) {
+        favoritos.splice(index, 1);
+        console.log("Favorito ELIMINADO. Total favoritos:", favoritos.length);
+        
+        try {
+            fs.writeFileSync("favoritos.json", JSON.stringify(favoritos, null, 2), "utf-8");
+            return { success: true, action: 'removed', message: 'Favorito eliminado' };
+        } catch (err) {
+            return { success: false, error: 'Error al escribir favoritos: ' + err.message };
+        }
+    } else {
+        const nuevoFavorito = {
+            usuario: NOMBRE,
+            id: idUnico,
+            nombre: zapatilla.Nombre,
+            precio: zapatilla.Precio,
+            imagenUrl: zapatilla.Imagen,
+            marca: zapatilla.Marca || '',
+            color: zapatilla.Color || '',
+            fechaAgregado: new Date().toISOString()
+        };
+
+        favoritos.push(nuevoFavorito);
+        console.log("Favorito AGREGADO. Total favoritos:", favoritos.length);
+        console.log("Nuevo favorito:", nuevoFavorito);
+
+        try {
+            fs.writeFileSync("favoritos.json", JSON.stringify(favoritos, null, 2), "utf-8");
+            console.log("Archivo guardado exitosamente");
+            return { success: true, action: 'added', message: 'Favorito agregado' };
+        } catch (err) {
+            console.error("Error al guardar:", err);
+            return { success: false, error: 'Error al escribir favoritos: ' + err.message };
+        }
+    }
+}
+
+export { ToggleFavorito };
+
+function ObtenerFavoritos(queryParams) {
+    const usuario = queryParams.usuario;
+    
+    if (!usuario) {
+        return [];
+    }
+
+    let favoritos = [];
+    try {
+        const raw = fs.readFileSync("favoritos.json", "utf-8");
+        favoritos = JSON.parse(raw);
+        if (!Array.isArray(favoritos)) favoritos = [];
+    } catch (err) {
+        if (err.code === 'ENOENT') {
+            return [];
+        }
+        console.error('Error al leer favoritos:', err);
+        return [];
+    }
+
+    const favoritosUsuario = favoritos.filter(fav => fav.usuario === usuario);
+    
+    return favoritosUsuario;
+}
+
+export { ObtenerFavoritos };
+
+function QuitarFavorito(queryParams) {
+    const idZapatilla = queryParams.id;
+    const usuario = queryParams.usuario;
+    
+    if (!idZapatilla || !usuario) {
+        return { success: false, error: 'Faltan parámetros: id y usuario son requeridos.' };
+    }
+
+    let favoritos = [];
+    try {
+        const raw = fs.readFileSync("favoritos.json", "utf-8");
+        favoritos = JSON.parse(raw);
+        if (!Array.isArray(favoritos)) favoritos = [];
+    } catch (err) {
+        return { success: false, error: 'Error al leer favoritos.' };
+    }
+
+    const nuevosFavoritos = favoritos.filter(
+        fav => !(fav.usuario === usuario && fav.id === idZapatilla)
+    );
+
+    try {
+        fs.writeFileSync("favoritos.json", JSON.stringify(nuevosFavoritos, null, 2), "utf-8");
+        return { success: true, message: 'Favorito eliminado correctamente' };
+    } catch (err) {
+        return { success: false, error: 'Error al escribir favoritos: ' + err.message };
+    }
+}
+
+export { QuitarFavorito };
+
+function VerificarFavorito(queryParams) {
+    const usuario = queryParams.usuario;
+    const idZapatilla = queryParams.id;
+    
+    if (!usuario || !idZapatilla) {
+        return { esFavorito: false };
+    }
+
+    let favoritos = [];
+    try {
+        const raw = fs.readFileSync("favoritos.json", "utf-8");
+        favoritos = JSON.parse(raw);
+        if (!Array.isArray(favoritos)) favoritos = [];
+    } catch (err) {
+        return { esFavorito: false };
+    }
+
+    const existe = favoritos.some(
+        fav => fav.usuario === usuario && fav.id === idZapatilla
+    );
+
+    return { esFavorito: existe };
+}
+
+export { VerificarFavorito };

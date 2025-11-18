@@ -15,15 +15,20 @@ window.addEventListener('click', function(e) {
 connect2Server();
 
 const contenedor = document.querySelector(".cuadrados");
+const nombreUsuario = localStorage.getItem("nombreusuario");
 
 document.addEventListener("DOMContentLoaded", cargarFavoritos);
 
 function cargarFavoritos() {
+    if (!nombreUsuario) {
+        contenedor.innerHTML = "<h1>Por favor inicia sesión para ver tus favoritos.</h1>";
+        return;
+    }
     
-    getEvent("zapatillasfavoritas", (zapatillas) => {
+    getEvent(`zapatillasfavoritas?usuario=${nombreUsuario}`, (zapatillas) => {
         
         if (!zapatillas || !Array.isArray(zapatillas) || zapatillas.length === 0) {
-            contenedor.innerHTML = "<h1>No tienes ninguna zapatilla favorita salva aún.</h1>";
+            contenedor.innerHTML = "<h1>No tienes ninguna zapatilla favorita guardada aún.</h1>";
             return;
         }
 
@@ -45,7 +50,6 @@ function crearCajaHTML(zapatilla) {
 
     caja.innerHTML = `
         <img class="cuadradito-img" src="${imagenSrc}" alt="${zapatilla.nombre || 'Zapatilla'}">
-        <p>${zapatilla.nombre || 'Zapatilla Favorita'}</p>
         <img class="fav-icon" src="../imagenes/favorito.png" alt="Quitar favorito">
     `;
 
@@ -64,9 +68,14 @@ function quitarFavorito(event) {
 
     setTimeout(() => {
         cajaParaEliminar.remove();
+
+        const cajas = document.querySelectorAll(".cuadradito");
+        if (cajas.length === 0) {
+            contenedor.innerHTML = "<h1>No tienes ninguna zapatilla favorita guardada aún.</h1>";
+        }
     }, 300); 
 
-    getEvent(`quitarFavorito?id=${idParaEliminar}`, (respuesta) => {
+    getEvent(`quitarFavorito?id=${idParaEliminar}&usuario=${nombreUsuario}`, (respuesta) => {
         console.log(`Zapatilla ${idParaEliminar} eliminada. Respuesta del servidor:`, respuesta);
     });
 }

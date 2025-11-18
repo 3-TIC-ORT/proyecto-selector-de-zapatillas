@@ -11,95 +11,90 @@ function cambiar() {
 
 menu_lateral.addEventListener("click", cambiar);
 window.addEventListener('click', function(e) {
-
     if (barras.classList.contains('visible') && !barras.contains(e.target) && !menu_lateral.contains(e.target)) {
         barras.classList.remove('visible');
     }
 });
 
 let corazon = document.getElementById("fav");
-    if (corazon) {
-        corazon.addEventListener("click", function () {
-            corazon.classList.toggle("tocado");
+if (corazon) {
+    corazon.addEventListener("click", function () {
+        const zapatillaSeleccionada = JSON.parse(localStorage.getItem("zapatillaSeleccionada")); 
+        
+        if (!zapatillaSeleccionada || !nombreUsuario) {
+            console.error("Error: No se encontró la zapatilla o el nombre de usuario en localStorage");
+            alert("Por favor inicia sesión para guardar favoritos");
+            return;
+        }
 
-            const zapatillaSeleccionada = JSON.parse(localStorage.getItem("zapatillaSeleccionada")); 
-            if (!zapatillaSeleccionada || !nombreUsuario) {
-                console.error("Error: No se encontró la zapatilla o el nombre de usuario en localStorage");
-                return;
+        corazon.classList.toggle("tocado");
+
+        const idUnico = zapatillaSeleccionada.id || 
+                       `${zapatillaSeleccionada.Nombre}_${zapatillaSeleccionada.Marca || ''}_${zapatillaSeleccionada.Precio}`.replace(/\s/g, '_');
+
+        const datosFavorito = {
+            NOMBRE: nombreUsuario,
+            zapatilla: {
+                id: idUnico,
+                Nombre: zapatillaSeleccionada.Nombre,
+                Precio: zapatillaSeleccionada.Precio,
+                Imagen: zapatillaSeleccionada.Imagen,
+                Marca: zapatillaSeleccionada.Marca,
+                Color: zapatillaSeleccionada.Color
             }
+        };
 
-            const datosFavorito = {
-                NOMBRE: nombreUsuario,
-                zapatilla: zapatillaSeleccionada
-            };
-
-            postEvent("ToggleFavorito", datosFavorito, (respuesta) => {
-                console.log("Respuesta del servidor:", respuesta); 
-            });
+        postEvent("ToggleFavorito", datosFavorito, (respuesta) => {
+            console.log("Respuesta del servidor:", respuesta);
+            
+            if (respuesta.success) {
+                if (respuesta.action === 'added') {
+                    console.log("Zapatilla agregada a favoritos");
+                } else if (respuesta.action === 'removed') {
+                    console.log("Zapatilla quitada de favoritos");
+                }
+            } else {
+                corazon.classList.toggle("tocado");
+                console.error("Error:", respuesta.error);
+            }
         });
-    }
+    });
+}
 
 window.addEventListener("DOMContentLoaded", () => {
-    const zapatilla = JSON.parse(localStorage.getItem("zapatillaSeleccionada"));
+    const zapatillaSeleccionada = JSON.parse(localStorage.getItem("zapatillaSeleccionada"));
 
-    if (zapatilla) {
+    if (zapatillaSeleccionada) {
         const contenedor = document.querySelector(".zapatilla");
-
-        
         contenedor.innerHTML = `
-            <img src="${zapatilla.Imagen}" alt="${zapatilla.Nombre}" 
+            <img src="${zapatillaSeleccionada.Imagen}" alt="${zapatillaSeleccionada.Nombre}" 
                  style="width:100%; height:auto; border-radius:1rem;">
         `;
+
+        document.querySelector(".nombre-zapatilla").textContent = zapatillaSeleccionada.Nombre;
+        document.querySelector(".precio-zapatilla").textContent = zapatillaSeleccionada.Precio;
+
     } else {
-        
         document.querySelector(".zapatilla").innerHTML = "<p>No se seleccionó ninguna zapatilla.</p>";
     }
 });
 
- 
-window.addEventListener('DOMContentLoaded', () => {
-    const zapatillaSeleccionada = JSON.parse(localStorage.getItem('zapatillaSeleccionada'))
-
-    if (!zapatillaSeleccionada) {
-        console.warn("No hay zapatilla seleccionada.");
-        return;
-    }
-
-   
-    const divZapatilla = document.querySelector('.zapatilla');
-    if (divZapatilla) {
-        divZapatilla.innerHTML = `
-            <img src="${zapatillaSeleccionada.Imagen}" 
-                 alt="${zapatillaSeleccionada.Nombre}" 
-                 style="width:100%; height:100%; object-fit:contain; border-radius:1rem;">
-        `;
-    }
-
-    
-});
-
-window.addEventListener("DOMContentLoaded", () => {
-    const zapatilla = JSON.parse(localStorage.getItem("zapatillaSeleccionada"));
-    if (!zapatilla) return;
-  
-    document.querySelector(".zapatilla").innerHTML = `<img src="${zapatilla.Imagen}" alt="${zapatilla.Nombre}" style="width:100%;border-radius:1rem;">`;
-    document.querySelector(".nombre-zapatilla").textContent = zapatilla.Nombre;
-    document.querySelector(".precio-zapatilla").textContent = zapatilla.Precio;
-});
-
-
 document.getElementById("comentar").addEventListener("click", function (e) {
-    e.preventDefault(); // ← evita recargar SI O SI
+    e.preventDefault();
 
     const texto = document.getElementById("comentario").value.trim();
     if (texto === "") return;
 
     const usuario = localStorage.getItem("nombreusuario");
 
-    // Mostrarlo inmediatamente en pantalla
+    if (!usuario) {
+        alert("Por favor inicia sesión para comentar");
+        return;
+    }
+
     agregarComentarioEnPantalla(usuario, texto);
 
-    // Enviar al backend
+
     postEvent("Comentario", {
         Nombre: usuario,
         crearcomentario: texto
