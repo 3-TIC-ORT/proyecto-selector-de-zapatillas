@@ -1,5 +1,3 @@
-
-
 [
     {
     "Nombre": "ASICS Gel-1130 Black Pure Silver",
@@ -8,7 +6,6 @@
     "Imagen": "https://images.stockx.com/images/ASICS-Gel-1130-Black-Pure-Silver-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
     "Color": "Negro"
     },
-
     {
     "Nombre": "Adidas Yeezy Boost 350 V2 Zebra",
     "Marca": "Adidas",
@@ -16,7 +13,6 @@
     "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Zebra-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
     "Color": "Blanco"
     },
-
     {
     "Nombre": "Jordan 4 Retro Red Thunder",
     "Marca": "Jordan",
@@ -24,7 +20,6 @@
     "Imagen": "https://images.stockx.com/images/Air-Jordan-4-Retro-Red-Thunder-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
     "Color": "Rojo"
     },
-
     {
     "Nombre": "adidas Yeezy Slide Onyx",
     "Marca": "Adidas",
@@ -32,7 +27,6 @@
     "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Slide-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
     "Color": "Negro"
     },
-
     {
     "Nombre": "Jordan 4 Retro OG SP Undefeated",
     "Marca": "Jordan",
@@ -40,7 +34,6 @@
     "Imagen": "https://images.stockx.com/images/Air-Jordan-4-Retro-OG-SP-Undefeated-2025-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1753819868",
     "Color": "Gris"
     },
-
     {
     "Nombre": "Jordan 4 Retro SB Navy",
     "Marca": "Jordan",
@@ -48,7 +41,6 @@
     "Imagen": "https://images.stockx.com/images/Air-Jordan-4-Retro-SB-Navy-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1740411181",
     "Color": "Blanco"
     },
-
     {
     "Nombre": "Jordan 1 Retro High OG Rare Air",
     "Marca": "Jordan",
@@ -56,7 +48,6 @@
     "Imagen": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-OG-Rare-Air-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1741385112",
     "Color": "Azul"
     },
-
     {
     "Nombre": "Nike Dunk Low Retro White Black Panda",
     "Marca": "Nike",
@@ -64,7 +55,6 @@
     "Imagen": "https://images.stockx.com/images/Nike-Dunk-Low-Retro-White-Black-2021-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
     "Color": "Negro"
     },
-
     {
     "Nombre": "adidas Yeezy Slide Slate Marine",
     "Marca": "Adidas",
@@ -72,7 +62,6 @@
     "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Slide-Slate-Marine-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
     "Color": "Celeste"
     },
-
     {
     "Nombre": "Nike Air Force 1 Low '07 White",
     "Marca": "Nike",
@@ -80,9 +69,6 @@
     "Imagen": "https://images.stockx.com/images/Nike-Air-Force-1-Low-White-07_V2-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
     "Color": "Blanco"
     },
-
-    
-
     {
     "Nombre": "Reebok Classic Leather White",
     "Marca": "Reebok",
@@ -90,7 +76,6 @@
     "Imagen": "https://images.stockx.com/images/Reebok-Classic-Leather-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
     "Color": "Blanco"
     },
-
     {
     "Nombre": "ASICS Gel-1130 White Black",
     "Marca": "ASICS",
@@ -98,17 +83,6 @@
     "Imagen": "https://images.stockx.com/images/ASICS-Gel-1130-White-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
     "Color": "Blanco"
     },
-
-    
-
-    {
-    "Nombre": "adidas NMD R1 Triple Black",
-    "Marca": "Adidas",
-    "Precio": "$280",
-    "Imagen": "https://images.stockx.com/images/adidas-NMD-R1-Triple-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
-    "Color": "Negro"
-    },
-
     {
     "Nombre": "Vans Old Skool Black White",
     "Marca": "Vans",
@@ -116,7 +90,6 @@
     "Imagen": "https://images.stockx.com/images/Vans-Old-Skool-Black-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
     "Color": "Blanco"
     },
-
     {
     "Nombre": "adidas Nite Jogger Core Black",
     "Marca": "Adidas",
@@ -124,23 +97,6 @@
     "Imagen": "https://images.stockx.com/images/adidas-Nite-Jogger-Core-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
     "Color": "Negro"
     },
-
-    {
-    "Nombre": "Nike Air Force 1 Low '07 White Pure Platinum",
-    "Marca": "Nike",
-    "Precio": "$170",
-    "Imagen": "https://images.stockx.com/images/Nike-Air-Force-1-Low-White-07_V2-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
-    "Color": "Blanco"
-    },
-
-    {
-    "Nombre": "Nike Kobe 6 Protro Grinch (2020)",
-    "Marca": "Nike",
-    "Precio": "$1050",
-    "Imagen": "https://images.stockx.com/images/Nike-Kobe-6-Protro-Grinch-2020-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
-    "Color": "Verde"
-    },
-
     {
     "Nombre": "New Balance 990v5 Grey",
     "Marca": "New Balance",
@@ -148,7 +104,6 @@
     "Imagen": "https://images.stockx.com/images/New-Balance-990v5-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
     "Color": "Gris"
     },
-
     {
     "Nombre": "adidas Yeezy Boost 380 Mist",
     "Marca": "Adidas",
@@ -156,7 +111,6 @@
     "Imagen": "https://images.stockx.com/images/adidas-Yeezy-Boost-380-Mist-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
     "Color": "Verde Oscuro"
     },
-
     {
     "Nombre": "New Balance 992 Grey",
     "Marca": "New Balance",
@@ -164,7 +118,6 @@
     "Imagen": "https://images.stockx.com/images/New-Balance-992-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
     "Color": "Gris"
     },
-
     {
     "Nombre": "adidas Yeezy 450 Cloud White",
     "Marca": "Adidas",
@@ -172,7 +125,6 @@
     "Imagen": "https://images.stockx.com/images/adidas-Yeezy-450-Cloud-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
     "Color": "Blanco"
     },
-
     {
     "Nombre": "Nike Dunk Low Grey Fog",
     "Marca": "Nike",

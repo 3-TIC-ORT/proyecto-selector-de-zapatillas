@@ -17,7 +17,6 @@ window.addEventListener('click', function(e) {
 const contenedor = document.querySelector(".cuadrados");
 const nombreUsuario = localStorage.getItem("nombreusuario");
 
-// Cargar favoritos al iniciar la página
 document.addEventListener("DOMContentLoaded", cargarFavoritos);
 
 function cargarFavoritos() {
@@ -26,7 +25,6 @@ function cargarFavoritos() {
         return;
     }
     
-    // Usar getEvent para obtener los favoritos del backend
     getEvent(`ObtenerFavoritos?usuario=${encodeURIComponent(nombreUsuario)}`, (zapatillas) => {
         console.log("Favoritos recibidos:", zapatillas);
         
@@ -72,10 +70,8 @@ function quitarFavorito(event, zapatilla) {
     const cajaParaEliminar = icono.closest(".cuadradito");
     const idParaEliminar = cajaParaEliminar.dataset.id;
 
-    // Animación de salida
     cajaParaEliminar.classList.add("hiding");
 
-    // Esperar a que termine la animación antes de eliminar
     setTimeout(() => {
         cajaParaEliminar.remove();
 
@@ -85,7 +81,6 @@ function quitarFavorito(event, zapatilla) {
         }
     }, 300); 
 
-    // Enviar solicitud al backend para quitar de favoritos
     postEvent("ToggleFavorito", {
         NOMBRE: nombreUsuario,
         zapatilla: {
@@ -102,13 +97,11 @@ function quitarFavorito(event, zapatilla) {
             console.log("✅ Favorito eliminado exitosamente");
         } else {
             console.error("❌ Error al eliminar favorito:", respuesta.error);
-            // Recargar favoritos en caso de error
             cargarFavoritos();
         }
     });
 }
 
-// Cerrar sesión
 const cerrarBtn = document.getElementById("cerrar");
 const inputEscondido = document.getElementById("input_escondido");
 const cancelBtn = document.getElementById("cancel-button");
