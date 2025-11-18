@@ -1,3 +1,12 @@
 [
-  
+  {
+    "usuario": "Bruno Fernandes",
+    "id": "New_Balance_990v5_Grey_New_Balance_$190",
+    "nombre": "New Balance 990v5 Grey",
+    "precio": "$190",
+    "imagenUrl": "https://images.stockx.com/images/New-Balance-990v5-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+    "marca": "New Balance",
+    "color": "Gris",
+    "fechaAgregado": "2025-11-18T11:59:00.936Z"
+  }
 ]

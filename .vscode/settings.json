@@ -1,3 +1,10 @@
 {
     "liveServer.settings.port": 5500,
+    "liveServer.settings.ignoreFiles": [
+    "**/*.json",
+    "**/Back/**",
+    "**/node_modules/**"
+  ],
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.wait": 100
 }

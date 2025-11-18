@@ -1,3 +1,5 @@
+connect2Server();
+
 let menu_lateral = document.getElementById("menu");
 let barras = document.getElementById("lateral");
 
@@ -12,11 +14,10 @@ window.addEventListener('click', function(e) {
     }
 });
 
-connect2Server();
-
 const contenedor = document.querySelector(".cuadrados");
 const nombreUsuario = localStorage.getItem("nombreusuario");
 
+// Cargar favoritos al iniciar la página
 document.addEventListener("DOMContentLoaded", cargarFavoritos);
 
 function cargarFavoritos() {
@@ -25,7 +26,9 @@ function cargarFavoritos() {
         return;
     }
     
-    getEvent(`zapatillasfavoritas?usuario=${nombreUsuario}`, (zapatillas) => {
+    // Usar getEvent para obtener los favoritos del backend
+    getEvent(`ObtenerFavoritos?usuario=${encodeURIComponent(nombreUsuario)}`, (zapatillas) => {
+        console.log("Favoritos recibidos:", zapatillas);
         
         if (!zapatillas || !Array.isArray(zapatillas) || zapatillas.length === 0) {
             contenedor.innerHTML = "<h1>No tienes ninguna zapatilla favorita guardada aún.</h1>";
@@ -45,27 +48,34 @@ function crearCajaHTML(zapatilla) {
     const caja = document.createElement("div");
     caja.classList.add("cuadradito");
     caja.dataset.id = zapatilla.id; 
+    caja.dataset.nombre = zapatilla.nombre;
     
-    const imagenSrc = zapatilla.imagenUrl || zapatilla.foto || '../imagenes/placeholder.png';
+    const imagenSrc = zapatilla.imagenUrl || '../imagenes/placeholder.png';
 
     caja.innerHTML = `
+    <a href="../w_zapatillaespecifica copy/tab.html">
         <img class="cuadradito-img" src="${imagenSrc}" alt="${zapatilla.nombre || 'Zapatilla'}">
+
+    </a>
         <img class="fav-icon" src="../imagenes/favorito.png" alt="Quitar favorito">
+    
     `;
 
     const iconoCorazon = caja.querySelector(".fav-icon");
-    iconoCorazon.addEventListener("click", quitarFavorito);
+    iconoCorazon.addEventListener("click", (e) => quitarFavorito(e, zapatilla));
 
     return caja;
 }
 
-function quitarFavorito(event) {
+function quitarFavorito(event, zapatilla) {
     const icono = event.target;
     const cajaParaEliminar = icono.closest(".cuadradito");
     const idParaEliminar = cajaParaEliminar.dataset.id;
 
+    // Animación de salida
     cajaParaEliminar.classList.add("hiding");
 
+    // Esperar a que termine la animación antes de eliminar
     setTimeout(() => {
         cajaParaEliminar.remove();
 
@@ -75,7 +85,43 @@ function quitarFavorito(event) {
         }
     }, 300); 
 
-    getEvent(`quitarFavorito?id=${idParaEliminar}&usuario=${nombreUsuario}`, (respuesta) => {
+    // Enviar solicitud al backend para quitar de favoritos
+    postEvent("ToggleFavorito", {
+        NOMBRE: nombreUsuario,
+        zapatilla: {
+            id: zapatilla.id,
+            Nombre: zapatilla.nombre,
+            Precio: zapatilla.precio,
+            Imagen: zapatilla.imagenUrl,
+            Marca: zapatilla.marca || '',
+            Color: zapatilla.color || ''
+        }
+    }, (respuesta) => {
         console.log(`Zapatilla ${idParaEliminar} eliminada. Respuesta del servidor:`, respuesta);
+        if (respuesta.success) {
+            console.log("✅ Favorito eliminado exitosamente");
+        } else {
+            console.error("❌ Error al eliminar favorito:", respuesta.error);
+            // Recargar favoritos en caso de error
+            cargarFavoritos();
+        }
+    });
+}
+
+// Cerrar sesión
+const cerrarBtn = document.getElementById("cerrar");
+const inputEscondido = document.getElementById("input_escondido");
+const cancelBtn = document.getElementById("cancel-button");
+
+if (cerrarBtn) {
+    cerrarBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        inputEscondido.classList.remove("hidden");
+    });
+}
+
+if (cancelBtn) {
+    cancelBtn.addEventListener("click", function() {
+        inputEscondido.classList.add("hidden");
     });
 }
