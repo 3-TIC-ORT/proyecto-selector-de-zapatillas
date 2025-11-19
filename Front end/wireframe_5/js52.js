@@ -32,48 +32,7 @@ function aplicarFiltros() {
 }
 
 
-function mostrarResultados(zapatillas) {
-    const contenedor = document.querySelector('.octavos');
-    contenedor.innerHTML = '';
 
-    if (!zapatillas || zapatillas.length === 0) {
-        contenedor.innerHTML = '<p>No se encontraron zapatillas con esos filtros.</p>';
-        return;
-    }
-
-    zapatillas.forEach(zapatilla => {
-        const card = document.createElement('div');
-        card.className = 'ejemplos';
-        card.innerHTML = `
-            <img src="${zapatilla.Imagen}" alt="${zapatilla.Nombre}" style="width:100%;border-radius:1rem;">
-            <h4>${zapatilla.Nombre}</h4>
-            <p>${zapatilla.Marca} - ${zapatilla.Color}</p>
-            <p>${zapatilla.Precio}</p>
-        `;
-        contenedor.appendChild(card);
-    });
-}
-
-
-[colorSelect, precioSelect, tipoSelect, marcaSelect].forEach(select => {
-    select.addEventListener('change', aplicarFiltros);
-});
-
-
-limpiarBoton.addEventListener('click', () => {
-    [colorSelect, precioSelect, tipoSelect, marcaSelect].forEach(select => (select.selectedIndex = 0));
-    aplicarFiltros();
-});
-
-
-window.addEventListener('DOMContentLoaded', aplicarFiltros);
-
-filtroLink.addEventListener('click', (e) => {
-  e.preventDefault();
-  console.log("Clic en el enlace de filtro");
-  filtroCuadro.style.display = filtroCuadro.style.display === 'none' ? 'block' : 'none';
-  console.log("Estado actual del filtro:", filtroCuadro.style.display);
-});
 
 function mostrarResultados(zapatillas) {
     const contenedor = document.querySelector('.octavos');
@@ -110,6 +69,25 @@ function mostrarResultados(zapatillas) {
         contenedor.appendChild(card);
 });
 }
+[colorSelect, precioSelect, tipoSelect, marcaSelect].forEach(select => {
+  select.addEventListener('change', aplicarFiltros);
+});
+
+
+limpiarBoton.addEventListener('click', () => {
+  [colorSelect, precioSelect, tipoSelect, marcaSelect].forEach(select => (select.selectedIndex = 0));
+  aplicarFiltros();
+});
+
+
+window.addEventListener('DOMContentLoaded', aplicarFiltros);
+
+filtroLink.addEventListener('click', (e) => {
+e.preventDefault();
+console.log("Clic en el enlace de filtro");
+filtroCuadro.style.display = filtroCuadro.style.display === 'none' ? 'block' : 'none';
+console.log("Estado actual del filtro:", filtroCuadro.style.display);
+});
 
 window.addEventListener("DOMContentLoaded", () => {
     const inputBusqueda = document.getElementById("busqueda");
